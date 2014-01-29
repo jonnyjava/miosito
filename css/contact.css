@@ -1,0 +1,89 @@
+.contactamencontent{
+  margin: auto;
+  text-align:left;
+  vertical-align: middle;
+  text-decoration: none;
+  padding-left: 20%;
+  color:#000000;
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: bolder;
+  }
+.contactamencontent img{
+  float:left;  
+}
+.contactamencontent a{
+  text-decoration: none;
+}
+.linkprofile{
+  float:left;
+  margin-top:4px;
+  padding-top:4px;
+  width:450px;
+  height: 40px;
+  color:#ffffff;
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: bolder;
+  text-decoration: none;
+}
+.linkprofile img{
+  float:right;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border:0px;
+}
+.buttoncontact{
+  background-color: #173A4E;
+  color:#ffffff;
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: bolder;
+  border:2px solid #00263C;
+  border-radius:15px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  min-width: 80px;
+  cursor:pointer;
+  float:right;
+  padding-bottom:6px;  
+}
+.buttoncontact :hover{
+  background-color: #00263c;
+  border: 1px solid #004c78;
+  border-bottom-width: 2px;
+}
+.inputcontact{
+  font-family: Nunito;
+  font-size: 16px;
+  border:2px solid #00263C;
+  height: 30px;
+  width: 310px;
+  float:left;
+}
+.labelcontact{
+  float:left;
+  width:150px;
+  min-width:150px;
+  height: 30px;
+  color:#ffffff;
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.textareacontact{
+  font-family: Nunito;
+  font-size: 16px;
+  border:2px solid #00263C;
+  width: 310px;
+}
+.aviso{
+  float:left;
+  display:none;
+  border:1px solid #00263C;
+  width:150px;
+  Color:#ffffff;
+  font-size:14px;
+}

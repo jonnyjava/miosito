@@ -1,0 +1,36 @@
+<script type="text/javascript">
+  var i = 1;
+  var n = 0;
+  var mytimer;
+  $(document).ready(function(){
+     mytimer = setInterval(function(){myTimer()},2500);
+  });
+  function myTimer(){
+    $('#button-'+(i%3)).click();
+    if(n==0){i++;}else{i--;}
+    if(i==2){n=1;}
+    if(i==0){n=0;}
+  }
+  function stopslider(){
+   clearInterval(mytimer); 
+  }
+</script>
+<div class="sp-slideshow">
+  <input id="button-0" type="radio" name="radio-set" class="sp-selector-1" checked="checked" />
+  <label for="button-0" class="button-label-1"></label>
+  <input id="button-1" type="radio" name="radio-set" class="sp-selector-2" />
+  <label for="button-1" class="button-label-2"></label>
+  <input id="button-2" type="radio" name="radio-set" class="sp-selector-3" />
+  <label for="button-2" class="button-label-3"></label>
+  <label for="button-0" class="sp-arrow sp-a1"></label>
+  <label for="button-1" class="sp-arrow sp-a2"></label>
+  <label for="button-2" class="sp-arrow sp-a3"></label>
+  <div class="sp-content">
+    <div class="sp-parallax-bg"></div>
+    <ul class="sp-slider clearfix">
+      <li><img src="img/ficha1.png" alt="image01" /></li>
+      <li><img src="img/ficha2.png" alt="image02" /></li>
+      <li><img src="img/ficha3.png" alt="image03" /></li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,102 @@
+<svg width="800" height="600" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<g id="testa">
+			<!-- Viso-->
+			<ellipse cx="40" cy="50" rx="40" ry="50" style="fill:rgb(254,202,177);stroke:black;stroke-width:2"/>
+
+			<!-- Occhio sinistro-->	
+			<ellipse id="occhio" cx="30" cy="35" rx="8" ry="15" style="fill:white;stroke:black;stroke-width:1"/>
+			
+			<!-- Occhio destro-->
+			<use xlink:href="#occhio" transform="translate(20,0)"/>
+
+			<!-- Pupilla sinistra-->
+			<ellipse id="pupilla" cx="30" cy="45" rx="3" ry="5" style="fill:black"/>
+
+			<!-- Pupilla destra-->
+			<use xlink:href="#pupilla" transform="translate(20,0)"/>
+
+			<!-- Bocca-->
+			<path d="M 20 70 Q 40 90 60 70" style="fill:none;stroke:black; stroke-width:2;"/>
+		</g>
+		
+		<g id="corpo">
+			<!-- Profilo del corpo-->
+			<rect x="0" y="0" width="120" height="140" rx="50" style="fill:red; stroke:black; stroke-width:2;"/>
+
+			<!-- Collo -->
+			<path d="M 50 0 L 60 10 70 0" style="fill:rgb(254,202,177); stroke:black; stroke-width:2"/>
+
+			<!-- Bottone-->
+			<ellipse id="bottone" cx="60" cy="30" rx="15" ry="10" style="fill:yellow; stroke:black; stroke-width:2;"/>
+
+			<!-- gli altri bottoni-->
+			<use xlink:href="#bottone" transform="translate(0,30)"/>
+			<use xlink:href="#bottone" transform="translate(0,60)"/>
+
+		</g>
+
+		<g id="bracciosx">
+			<!-- Manica-->
+			<path d="M 10 10 Q 17.5 0 25 10 L 25 80 0 80 Z" style="fill:red; stroke:black; stroke-width:2"/>
+		
+			<!-- Mano -->
+			<circle cx="12.5" cy="92.5" r="12.5" style="fill:rgb(254,202,177);stroke:black;stroke-width:2"/>
+
+		</g>
+
+		<g id="bracciodx">
+			<use xlink:href="#bracciosx" transform="scale(-1,1)"/>
+
+		</g>
+
+		<g id="pantaloni">
+			
+			<path d="M 20 0 L 0 100 50 100 60 30 70 100 120 100 100 0" style="fill:olive; stroke:black; stroke-width:2"/> 
+
+		</g>
+
+		<g id="scarpa">
+			
+			<ellipse cx="25" cy="12.5" rx="25" ry="12.5" style="fill:maroon; stroke:black; stroke-width:2"/>
+		
+		</g>
+
+
+
+
+	</defs>
+	<rect id="bg"  width="800" height="600" x="0" y="0" fill="#ACE270"/>
+	<!-- Pantaloni-->
+	<use xlink:href="#pantaloni" x="180" y="330"/>
+
+
+	<!--Disegna il corpo-->
+	<use xlink:href="#corpo" x="180" y="200"/>
+
+	<!-- Disegna la testa-->
+	<use xlink:href="#testa" x="200" y="100"/>
+
+
+	<!-- Braccio sinistro-->
+	<use xlink:href="#bracciosx" x="152" y="230"/>
+
+	<!-- Braccio destro-->
+	<use xlink:href="#bracciodx" x="328" y="230" transform="rotate(-200,308,240)">
+		<animateTransform attributeName="transform" attributeType="XML" type="rotate" from="-200, 308, 240" to="-160, 308, 240" begin="0s; indietro.end" dur="1s"/>
+		<animateTransform id="indietro" attributeName="transform" attributeType="XML" type="rotate" from="-160, 308, 240" to="-200, 308, 240" begin="prev.end" dur="1s"/>
+	
+	</use>
+
+	<!-- scarpa sinistra -->
+	<use xlink:href="#scarpa" x="180" y="430"/>
+
+	<!-- scarpa destra -->
+	<use xlink:href="#scarpa" x="250" y="430"/>
+
+
+
+
+
+</svg>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+  <!ATTLIST svg xmlns:xlink CDATA #FIXED "http://www.w3.org/1999/xlink">
+]>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  onload="getSVGDoc(evt)">
+  <title>SVG - Imparare con gli esempi</title>
+  <defs>
+    <symbol id="zu">
+      <rect x="0" y="0" width="50" height="50" style="fill: #FFF; stroke: #000"/>
+      <line x1="0" y1="0" x2="50" y2="50" style="stroke: #999"/>
+      <line x1="50" y1="0" x2="0" y2="50" style="stroke: #999"/>
+    </symbol>
+    <symbol id="s1">
+      <rect x="0" y="0" width="50" height="50" style="fill: #F00; stroke: #000"/>
+    </symbol>
+    <symbol id="s2">
+      <rect x="0" y="0" width="50" height="50" style="fill: #090; stroke: #000"/>
+    </symbol>
+    <symbol id="s3">
+      <rect x="0" y="0" width="50" height="50" style="fill: #FF0; stroke: #000"/>
+    </symbol>
+    <symbol id="s4">
+      <rect x="0" y="0" width="50" height="50" style="fill: #00F; stroke: #000"/>
+    </symbol>
+    <symbol id="s5">
+      <rect x="0" y="0" width="50" height="50" style="fill: #0FF; stroke: #000"/>
+    </symbol>
+    <symbol id="s6">
+      <rect x="0" y="0" width="50" height="50" style="fill: #F0F; stroke: #000"/>
+    </symbol>
+    <symbol id="s7">
+      <rect x="0" y="0" width="50" height="50" style="fill: #AAA; stroke: #000"/>
+    </symbol>
+    <symbol id="s8">
+      <rect x="0" y="0" width="50" height="50" style="fill: #FC6; stroke: #000"/>
+    </symbol>
+    <symbol id="s9">
+      <rect x="0" y="0" width="50" height="50" style="fill: #FCC; stroke: #000"/>
+    </symbol>
+    <symbol id="s10">
+      <rect x="0" y="0" width="50" height="50" style="fill: #C03; stroke: #000"/>
+    </symbol>
+    <symbol id="s11">
+      <rect x="0" y="0" width="50" height="50" style="fill: #CF6; stroke: #000"/>
+    </symbol>
+    <symbol id="s12">
+      <rect x="0" y="0" width="50" height="50" style="fill: #EEE; stroke: #000"/>
+    </symbol>
+    <symbol id="s13">
+      <rect x="0" y="0" width="50" height="50" style="fill: #069; stroke: #000"/>
+    </symbol>
+    <symbol id="s14">
+      <rect x="0" y="0" width="50" height="50" style="fill: #0CC; stroke: #000"/>
+    </symbol>
+    <symbol id="s15">
+      <rect x="0" y="0" width="50" height="50" style="fill: #FFC; stroke: #000"/>
+    </symbol>
+    <symbol id="s16">
+      <rect x="0" y="0" width="50" height="50" style="fill: #C69; stroke: #000"/>
+    </symbol>
+    <symbol id="s17">
+      <rect x="0" y="0" width="50" height="50" style="fill: #FFF; stroke: #000"/>
+    </symbol>
+    <symbol id="s18">
+      <rect x="0" y="0" width="50" height="50" style="fill: #000; stroke: #000"/>
+    </symbol>
+
+    <script type="text/javascript">
+      <![CDATA[
+      var svgdoc,zahlen,click1=false,click2=false,clnr1=0,clnr2=0,clicks=0,versuche=0;
+      var temp,paare=0,feld1,feld2,ns="http://www.w3.org/1999/xlink",attr="xlink:href";
+      var spielfeld,use_elements;
+      function getSVGDoc(load_evt)
+      {
+        svgdoc=load_evt.target.ownerDocument;
+        spielfeld=svgdoc.getElementById("spielfeld");
+        use_elements=spielfeld.getElementsByTagName("use");
+        NeuesSpiel();
+      }
+      function InitRandom()
+      {
+        var neuezahl,k=0;
+        zahlen=new Array(use_elements.length);
+        for(i=0;i<use_elements.length;i++)
+        {
+          neuezahl=Zufallszahl(1,use_elements.length/2);
+          for(j=0;j<zahlen.length;j++)
+          {
+            if(zahlen[j]==neuezahl)k++;
+          }
+          if(k<2)zahlen[i]=neuezahl;
+          else
+          {
+            k=0;
+            i--;
+          }
+        }
+      }
+      function Zufallszahl(von,bis)
+      {
+        var z;
+        z=Math.round(von+(bis-von)*Math.random());
+        return z;
+      }
+      function Check(click_evt)
+      {
+        var obj,feldid,feldnr;
+        obj=click_evt.currentTarget;
+        feldid=obj.getAttribute("id");
+        feldnr=feldid.substring(1);
+        if(obj.getAttribute(attr)=="#zu" && paare<use_elements.length/2)
+        {
+          clicks++;
+          versuche++;
+        }
+        if(clicks==1)
+        {
+          click1=true;
+          feld1=feldnr;
+          obj.setAttributeNS(ns,attr,"#s"+zahlen[feld1-1]);
+          clnr1=zahlen[feld1-1];
+        }
+        else if(clicks==2 && click1)
+        {
+          click2=true;
+          feld2=feldnr;
+          obj.setAttributeNS(ns,attr,"#s"+zahlen[feld2-1]);
+          clnr2=zahlen[feld2-1];
+        }
+        if(click1 && click2)
+        {          
+          if(clnr1==clnr2)paare++;
+          else
+          {
+            LauscherAus();
+            setTimeout("Nochmal()",1000);
+          }
+          clicks=0;
+          click1=false;
+          click2=false;
+        }
+        if(versuche%2==0)
+        {
+          svgdoc.getElementById("v").firstChild.nodeValue=versuche/2;
+          svgdoc.getElementById("p").firstChild.nodeValue=paare;
+        }
+      }
+      function Nochmal()
+      {
+        svgdoc.getElementById("f"+feld1).setAttributeNS(ns,attr,"#zu");
+        svgdoc.getElementById("f"+feld2).setAttributeNS(ns,attr,"#zu");
+        LauscherAn();
+      }
+      function NeuesSpiel()
+      {
+        AllesVerstecken();
+        InitRandom();
+        paare=0;
+        versuche=0;
+        svgdoc.getElementById("v").firstChild.nodeValue=versuche;
+        svgdoc.getElementById("p").firstChild.nodeValue=paare;
+        LauscherAn();
+      }
+      function HilfeAn()
+      {
+        temp=new Array(use_elements.length);
+        for(i=0;i<use_elements.length;i++)
+        {
+          if(use_elements.item(i).getAttribute(attr)=="#zu")
+          {
+            temp[i]=true;
+            use_elements.item(i).setAttributeNS(ns,attr,"#s"+zahlen[i]);
+          }
+          else temp[i]=false;
+        }
+        setTimeout("HilfeAus()",3000)
+      }
+      function HilfeAus()
+      {
+        for(i=0;i<use_elements.length;i++)
+          if(temp[i])use_elements.item(i).setAttributeNS(ns,attr,"#zu");
+      }
+      function AllesVerstecken()
+      {
+        for(i=0;i<use_elements.length;i++)
+          use_elements.item(i).setAttributeNS(ns,attr,"#zu");
+      }
+      function LauscherAn()
+      {
+        for(i=0;i<use_elements.length;i++)
+          use_elements.item(i).addEventListener("click",Check,false);
+      }
+      function LauscherAus()
+      {
+        for(i=0;i<use_elements.length;i++)
+          use_elements.item(i).removeEventListener("click",Check,false);
+      }
+      ]]>
+    </script>
+  </defs>
+  <rect id="bg"  width="500" height="500" x="0" y="0" fill="#ACE270"/>
+  <text x="20" y="30" style="fill: #000; font-size: 24px">
+    Gioco di memoria [36 Caselle]</text>
+  <text x="20" y="50" style="fill: #000; font-size: 12px">
+    Trova le 18 coppie di colori.</text>
+  <g id="spielfeld">
+    
+    <use id="f1" xlink:href="#zu" x="20" y="70"/>
+    <use id="f2" xlink:href="#zu" x="70" y="70"/>
+    <use id="f3" xlink:href="#zu" x="120" y="70"/>
+    <use id="f4" xlink:href="#zu" x="170" y="70"/>
+    <use id="f5" xlink:href="#zu" x="220" y="70"/>
+    <use id="f6" xlink:href="#zu" x="270" y="70"/>
+    
+    <use id="f7" xlink:href="#zu" x="20" y="120"/>
+    <use id="f8" xlink:href="#zu" x="70" y="120"/>
+    <use id="f9" xlink:href="#zu" x="120" y="120"/>
+    <use id="f10" xlink:href="#zu" x="170" y="120"/>
+    <use id="f11" xlink:href="#zu" x="220" y="120"/>
+    <use id="f12" xlink:href="#zu" x="270" y="120"/>
+    
+    <use id="f13" xlink:href="#zu" x="20" y="170"/>
+    <use id="f14" xlink:href="#zu" x="70" y="170"/>
+    <use id="f15" xlink:href="#zu" x="120" y="170"/>
+    <use id="f16" xlink:href="#zu" x="170" y="170"/>
+    <use id="f17" xlink:href="#zu" x="220" y="170"/>
+    <use id="f18" xlink:href="#zu" x="270" y="170"/>
+    
+    <use id="f19" xlink:href="#zu" x="20" y="220"/>
+    <use id="f20" xlink:href="#zu" x="70" y="220"/>
+    <use id="f21" xlink:href="#zu" x="120" y="220"/>
+    <use id="f22" xlink:href="#zu" x="170" y="220"/>
+    <use id="f23" xlink:href="#zu" x="220" y="220"/>
+    <use id="f24" xlink:href="#zu" x="270" y="220"/>
+    
+    <use id="f25" xlink:href="#zu" x="20" y="270"/>
+    <use id="f26" xlink:href="#zu" x="70" y="270"/>
+    <use id="f27" xlink:href="#zu" x="120" y="270"/>
+    <use id="f28" xlink:href="#zu" x="170" y="270"/>
+    <use id="f29" xlink:href="#zu" x="220" y="270"/>
+    <use id="f30" xlink:href="#zu" x="270" y="270"/>
+ 
+    <use id="f31" xlink:href="#zu" x="20" y="320"/>
+    <use id="f32" xlink:href="#zu" x="70" y="320"/>
+    <use id="f33" xlink:href="#zu" x="120" y="320"/>
+    <use id="f34" xlink:href="#zu" x="170" y="320"/>
+    <use id="f35" xlink:href="#zu" x="220" y="320"/>
+    <use id="f36" xlink:href="#zu" x="270" y="320"/>
+  </g>
+  <g id="infoblock">
+    <text x="70" y="400">
+      Coppie trovate: <tspan id="p" style="fill: #F00">0</tspan>
+    </text>
+    <text x="200" y="400">
+      Tentativi: <tspan id="v" style="fill: #00C">0</tspan>
+    </text>
+    <a xlink:href="" onclick="NeuesSpiel()">
+      <text x="110" y="415">Nuovo gioco</text>
+      <set attributeName="fill" attributeType="CSS" to="#F00" begin="mouseover"/>
+      <set attributeName="fill" attributeType="CSS" to="#000" begin="mouseout"/>
+    </a>
+    <a xlink:href="" onclick="HilfeAn()">
+      <text x="200" y="415">Aiuto</text>
+      <set attributeName="fill" attributeType="CSS" to="#F00" begin="mouseover"/>
+      <set attributeName="fill" attributeType="CSS" to="#000" begin="mouseout"/>
+    </a>
+  </g>
+</svg>
+

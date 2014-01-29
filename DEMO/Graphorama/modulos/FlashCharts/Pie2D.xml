@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<chart  caption="Sales Summary" subCaption="For the year 2011" bgColor='007777' divLineColor='000000' divLineAlpha='100' numVDivlines='10' 
+vDivLineisDashed='1' showAlternateVGridColor='1'  toolTipBgColor='000000' toolTipBorderColor='000000' bgAlpha='100' baseFontColor='ffffff' 
+canvasBgAlpha='0' canvasBorderColor='000000' numberPrefix="€" sformatNumberScale="1" sNumberPrefix="$" syncAxisLimits="1" rotateValues="0" 
+showSum="1">
+<set value='64.78' label='Jan' color='AFD8F8'/>
+<set value='29.83' label='Feb' color='F6BD0F'isSliced="1"/>
+<set value='30.08' label='Mar' color='8BBA00'/>
+<set value='28.87' label='Apr' color='A66EDD'isSliced="1"/>
+<set value='96.65' label='May' color='F984A1'/>
+<set value='84.79' label='Jun' color='c30a2b'isSliced="1"/>
+<set value='45.68' label='Jul' color='f900c2'/>
+<set value='79.99' label='Aug' color='AFD8F8'isSliced="1"/>
+<set value='72.26' label='Sep' color='F6BD0F'/>
+<set value='78.12' label='Oct' color='8BBA00'isSliced="1"/>
+<set value='15.06' label='Nov' color='A66EDD'/>
+<set value='97.31' label='Dec' color='F984A1'isSliced="1"/>
+ <styles>
+        <definition>
+            <style name='captionFont' type='font' size='15' />
+        </definition>
+        <application>
+            <apply toObject='caption' styles='captionfont' />
+        </application>
+    </styles>
+</chart>

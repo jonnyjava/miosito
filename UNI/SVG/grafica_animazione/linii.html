@@ -1,0 +1,126 @@
+<html>
+<head>
+	<title>Untitled</title>
+	<script>  
+	var svgDocument;
+  var sketchpad; 
+  var textobj;
+  var RectElement;
+  var mouseIsDown;
+  var RectData;
+  var count=0
+  var objFound=false
+  var moving=false
+  var foundOne=0
+
+function startup(evt) {
+
+	if (document.all){
+		rightedge=document.body.clientWidth
+		bottomedge=document.body.clientHeight
+	}else{
+		rightedge=window.innerWidth
+		bottomedge=window.innerHeight
+	}
+	document.getElementById("sv").width=rightedge
+	document.getElementById("sv").height=bottomedge/1.5
+
+    svgDocument = evt.getTarget().getOwnerDocument();
+    sketchpad = svgDocument.getElementById("sketchpad");
+	path=svgDocument.getElementById("Q")
+	moredraw();
+}
+
+numlines=35
+function moredraw(){
+	for (j=0;j<numlines;j++) another(100+j*10)
+	animate()
+}
+function onemore(){
+	another(200+count*10)
+}
+
+var xlinkns = "http://www.w3.org/1999/xlink";
+function another(x){
+	Pa = svgDocument.createElement("path");
+	
+	Pa.setAttribute("id", "P"+count); count++
+	Pa.setAttribute("d", "M 100 0 C 200 200 300 200 100 300"); 
+	Pa.setAttribute("stroke", color())
+	Pa.setAttribute("stroke-width", "6")
+	Pa.setAttribute("fill", "none")
+	sketchpad.appendChild(Pa);
+}
+running=true
+xlow=-200
+xhigh=100
+x=xlow
+incr=5
+dir=1
+xdir=1
+ydir=1
+xspeed=.7
+yspeed=.4
+xcur=50
+ycur=50
+ylow=-25
+yhigh=100
+function check(){
+	if (running){
+		onemore()
+		animate()
+	}
+}
+function animate(){
+	if (!running) return
+	x+=incr*dir
+	if ((x<xlow+incr)||(x>xhigh+incr))dir=-dir
+	onestep(x)
+	window.setTimeout("animate()",10)
+}
+
+function onestep(x){
+	sketchpad.setAttribute("transform","translate("+xcur+","+ycur+")")
+	for (i=0;i<count;i++){
+		Pa = svgDocument.getElementById("P"+i);
+		Pa.setAttribute("d", "M 200 20 C "+((i*18)+x)+" 100 "+(220- x/2)+" 250 200 340 "); 
+	}
+
+	xcur=xcur+xspeed*xdir
+	ycur=ycur+yspeed*ydir
+	if((xcur<xlow+150)||(xcur>rightedge/1.5)) xdir=-xdir
+	if((ycur<ylow)||(ycur>yhigh)) ydir=-ydir
+	
+	if (Math.floor(xcur)%10==0)recolorone()
+}
+function recolor(){
+	for (i=0;i<count;i++){
+		Pa = svgDocument.getElementById("P"+i);
+		Pa.setAttribute("stroke",color()); 
+	}
+}
+function recolorone(){
+	r=Math.floor(Math.random()*count)
+	Pa = svgDocument.getElementById("P"+r);
+	Pa.setAttribute("stroke",color()); 
+}
+function color(){
+	r=Math.floor(Math.random()*16)
+	R=r.toString(16)
+	g=Math.floor(Math.random()*16)
+	G=g.toString(16)
+	b=Math.floor(Math.random()*16)
+	B=b.toString(16)
+	return "#"+R+B+G
+}
+	</script>
+</head>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" bgcolor="#ACE270"> 
+<center>
+<EMBED name="sv" src="linii.svg" type="text/plain; charset=UTF-8"></EMBED> 
+<br>
+<input type=button onclick="recolor()" value="recolor" >
+</center>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20001102//EN" "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd">
+
+<svg width="688" height="387" onload="onLoad(evt)" onmousemove="selectValue(evt)" onmouseup="setValue(evt)" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+   <title>SVG - Imparare con gli esempi</title>
+ <defs>
+	<style type="text/css"><![CDATA[
+		.SamplePath { fill:none; stroke:red; stroke-width:5 }
+		.black {fill:none;stroke:blue;stroke-width:0.1 }
+		.andrew {fill:rgb(0,0,0);font-family:verdana,monospace;font-size:8pt;}
+		.selectTab{fill:rgb(255,255,255);fill-opacity:0.35;stroke:rgb(0,255,120)} 
+		.button{fill:rgb(255,255,255);fill-opacity:0.35;stroke-width:1;stroke:rgb(0,255,120)}
+		.mainTop {
+		fill:rgb(75,140,0); // il colore degli assi cartesiani
+		stroke:none;
+		}
+		.main {
+			fill:rgb(120,180,0); 
+			stroke:rgb(0,0,156);
+			stroke-width:1;
+		}
+		.mainBox {
+			
+			stroke:rgb(214,115,0);
+			stroke-width:0;
+		}
+	]]></style>
+<script language="Javascript1.2">
+<![CDATA[
+var RSelect
+function onLoad(evt){
+   	doc = evt.getTarget() != null ? evt.getTarget().getOwnerDocument() : null;	
+		RSelect = doc.getElementById("RSelect")
+		tempPath = doc.createElement("path")
+		tempPath.getStyle().setProperty("stroke-width",1.5); // lo spessore del tratto disegnato
+		tempPath.getStyle().setProperty("fill","none"); // rimpimento della spirale
+		tempPath.getStyle().setProperty("stroke","rgb("+(240-color)+","+(120-color2)+",0)");
+		doc.getElementById("pathHolder").appendChild(tempPath)
+		makePoints();
+}
+window.makePoints = makePoints;
+tMin = 0;
+tMax = 2;
+tStep = Math.PI*0.05;
+t=tMin;
+xMax = 1;
+xMin = 0;
+step = 10;
+var x = xMin;
+c=0;
+color = 0
+color2 = 0
+xMult = 0
+yMult = 30
+var R = 30
+var r = 25
+var o = 10
+var newX, newY
+var tempR, tempr, tempo
+var startSlider = false
+var whichSlider
+var newR = 0
+var whichItem
+function makePoints(){
+	newX = (R+r)*Math.cos(x) - (r+o)*Math.cos(((R+r)/r)*x)
+	newY = (R+r)*Math.sin(x) - (r+o)*Math.sin(((R+r)/r)*x)
+	newX = parseInt(newX*1000)/1000
+	newY = parseInt(newY*1000)/1000
+	if (x==xMin) {
+		path="M ";
+		firstX=newX;
+		firstY=newY;
+	}
+	path += newX+","
+	path += newY+" \n";
+	doc.getElementById("pathHolder").getLastChild().setAttribute("d",path);
+	making = setTimeout('makePoints()',10);
+	if (x>=1000||(firstX==newX&&firstY==newY&&x!=xMin))clearTimeout(making);
+		x+=.1
+	
+}
+function getValue(evt){
+whichSlider = evt.currentNode
+whichItem = whichSlider.getChildNodes().item(1).firstChild.data
+startSlider = true
+}
+function selectValue(evt){
+	if (startSlider){
+			evt.getClientX()>620 ? slideX = 630 : slideX = 590
+			if(evt.getClientY()-6 > 266) slideY = 266;
+			else if(evt.getClientY()-6 < 16) slideY = 10;
+			else slideY = evt.getClientY()-6;
+			slidepoint = slideX + " , " + slideY + " ";
+			if(slideX==590) newR = Math.floor((slideY-40)/10.2) + 4
+			if(slideX==630) newR = Math.floor((slideY-40)/10.2) + 29
+			if(slideY==266&&slideX==590) newR = 25
+			if(slideY==266&&slideX==630) newR = 50
+			doc.getElementById(whichItem).getFirstChild().setData(newR)
+			whichSlider.setAttribute("transform","translate("+slidepoint+")");
+	}else return;
+}
+function setValue(evt){
+tempR = doc.getElementById("R").firstChild.data
+tempr = doc.getElementById("r").firstChild.data
+tempo = doc.getElementById("o").firstChild.data
+startSlider = false;
+whichSlider = null;
+whichItem = null
+}
+function startNew(){
+clearTimeout(making);
+R = parseInt(tempR)
+r = parseInt(tempr)
+o = parseInt(tempo)
+x = xMin;
+newX = 0
+newY = 0
+makePoints();
+}
+function stopMe(){
+return;
+}
+]]>
+</script>
+	<filter id="Dilate6">
+      <feMorphology operator="dilate" in="SourceGraphic" radius="2" />
+    </filter>
+	<filter id="blurIt">
+		<feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+  	</filter>
+ </defs>
+<rect id="ground" x="0" y="0" width="688" height="387" class="main" />
+<rect width="1" height="387" x="200" y="0" class="mainTop" />
+<rect width="688" height="1" x="0" y="200" class="mainTop"/>
+<g transform="translate(200,200)" id="pathHolder">
+</g>
+<text class="andrew" x="600" y="20" onfocusin="stopMe()">
+	1
+	<tspan x="600" dy="1em">2</tspan>
+	<tspan x="600" dy="1em">3</tspan>
+	<tspan x="600" dy="1em">4</tspan>
+	<tspan x="600" dy="1em">5</tspan>
+	<tspan x="600" dy="1em">6</tspan>
+	<tspan x="600" dy="1em">7</tspan>
+	<tspan x="600" dy="1em">8</tspan>
+	<tspan x="600" dy="1em">9</tspan>
+	<tspan x="600" dy="1em">10</tspan>
+	<tspan x="600" dy="1em">11</tspan>
+	<tspan x="600" dy="1em">12</tspan>
+	<tspan x="600" dy="1em">13</tspan>
+	<tspan x="600" dy="1em">14</tspan>
+	<tspan x="600" dy="1em">15</tspan>
+	<tspan x="600" dy="1em">16</tspan>
+	<tspan x="600" dy="1em">17</tspan>
+	<tspan x="600" dy="1em">18</tspan>
+	<tspan x="600" dy="1em">19</tspan>
+	<tspan x="600" dy="1em">20</tspan>
+	<tspan x="600" dy="1em">21</tspan>
+	<tspan x="600" dy="1em">22</tspan>
+	<tspan x="600" dy="1em">23</tspan>
+	<tspan x="600" dy="1em">24</tspan>
+	<tspan x="600" dy="1em">25</tspan>
+	<tspan x="640" y="20">26</tspan>
+	<tspan x="640" dy="1em">27</tspan>
+	<tspan x="640" dy="1em">28</tspan>
+	<tspan x="640" dy="1em">29</tspan>
+	<tspan x="640" dy="1em">30</tspan>
+	<tspan x="640" dy="1em">31</tspan>
+	<tspan x="640" dy="1em">32</tspan>
+	<tspan x="640" dy="1em">33</tspan>
+	<tspan x="640" dy="1em">34</tspan>
+	<tspan x="640" dy="1em">35</tspan>
+	<tspan x="640" dy="1em">36</tspan>
+	<tspan x="640" dy="1em">37</tspan>
+	<tspan x="640" dy="1em">38</tspan>
+	<tspan x="640" dy="1em">39</tspan>
+	<tspan x="640" dy="1em">40</tspan>
+	<tspan x="640" dy="1em">41</tspan>
+	<tspan x="640" dy="1em">42</tspan>
+	<tspan x="640" dy="1em">43</tspan>
+	<tspan x="640" dy="1em">44</tspan>
+	<tspan x="640" dy="1em">45</tspan>
+	<tspan x="640" dy="1em">46</tspan>
+	<tspan x="640" dy="1em">47</tspan>
+	<tspan x="640" dy="1em">48</tspan>
+	<tspan x="640" dy="1em">49</tspan>
+	<tspan x="640" dy="1em">50</tspan>
+</text>
+<g id="RSelect" transform="translate(630,53)" onmousedown="getValue(evt)">
+	<text x="0" y="11" id="outerCircle">R</text>
+	<rect x="0" y="0" height="12" width="30" class="selectTab"/>
+</g>
+<g id="rSelect" transform="translate(590,266)" onmousedown="getValue(evt)">
+	<text x="3" y="10" id="InnerCircle">r</text>
+	<rect x="0" y="0" height="12" width="30" class="selectTab"/>
+</g>
+<g id="oSelect" transform="translate(590,106)" onmousedown="getValue(evt)">
+	<text x="1" y="10" id="offset">o</text>
+	<rect x="0" y="0" height="12" width="30" class="selectTab"/>
+</g>
+<g transform="translate(440,25)">
+	<text x="-10" y="0">Raggio cerchio esterno R:
+	<tspan x="-10" dy="1em">Raggio cerchio interno r:</tspan>
+	<tspan x="-10" dy="1em">Offset cerchio interno o:</tspan>
+</text>
+	<text x="140" y="0" id="R">30</text>
+	<text x="140" y="12" id="r">25</text>
+	<text x="140" y="24" id="o">10</text>
+	<a><g id="stop" transform="translate(0,35)" onclick="clearTimeout(making)">
+		<rect x="0" y="0" height="15" width="50" class="button"/>
+		<text x="13" y="11">Stop</text>
+	</g></a>
+	<a><g id="start" transform="translate(70,35)" onclick="startNew()">
+		<rect x="0" y="0" height="15" width="50" class="button"/>
+		<text x="13" y="11">Start</text>
+	</g></a>
+</g>
+
+</svg>

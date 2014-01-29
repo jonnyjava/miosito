@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Graph-O-Rama useful tools for data mining</title>
+<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript" src="js/FusionCharts.js"></script>
+<script type="text/javascript" src="js/jquery.jqplot.min.js"></script>
+<script type="text/javascript" src="js/jqplot.canvasAxisLabelRenderer.min.js"></script>
+<script type="text/javascript" src="js/jqplot.canvasTextRenderer.min.js"></script>
+<script type="text/javascript" src="js/jqplot.ohlcRenderer.min.js"></script>
+<script type="text/javascript" src="js/jqplot.dateAxisRenderer.min.js"></script>
+<script type="text/javascript" src="js/jqplot.canvasAxisTickRenderer.min.js"></script>
+<script type="text/javascript" src="js/jqplot.categoryAxisRenderer.min.js"></script>
+<script type="text/javascript" src="js/jqplot.bubbleRenderer.min.js"></script>
+<script type="text/javascript" src="js/jqplot.pointLabels.min.js"></script>
+<script type="text/javascript" src="js/jqplot.barRenderer.min.js"></script>
+<script type="text/javascript" src="js/jqplot.pieRenderer.min.js"></script>
+<script type="text/javascript" src="js/jqplot.donutRenderer.min.js"></script>
+<script type="text/javascript" src="js/jqplot.highlighter.min.js"></script>
+<script type="text/javascript" src="js/jqplot.cursor.min.js"></script>
+
+<link href="css/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="css/global.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="css/jquery.jqplot.css" rel="stylesheet" type="text/css" media="screen"/>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("ul.subnav").parent().append("<span></span>");
+    $("ul.topnav li span").click(function() {
+      $(this).parent().find("ul.subnav").slideDown('fast').show();
+      $(this).parent().hover(function() {
+      }, function(){
+         $(this).parent().find("ul.subnav").slideUp('slow');
+      });
+      }).hover(function() {
+         $(this).addClass("subhover"); 
+      }, function(){
+         $(this).removeClass("subhover");
+    });
+});
+  function cargamodulo(folder,pag){
+  $('#contenido').html("");
+    $('#contenido').load('modulos/'+folder+'/'+pag+'.php', function(){$('#contenido').css("height","auto");});
+  }
+  function cargaGrafico(folder,pag){
+    $('#contenido').html("<img src='modulos/"+folder+"/"+pag+".php' alt='' title='' />");
+  }
+  function cargaContenido(folder,img){
+    $('#contenido').html("");
+    $('#contenido').html("<img src='modulos/"+folder+"/"+img+".php' alt='' title='' />");
+  }
+  </script>
+</head>
+<body onload="cargamodulo('home','index');">
+<div style="width:976px; margin: auto;">
+  <div class="container">
+    <h1 class="titolo" onclick="cargamodulo('home','index');">GRAPH-O-RAMA - Useful tool for data mining</h1>
+      <div id="header">
+          <ul class="topnav">
+              <li>
+                  <a href="#" class="parent" onclick="cargamodulo('jpgraph','index');">JPgraph</a>
+                  <ul class="subnav">
+                    <li><a href="#" class="parent" onclick="cargaContenido('jpgraph','linee');">Linear graph</a></li>
+                    <li><a href="#" class="parent" onclick="cargaContenido('jpgraph','columnas');">Bar graph</a></li>
+                    <li><a href="#" class="parent" onclick="cargaContenido('jpgraph','stock');">Stock graph</a></li>
+                    <li><a href="#" class="parent" onclick="cargaContenido('jpgraph','dots');">Dots graph</a></li>
+                    <li><a href="#" class="parent" onclick="cargaContenido('jpgraph','gantt');">Gantt diagram</a></li>
+                    <li><a href="#" class="parent" onclick="cargaContenido('jpgraph','simplepie');">Pie diagram</a></li>
+                    <li><a href="#" class="parent" onclick="cargaContenido('jpgraph','3Dpie');">3DPie diagram</a></li>
+                    <li><a href="#" class="parent" onclick="cargaContenido('jpgraph','ring');">Doughnut diagram</a></li>
+                  </ul>
+              </li>
+          <li><a href="#" class="parent" onclick="cargamodulo('FlashCharts','index');">FlashCharts 2D</a>
+              <ul class="subnav">
+                <li><a href="#" class="parent" onclick="cargamodulo('FlashCharts','Lines');">Linear graphs</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('FlashCharts','Area');">Area Chart</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('FlashCharts','MultiArea');">Multi Area Chart</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('FlashCharts','Bar2D');">2D bars</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('FlashCharts','Column2D');">2D Histograms</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('FlashCharts','StackedColumn2D');">2D Stacked Columns</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('FlashCharts','MultipleStacked2D');">Multiple Stacked 2D Histograms</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('FlashCharts','Doughnut2D');">2D Doughnut</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('FlashCharts','Pie2D');">2D Pie</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('FlashCharts','Gantt');">Gantt</a></li>                      
+              </ul>
+            </li>
+            <li><a href="#" class="parent" onclick="cargamodulo('FlashCharts','index');">FlashCharts 3D</a>
+              <ul class="subnav">
+                <li><a href="#" class="parent" onclick="cargamodulo('FlashCharts','Lines3D');">3D Linear graphs</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('FlashCharts','Area3D');">3D Areas</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('FlashCharts','Column3D');">3D Histograms</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('FlashCharts','StackedColumn3D');">3D Stacked Columns</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('FlashCharts','Multiple3D');">Multiple 3D Histograms</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('FlashCharts','Doughnut3D');">3D Doughnut</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('FlashCharts','Pie3D');">3D Pie</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="parent" onclick="cargamodulo('JQueryPlot','index');">JQueryPlot</a>
+              <ul class="subnav">
+                <li><a href="#" class="parent" onclick="cargamodulo('JQueryPlot','Lines');">Linear graphs</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('JQueryPlot','histogram');">Histograms</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('JQueryPlot','stacked');">Stacked istograms</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('JQueryPlot','bar');">Bar graph</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('JQueryPlot','stock');">Stock graph</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('JQueryPlot','Pie');">Pie diagram</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('JQueryPlot','Doughnut');">Doughnut diagram</a></li>
+                <li><a href="#" class="parent" onclick="cargamodulo('JQueryPlot','bubbles');">Bubbles diagrams</a></li>
+              </ul>
+            </li>  
+          </ul>
+      </div>
+  </div>
+  <div id="contenido" style="width:960px; margin: auto;min-height: 500px;"></div>
+  <div id="footer" class="footer"><div> &copy; Jonnyjava.net - 2011</div></div>  
+</div>
+   
+</body>
+</html>

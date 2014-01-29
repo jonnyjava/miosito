@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<chart caption="Sales Summary" subCaption="For the year 2011" bgColor='406181, 6DA5DB' divLineColor='000000' divLineAlpha='100' numVDivlines='10' vDivLineisDashed='1' showAlternateVGridColor='1'  toolTipBgColor='406181' toolTipBorderColor='406181' bgAlpha='100' baseFontColor='000000' canvasBgAlpha='0' canvasBorderColor='FFFFFF' numberPrefix="€" sformatNumberScale="1" sNumberPrefix="$" syncAxisLimits="1" rotateValues="0" showSum="1">
+<categories>
+  <category label="Day 1"/>
+  <category label="Day 2"/>
+  <category label="Day 3"/>
+  <category label="Day 4"/>
+  <category label="Day 5"/>
+  <category label="Day 6"/>
+  <category label="Day 7"/>
+  <category label="Day 8"/>
+  <category label="Day 9"/>
+  <category label="Day 10"/>
+  <category label="Day 11"/>
+  <category label="Day 12"/>
+  <category label="Day 13"/>
+  <category label="Day 14"/>
+  <category label="Day 15"/>
+  <category label="Day 16"/>
+  <category label="Day 17"/>
+  <category label="Day 18"/>
+  <category label="Day 19"/>
+  <category label="Day 20"/>
+  <category label="Day 21"/>
+  <category label="Day 22"/>
+  <category label="Day 23"/>
+  <category label="Day 24"/>
+  <category label="Day 25"/>
+  <category label="Day 26"/>
+  <category label="Day 27"/>
+  <category label="Day 28"/>
+  <category label="Day 29"/>
+  <category label="Day 30"/>
+  <category label="Day 31"/>
+</categories>
+<dataset seriesName="Products" color='000000' >
+   <set value="5.01"/><set value="21.69"/><set value="10.2"/><set value="23.86"/><set value="16.48"/><set value="14.71"/><set value="11.62"/><set value="4.84"/><set value="9.22"/><set value="18.09"/><set value="17.99"/><set value="9.09"/><set value="5.51"/><set value="8.03"/><set value="19.35"/><set value="22.64"/><set value="24.23"/><set value="12.09"/><set value="19.45"/><set value="23.6"/><set value="19.73"/><set value="8.36"/><set value="14.23"/><set value="3.65"/><set value="5.09"/><set value="18.81"/><set value="15.42"/><set value="5.52"/><set value="20.11"/><set value="20.68"/><set value="7.07"/><set value="14.27"/>
+</dataset>
+<dataset seriesName="Products" color='c7c7c7' >
+<set value="70.6"/><set value="73.68"/><set value="73.96"/><set value="71.27"/><set value="52.58"/><set value="10.12"/><set value="26.5"/><set value="47.54"/><set value="2.56"/><set value="64.71"/><set value="25.35"/><set value="9.9"/><set value="27.86"/><set value="39.29"/><set value="70.6"/><set value="29.77"/><set value="42.03"/><set value="26.93"/><set value="42.39"/><set value="43.49"/><set value="4.25"/><set value="10.34"/><set value="21.74"/><set value="34.3"/><set value="68.91"/><set value="6.74"/><set value="72.85"/><set value="12.92"/><set value="28.44"/><set value="74.55"/><set value="55.27"/><set value="3.7"/>
+</dataset>
+<dataset seriesName="Products" color='ffff00' >
+<set value="33.03"/><set value="8.44"/><set value="42.11"/><set value="7.53"/><set value="20.11"/><set value="5.26"/><set value="36.55"/><set value="30.75"/><set value="38.33"/><set value="29.53"/><set value="22.06"/><set value="48.41"/><set value="24.64"/><set value="22.27"/><set value="47.21"/><set value="2.52"/><set value="1.8"/><set value="38.46"/><set value="9.39"/><set value="19.18"/><set value="41.57"/><set value="34.89"/><set value="48.47"/><set value="26.84"/><set value="17.56"/><set value="43.97"/><set value="11.48"/><set value="33.11"/><set value="40.51"/><set value="38.05"/><set value="35.34"/><set value="12.3"/>
+</dataset>   
+ <styles>
+  <definition>
+      <style name='LineShadow' type='shadow' color='000000' distance='5'/>
+  </definition>
+  <application>
+      <apply toObject='DATAPLOT' styles='LineShadow' />
+  </application>
+</styles>
+</chart>

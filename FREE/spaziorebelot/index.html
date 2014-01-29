@@ -1,0 +1,52 @@
+<!--<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">-->
+<html>
+<head>
+    <title>BENVENUTI ALLO SPAZIO REBELOT</title>
+<script type="text/javascript">
+function mappa()
+{
+    document.getElementById('flashsection').style.display = 'none';
+    document.getElementById('layerUp').style.display = 'block';
+    document.getElementById('box').src = 'mappaRebelot.html';
+}
+function home()
+{
+    document.getElementById('flashsection').style.display = 'block';
+    document.getElementById('layerUp').style.display = 'none';
+    document.getElementById('box').src = '';
+}
+</script>
+</head>
+<body style="background-image:url('sfondo2.jpg');">
+      <div  style="height:100%; width:100%; vertical-align:middle; z-index:0;" align="center">
+            <table id="sito" style="width:800px;height:600px;margin:0px; padding:0px;" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="top" align="right">
+                        <img src="testataSX.png" alt="" style="vertical-align:bottom;cursor:pointer;" onclick="home();"/>
+                    </td>
+                    <td align="center">
+                        <img src="testata.png" alt="" style="vertical-align:bottom;" />
+                    </td>
+                    <td valign="top" align="left" >
+                        <img src="testataDX.png" alt="clicca per visualizzare la mappa" style="vertical-align:bottom;cursor:pointer;" onclick="mappa();"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="height:600px;" align="center">
+                        <div id="flashsection">
+                            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="800px;" height="600px;" style="z-index:0;" >
+                                <PARAM NAME="movie" value="rebelot-v2.swf">
+                                <PARAM NAME="quality" value="high">
+                                <EMBED src="rebelot-v2.swf" width="800px;" height="600px;"  quality="high" type="application/x-shockwave-flash" style="z-index:0; vertical-align:bottom;" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></EMBED>
+                            </object>
+                        </div>
+                        <div id="layerUp" style="width:800px;height:600px;display:none;">
+                            <iframe id="box" src="" style="width:800px;height:600px; border:0; " frameborder="0"></iframe>
+                        </div>
+                    </td>
+                </tr>
+                <tr><td colspan="3"><img src="miologo1.png" alt="" style="vertical-align:top;" /></td></tr>
+            </table>
+        </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<svg viewBox="-40 -40 80 80" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+   <title>SVG - Imparare con gli esempi</title>
+<defs> 
+	<linearGradient id="gradient" gradientUnits="userSpaceOnUse" x1="-100" y1="-100" x2="100" y2="100">
+	<stop offset="0" stop-color="yellow"/>
+	<stop offset="1" stop-color="magenta"/>
+	</linearGradient>
+</defs>
+
+<rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+<g transform="scale(0.9 , 0.9) rotate(15)"><rect x="-100" y="-100" width="200" height="200" fill="url(#gradient)" stroke="black"/>
+</g></g> </g></g> </g></g> </g></g> </g></g> 
+</g></g> </g></g> </g></g> </g></g> </g></g>
+</g></g> </g></g> </g></g> </g></g> </g></g>
+</g></g> </g></g> </g></g> </g></g> </g></g> 
+</g></g> </g></g> </g></g> </g></g> </g></g>
+</g></g> </g></g> </g></g> </g></g> </g></g>
+
+</svg>

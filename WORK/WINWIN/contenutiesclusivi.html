@@ -1,0 +1,533 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>WINWIN - Contenuti esculsivi</title>
+	<link rel="stylesheet" media="all" type="text/css" href="./css/miniwebstyle.css" /> 
+	<link rel="stylesheet" media="all" type="text/css" href="./css/common.css" /> 
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon" /> 
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />	
+	<script src="../../js/jquery.min.js"></script> 
+	<style type="text/css" media="screen"> 
+	body { font: 1em "Trebuchet MS", verdana, arial, sans-serif; font-size: 100%; }
+	input, textarea { font-family: Arial; font-size: 125%; padding: 7px; }
+	label { display: block; } 
+	 
+	.infiniteCarousel {
+		width: 575px;
+		position: relative;
+	}
+	.infiniteCarouselie6 {
+		width: 575px;
+		position: relative;
+		height:100px;
+	}
+	 
+	.infiniteCarousel .wrapper {
+	/*esto para el numero de imagens*/
+		width: 495px; /* .infiniteCarousel width - (.wrapper margin-left + .wrapper margin-right) */
+		overflow: auto;
+		min-height: 10em;
+		margin: 0 40px;
+		position: absolute;
+		top: 1;
+	}
+	.infiniteCarouselie6wrapper {
+	/*esto para el numero de imagens*/
+		width: 495px; /* .infiniteCarousel width - (.wrapper margin-left + .wrapper margin-right) */
+		overflow: auto;
+		min-height: 10em;
+		margin: 0 40px;
+		position: fixed;
+		top: 0;
+	}	
+	 
+	.infiniteCarousel ul a img {
+		border: 3px solid #000;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+	}
+	 
+	.infiniteCarousel .wrapper ul {
+		width: 9999px;
+		list-style-image:none;
+		list-style-position:outside;
+		list-style-type:none;
+		margin:0;
+		padding:0;
+		position: absolute;
+		top: 0;
+	}
+	.infiniteCarouselie6wrapperul {
+		width: 9999px;
+		list-style-image:none;
+		list-style-position:outside;
+		list-style-type:none;
+		margin:0;
+		padding:0;
+		position:absolute;
+		top: 0;
+		left:0;
+	}
+	 
+	.infiniteCarousel ul li {
+		display:block;
+		float:left;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 15px;
+		padding-right: 10px;
+		height: 55px;
+		width: 55px;
+	}
+	.infiniteCarouselie6ulli {
+		display:block;
+		float:left;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 15px;
+		padding-right: 10px;
+		height: 55px;
+		width: 55px;
+	}	 
+	.imgie6 {
+		display:block;
+		border:4px solid black;
+		margin-left:10px;
+		margin-right:10px;
+		margin-top:10px;
+		float:left;
+	}
+	.infiniteCarousel ul li a img {
+		display:block;
+	}
+	 
+	.infiniteCarousel .arrow {
+		display: block;
+		height: 36px;
+		width: 37px;
+		background: url(images/arrow.png) no-repeat 0 0;
+		text-indent: -9999px;
+		position: absolute;
+		top: 30px;
+		cursor: pointer;
+	}
+	 
+	.infiniteCarousel .forward {
+		background-position: 0 0;
+		right: 0;
+	}
+	 
+	.infiniteCarousel .back {
+		background-position: 0 -72px;
+		left: 0;
+	}
+	 
+	.infiniteCarousel .forward:hover {
+		background-position: 0 -36px;
+	}
+	 
+	.infiniteCarousel .back:hover {
+		background-position: 0 -108px;
+	}
+	</style> 
+	<script type="text/javascript">
+	$.fn.infiniteCarousel = function () {
+	 
+			function repeat(str, num) {
+					return new Array( num + 1 ).join( str );
+			}
+		
+			return this.each(function () {
+					var $wrapper = $('> div', this).css('overflow', 'hidden'),
+							$slider = $wrapper.find('> ul'),
+							$items = $slider.find('> li'),
+							$single = $items.filter(':first'),
+							
+							singleWidth = $single.outerWidth(), 
+							visible = Math.ceil($wrapper.innerWidth() / singleWidth), // note: doesn't include padding or border
+							currentPage = 1,
+							pages = Math.ceil($items.length / visible);            
+	 
+	 
+					// 1. Pad so that 'visible' number will always be seen, otherwise create empty items
+					if (($items.length % visible) != 0) {
+							$slider.append(repeat('<li class="empty" />', visible - ($items.length % visible)));
+							$items = $slider.find('> li');
+					}
+	 
+					// 2. Top and tail the list with 'visible' number of items, top has the last section, and tail has the first
+					$items.filter(':first').before($items.slice(- visible).clone().addClass('cloned'));
+					$items.filter(':last').after($items.slice(0, visible).clone().addClass('cloned'));
+					$items = $slider.find('> li'); // reselect
+					
+					// 3. Set the left position to the first 'real' item
+					$wrapper.scrollLeft(singleWidth * visible);
+					
+					// 4. paging function
+					function gotoPage(page) {
+							var dir = page < currentPage ? -1 : 1,
+									n = Math.abs(currentPage - page),
+									left = singleWidth * dir * visible * n;
+							
+							$wrapper.filter(':not(:animated)').animate({
+									scrollLeft : '+=' + left
+							}, 500, function () {
+									if (page == 0) {
+											$wrapper.scrollLeft(singleWidth * visible * pages);
+											page = pages;
+									} else if (page > pages) {
+											$wrapper.scrollLeft(singleWidth * visible);
+											// reset back to start position
+											page = 1;
+									} 
+	 
+									currentPage = page;
+							});                
+							
+							return false;
+					}
+					
+					$wrapper.after('<a class="arrow back">&lt;</a><a class="arrow forward">&gt;</a>');
+					
+					// 5. Bind to the forward and back buttons
+					$('a.back', this).click(function () {
+							return gotoPage(currentPage - 1);                
+					});
+					
+					$('a.forward', this).click(function () {
+							return gotoPage(currentPage + 1);
+					});
+					
+					// create a public interface to move to a specific page
+					$(this).bind('goto', function (event, page) {
+							gotoPage(page);
+					});
+			});  
+	};
+	if((browsercontrol()==8)||(browsercontrol()=='-1')){
+		$(document).ready(function () {	$('.infiniteCarousel').infiniteCarousel();});
+	}
+	
+	function	openwindow(idpag){
+		//if(idpag==1){window.open("login.html","mywindow","menubar=0,resizable=0,width=800,height=600");}
+		if(idpag==2){window.open("compatibilita.html","mywindow","menubar=0,resizable=1,width=800,height=600,scrollbars=1");}
+	}
+	function respuesta(idp){
+		document.getElementById('textodespues'+idp).style.display = "block";
+		document.getElementById('textoantes'+idp).style.display = "none";
+	}
+	function puntos(){
+		document.getElementById('frameescondido2').style.display = "block";
+	}
+	function controlla(idp){
+	var texto = document.getElementById('msisdn').value;
+	var bueno = false;
+	var patron =new RegExp("[0-9]{9,10}[^a-zA-Z]");
+	bueno = patron.test(texto);
+	if(bueno){
+	respuesta(idp);
+	}
+	else{document.getElementById('pizarra'+idp).style.display = "block";}
+}
+	function browsercontrol(){return (navigator.appName=='Microsoft Internet Explorer')?parseFloat((new RegExp("MSIE ([0-9]{1,}[.0-9]{0,})")).exec(navigator.userAgent)[1]):-1;}
+function onoffversion(){
+
+	if((browsercontrol()!=8)&&(browsercontrol()!=-1)){
+		document.getElementById('ie8block').style.display = "none";
+		document.getElementById('ie6block').style.display = "block";
+	}
+	else
+	{
+		document.getElementById('ie8block').style.display = "block";
+		document.getElementById('ie6block').style.display = "none";
+	}
+}
+</script>
+</head>
+<body onload="onoffversion();">
+<div class="main_container">
+  <div class="container"> 
+			<div style="vertical-align:middle; height:96px;">
+				<a href="index.html" title="" style="float:left;"> 
+					<img src="images/header.png"  width="857px" height="84px" alt="Vai alla homepage di WIN WIN" title="Vai alla homepage di WIN WIN" class="logo" border="0"/> 
+				</a> 
+				<a href="#" title="" style="float:right;position:relative;top:30px;right:0px;"> 
+					<img src="images/logoWIN.png" alt="WIN" title="WIN" class="logo" border="0" height="37px" width="92px"/> 
+				</a> 
+			</div> 
+			<div class="menu"> 
+					<ul> 
+						<li> 
+							<a href="index.html">
+							<img src="images/homeoff.png"  width="161px" height="29px" alt="Vai alla homepage di WIN WIN" title="Vai alla homepage di WIN WIN" class="logo" border="1"/>
+							</a> 
+						</li> 
+						<li> 
+							<a href="premi.html">
+								<img src="images/premioff.png"  width="161px" height="29px" class="logo" border="0" title="Premi" alt="Premi"/>
+							</a> 
+						</li> 
+						<li>
+							<a href="comepartecipare.html">
+								<img src="images/partecipareoff.png"  width="161px" height="29px" class="logo" border="0" title="Come partecipare" alt="Come partecipare"/>
+							</a> 
+						</li> 
+						<li> 
+							<a href="vincitori.html">
+								<img src="images/vincitorioff.png"  width="161px" height="29px" class="logo" border="0" title="Vincitori" alt="Vincitori"/>							
+							</a> 
+						</li> 
+						<li> 
+							<img src="images/contenution.png"  width="161px" height="29px" class="logo" border="0" title="Contenuti esclusivi" alt="Contenuti esclusivi"/>							
+						</li> 
+						<li> 
+							<a href="regolamento.html">
+								<img src="images/regolamentooff.png"  width="161px" height="29px" class="logo" border="0" title="Regolamento" alt="Regolamento"/>							
+							</a> 
+						</li> 						
+					</ul> 
+			</div>
+			<br />
+	<div class="big_content" style="background-image:url(images/sfondocontenuti.png); background-repeat:no-repeat; height:800px;">
+ 	<div id="ie8block" name="ie8block" style="display:block;">
+		<div class="vertical_dot" style="padding-left:20px;padding-top:10px;float:left; height:80px;"> 
+			<b class="textorojobig">Contenuti esclusivi</b><br />
+			<b class="textoazulbig">Partecipa e scarica i contenuti che ti piacciono di pi&ugrave;!</b>
+		</div>	
+		<div style="height:80px;float:right; width:370px; padding-top:20px;" align="left">			
+			<div style="width:350px;text-align:center; display:block; padding-left:0px; float:left; text-align:left;" id="textoantes2" name="textoantes2" align="left">
+				<b class="textoazulrounded" style="font-size:16px">Verifica il tuo saldo crediti per scaricare i contenuti acquistati ed i tuoi punti per le estrazioni dei premi</b><br />
+				<b class="textoplanoazul">Se sei gi&agrave; registrato inserisci il PIN che ti abbiamo inviato al momento della registrazione.</b> <br />
+				<b class="textorojoroundedmini"> Inserisci il tuo PIN</b><br />
+					<input type="text" style="width:150px;border:1px solid #BBBBBB;font-family:Helvetica,Arial;font-size:14px;" id="pin" name="pin" maxlength="5"/>
+					<img title="Consulta il tuo saldo punti" src="images/btnInviaoff.png" alt="Consulta il tuo saldo punti" width="88px" style="cursor:pointer; float:right; padding-right:50px;" onclick="puntos();" onmouseover="this.src='images/btnInviaon.png'" onmouseout="this.src='images/btnInviaoff.png'"/>
+			</div>			
+      <div class="vertical_dot" style="display:none; float:left;padding-top:0px; width:370px; height:20px;" id="frameescondido2" name="frameescondido2" align="center">
+				<b class="textorojoroundedmini" style="padding-top:4px;">Congratulazioni! HAI UN MILIONE DI PUNTI!</b>
+			</div>
+			<div align="left" id="textoantes3" name="textoantes3" style="display:block; float:left;padding-top:0px; width:370px; height:90px;">
+				<b class="textoplanoazul">Se non hai ancora il tuo codice PIN o non lo ricordi richiedilo qui<br /> e lo riceverai con un SMS</b><br />
+				<b class="textorojoroundedmini"> Inserisci il tuo numero</b><br />
+					<b class="textorojoroundedmini" >0039 </b>
+					<input type="text" style="width:150px; border:1px solid #BBBBBB; font-family:Helvetica,Arial;font-size:14px; vertical-align:middle;" maxlength="10" id="msisdn" name="msisdn"/> 
+					<img title="Richiedi il tuo pin" src="images/btnrichiedioff.png" alt="Richiedi il tuo pin" width="88px" style="cursor:pointer; float:right; padding-right:50px;" onclick="controlla(3);" onmouseover="this.src='images/btnrichiedion.png'" onmouseout="this.src='images/btnrichiedioff.png'"/>
+					<div id="pizarra3" name ="pizarra3" style="display:none" class="textoplano">&nbsp;&nbsp;&nbsp;&nbsp;Numero non valido</div>
+			</div>
+			<div class="vertical_dot" style="display:none; float:left;padding-top:0px; width:370px; height:90px;" id="textodespues3" name="textodespues3" align="center">
+				<b class="textorojoroundedmini" style="padding-top:4px;">La tua richiesta &egrave; stata inoltrata.<br /> A breve riceverai un SMS con il tuo codice PIN!</b>
+			</div>			
+		</div>	
+		<div class="vertical_dot" style="width:540px; padding-left:20px;height:110px;">
+				<p class="textoplano">Con ogni SMS inviato al 0000000 (tranne l'SMS vuoto) acquisti un credito al costo di 1,5&euro;<br /> per scaricare i contenuti che preferisci<br />
+				<b style=" font-size:13px">Usa i tuoi crediti per scaricare i contenuti che ti piacciono di pi&ugrave; dal nostro portale wap
+				</p> 
+				<p align="center" class="textorojoroundedmini" style="font-size:15px;"><b>Ecco alcuni dei contenuti disponibili! Accedi al sito WAP e scaricali con i tuoi crediti!</b></p>
+		</div>	
+		<div style="height:510px; float:left; width:640px; " align="center">
+			<div style="padding-top:10px; padding-left:20px;">
+				<b class="textoazulrounded">Giochi e applicazioni</b><br />
+				<div class="infiniteCarousel" style="height:100px;"> 
+					<div class="wrapper"> 
+						<ul> 
+							<li><a href="#" title="Giochi"><img src="contenidos/game.gif"  height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/app2.gif"  height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/game4.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/app5.gif"  height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/game6.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/app7.gif"  height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/game8.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/app9.gif"  height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li>  
+							<li><a href="#" title="Giochi"><img src="contenidos/game11.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/app12.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/game13.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/app15.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/game21.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li>
+							<li><a href="#" title="Giochi"><img src="contenidos/app17.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/game18.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/app19.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li>  
+							<li><a href="#" title="Giochi"><img src="contenidos/game39.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/app25.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/game26.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li>
+							<li><a href="#" title="Giochi"><img src="contenidos/app27.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/game28.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/app28.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/game30.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li>  						 
+							<li><a href="#" title="Giochi"><img src="contenidos/game31.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/game32.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/game38.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/game35.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li> 
+							<li><a href="#" title="Giochi"><img src="contenidos/game37.gif" height="55px" width="55px" alt="Giochi" title="Giochi" /></a></li>
+						</ul>        
+					</div> 
+				</div>
+				<b class="textoazulrounded">Sfondi e animazioni </b>
+				<div class="infiniteCarousel" style="height:100px;"> 
+					<div class="wrapper"> 
+						<ul> 
+							<li><a href="#" title="Sfondi"><img src="contenidos/wall01.jpg" height="55px" width="55px" alt="Sfondi" title="Sfondi"/></a></li>
+							<li><a href="#" title="Sfondi"><img src="contenidos/wall02.jpg" height="55px" width="55px" alt="Sfondi" title="Sfondi"/></a></li> 
+							<li><a href="#" title="Sfondi"><img src="contenidos/wall03.jpg" height="55px" width="55px" alt="Sfondi" title="Sfondi"/></a></li> 
+							<li><a href="#" title="Sfondi"><img src="contenidos/wall04.jpg" height="55px" width="55px" alt="Sfondi" title="Sfondi"/></a></li> 
+							<li><a href="#" title="Sfondi"><img src="contenidos/wall05.jpg" height="55px" width="55px" alt="Sfondi" title="Sfondi"/></a></li> 
+							<li><a href="#" title="Sfondi"><img src="contenidos/wall07.jpg" height="55px" width="55px" alt="Sfondi" title="Sfondi"/></a></li> 
+							<li><a href="#" title="Sfondi"><img src="contenidos/wall08.jpg" height="55px" width="55px" alt="Sfondi" title="Sfondi"/></a></li> 
+							<li><a href="#" title="Sfondi"><img src="contenidos/wall09.jpg" height="55px" width="55px" alt="Sfondi" title="Sfondi"/></a></li> 
+							<li><a href="#" title="Sfondi"><img src="contenidos/wall10.jpg" height="55px" width="55px" alt="Sfondi" title="Sfondi"/></a></li> 
+							<li><a href="#" title="Sfondi"><img src="contenidos/wall11.jpg" height="55px" width="55px" alt="Sfondi" title="Sfondi"/></a></li> 
+							<li><a href="#" title="Sfondi"><img src="contenidos/wall13.jpg" height="55px" width="55px" alt="Sfondi" title="Sfondi"/></a></li> 
+							<li><a href="#" title="Sfondi"><img src="contenidos/wall14.jpg" height="55px" width="55px" alt="Sfondi" title="Sfondi"/></a></li> 
+							<li><a href="#" title="Sfondi"><img src="contenidos/wall15.jpg" height="55px" width="55px" alt="Sfondi" title="Sfondi"/></a></li> 
+						</ul>        
+					</div> 
+				</div>				
+			</div>
+			<table border="0" style="width:640px; margin-left:20px;" align="center">
+			<tr>
+				<td><b class="textoazulrounded">Suonerie</b></td>
+				<td><b class="textoazulrounded">Suoni</b></td>
+			</tr>	
+			<tr>
+				<td align="left">
+					<ul style="float:left;" class="microelenco">
+						<li>Inno Italia</li>
+						<li>A te</li>
+						<li>Just dance</li>
+						<li>Broken</li>
+						<li>Candy Shop</li>
+						<li>All you need is love</li>
+						<li>Beautiful girls</li>
+						<li>Cash machine</li>
+						<li>Chocolate</li>
+						<li>Clandestino</li>
+					</ul>
+				</td>
+				<td align="left">
+					<ul style="float:left;" class="microelenco">
+						<li>Bambini che piangono</li>
+						<li>Bambino che ride con una paperetta</li>
+						<li>Alieno</li>
+						<li>Boom</li>
+						<li>Delfini in coro</li>
+						<li>F1 Car</li>
+						<li>Gatto</li>
+						<li>Gatto indemoniato</li>
+						<li>Gladiatore</li>
+						<li>Goooooooool</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		</div>
+		<div class="vertical_dot" style="width:970px; height:100px; background-image:url(images/sfondofondo.png); background-repeat:no-repeat; ">
+			<b class="textorojoroundedmini" style="float:left; padding-top:23px; padding-left:15px;font-size:16px;">Prima di acquistare un contenuto, verifica sempre la compatibilita' del tuo cellulare</b>
+			<img title="Verifica la compatibilitá del tuo cellulare" src="images/verificaoff.png" alt="Verifica la compatibilitá del tuo cellulare" width="180px" style="cursor:pointer;float:right; padding-right:90px;padding-top:20px;" onclick="openwindow(2);" onmouseover="this.src='images/verificaon.png'" onmouseout="this.src='images/verificaoff.png'"/>
+		</div>			
+	</div><!-- fin IE8-->
+	<div id="ie6block" name="ie6block" style="display:none"><!--ie6 only-->
+		<div class="vertical_dot" style="padding-left:20px;padding-top:10px;float:left; height:90px;"> 
+			<b class="textorojobig">Contenuti esclusivi</b><br />
+			<b class="textoazulbig">Partecipa e scarica i contenuti che ti piacciono di pi&ugrave;!</b>
+		</div>	
+		<div style="height:80px;float:right; padding-top:20px; width:350px;" align="center">			
+			<div style="width:350px;text-align:center; display:block; float:left; text-align:left" id="textoantes2" name="textoantes2" align="left">
+				<b class="textoazulrounded" style="font-size:16px">Verifica il tuo saldo crediti per scaricare i contenuti acquistati ed i tuoi punti per le estrazioni dei premi</b><br />
+				<b class="textoplanoazul">Se sei gi&agrave; registrato inserisci il PIN che ti abbiamo inviato al momento della registrazione.</b> <br />
+				<b class="textorojoroundedmini"> Inserisci il tuo PIN</b><br />
+				<input type="text" style="width:150px;border:1px solid #BBBBBB;font-family:Helvetica,Arial;font-size:14px; float:left;" id="pin" name="pin" maxlength="5"/>
+				<img title="Consulta il tuo saldo punti" src="images/btnInviaoff.png" alt="Consulta il tuo saldo punti" width="88px" style="cursor:pointer; float:right;padding-right:50px;" onclick="puntos();" onmouseover="this.src='images/btnInviaon.png'" onmouseout="this.src='images/btnInviaoff.png'"/>
+			</div>			
+			<div align="center" id="textoantes3" name="textoantes3" style="display:block; float:left;padding-top:0px; margin-right:10px; width:350px;height:80px; text-align:left;">
+				<b class="textoplanoazul">Se non hai ancora il tuo codice PIN o non lo ricordi richiedilo qui <br /> e lo riceverai con un SMS</b><br />
+				<b class="textorojoroundedmini"> Inserisci il tuo numero</b><br />
+				<br />
+				<b class="textorojoroundedmini" style="float:left" >0039 </b>
+				<input type="text" style="width:150px; border:1px solid #BBBBBB; font-family:Helvetica,Arial;font-size:14px; vertical-align:middle; float:left; margin-left:5px;" maxlength="10" id="msisdn" name="msisdn"/> 
+				<img title="Richiedi il tuo pin" src="images/btnrichiedioff.png" alt="Richiedi il tuo pin" width="88px" style="cursor:pointer; float:right; padding-right:50px;" onclick="controlla(3);" onmouseover="this.src='images/btnrichiedion.png'" onmouseout="this.src='images/btnrichiedioff.png'"/>
+				<div id="pizarra3" name ="pizarra3" style="display:none" class="textoplano">&nbsp;&nbsp;&nbsp;&nbsp;Numero non valido</div>
+			</div>
+			<div class="vertical_dot" style="display:none; float:left;padding-top:0px; width:370px; height:90px;" id="textodespues3" name="textodespues3" align="center">
+				<b class="textorojoroundedmini" style="padding-top:4px;">La tua richiesta &egrave; stata inoltrata.<br /> A breve riceverai un SMS con il tuo codice PIN!</b>
+			</div>			
+		</div>	
+		<div class="vertical_dot" style="width:540px; padding-left:20px;height:110px;">
+				<p class="textoplano">Con ogni SMS inviato al 0000000 (tranne l'SMS vuoto) acquisti un credito al costo di 1,5&euro;<br /> per scaricare i contenuti che preferisci<br />
+				<b style=" font-size:13px">Usa i tuoi crediti per scaricare i contenuti che ti piacciono di pi&ugrave; dal nostro portale wap
+				</p> 
+				<p align="center" class="textorojoroundedmini" style="font-size:15px;"><b>Ecco alcuni dei contenuti disponibili! Accedi al sito WAP e scaricali con i tuoi crediti!</b></p>
+		</div>
+		<div style="height:470px; float:left; width:600px;" align="center">
+			<div style="padding-top:10px;height:200px;padding-left:20px;">
+				<b class="textoazulrounded">Giochi e applicazioni</b><br />
+					<div style="height:80px;">
+						<img class="imgie6" src="contenidos/game.gif"  height="55px" width="55px" alt="Giochi" title="Giochi" />
+						<img class="imgie6" src="contenidos/app2.gif"  height="55px" width="55px" alt="Giochi" title="Giochi" />
+						<img class="imgie6" src="contenidos/game4.gif" height="55px" width="55px" alt="Giochi" title="Giochi" />
+						<img class="imgie6" src="contenidos/app5.gif"  height="55px" width="55px" alt="Giochi" title="Giochi" />
+						<img class="imgie6" src="contenidos/game6.gif" height="55px" width="55px" alt="Giochi" title="Giochi" />
+						<img class="imgie6" src="contenidos/app7.gif"  height="55px" width="55px" alt="Giochi" title="Giochi" />
+						<img class="imgie6" src="contenidos/game7.gif" height="55px" width="55px" alt="Giochi" title="Giochi" />
+				</div><br />
+					<b class="textoazulrounded">Sfondi e animazioni </b>
+					<div style="height:80px;">
+						<img class="imgie6" src="contenidos/wall01.jpg" height="55px" width="55px" alt="Sfondi" title="Sfondi"/>
+						<img class="imgie6" src="contenidos/wall02.jpg" height="55px" width="55px" alt="Sfondi" title="Sfondi"/>
+						<img class="imgie6" src="contenidos/wall03.jpg" height="55px" width="55px" alt="Sfondi" title="Sfondi"/>
+						<img class="imgie6" src="contenidos/wall04.jpg" height="55px" width="55px" alt="Sfondi" title="Sfondi"/>
+						<img class="imgie6" src="contenidos/wall05.jpg" height="55px" width="55px" alt="Sfondi" title="Sfondi"/>
+						<img class="imgie6" src="contenidos/wall07.jpg" height="55px" width="55px" alt="Sfondi" title="Sfondi"/>
+						<img class="imgie6" src="contenidos/wall08.jpg" height="55px" width="55px" alt="Sfondi" title="Sfondi"/>
+					</div>
+			</div>
+		<table border="0" style="width:590px;" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center"><b class="textoazulrounded">Suonerie</b></td>
+				<td><b class="textoazulrounded">Suoni</b></td>
+			</tr>	
+			<tr>
+				<td align="left" class="microelenco" >
+					<ul style="float:left;">
+						<li>Inno Italia</li>
+						<li>A te</li>
+						<li>Just dance</li>
+						<li>Broken</li>
+						<li>Candy Shop</li>
+						<li>All you need is love</li>
+						<li>Beautiful girls</li>
+						<li>Cash machine</li>
+						<li>Chocolate</li>
+						<li>Clandestino</li>
+					</ul>
+				</td>
+				<td align="left">
+					<ul style="float:left;" class="microelenco">
+						<li>Bambini che piangono</li>
+						<li>Bambino che ride con una paperetta</li>
+						<li>Alieno</li>
+						<li>Boom</li>
+						<li>Delfini in coro</li>
+						<li>F1 Car</li>
+						<li>Gatto</li>
+						<li>Gatto indemoniato</li>
+						<li>Gladiatore</li>
+						<li>Goooooooool</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		</div>
+		<br style="clear:both" />
+		<div class="vertical_dot" style="width:970px; height:80px; background-image:url(images/sfondofondo.png); background-repeat:no-repeat; ">
+			<b class="textorojoroundedmini" style="float:left; padding-top:23px; padding-left:15px;font-size:16px;">Prima di acquistare un contenuto, verifica sempre la compatibilita' del tuo cellulare</b>
+			<img title="Verifica la compatibilitá del tuo cellulare" src="images/verificaoff.png" alt="Verifica la compatibilitá del tuo cellulare" width="180px" style="cursor:pointer;float:right; padding-right:90px;padding-top:20px;" onclick="openwindow(2);" onmouseover="this.src='images/verificaon.png'" onmouseout="this.src='images/verificaoff.png'"/>
+		</div>		
+	</div>	<!--fin ie 6-->
+</div>
+			<div class="footer" style="background-image:url(images/barra.png); background-repeat:no-repeat;"> 
+				<div class="cont_txt_footer_dx" style="padding-top:15px;"> 
+					<span class="testo_footer_dx" style="font-size:10px;">Jonnyjava.net - 2010</span> 
+				</div> 
+			</div>
+	</div>	
+</div>
+</body>
+</html>

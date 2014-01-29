@@ -1,0 +1,26 @@
+<chart caption="Sales Summary" subCaption="For the year 2011" bgColor='66a3d2 3f9dd2' divLineColor='000000' divLineAlpha='100' numVDivlines='10' vDivLineisDashed='1' showAlternateVGridColor='1'  toolTipBgColor='406181' toolTipBorderColor='406181' bgAlpha='100' baseFontColor='000000' canvasBgAlpha='0' canvasBorderColor='FFFFFF' numberPrefix="€" sformatNumberScale="1" sNumberPrefix="$" syncAxisLimits="1" rotateValues="0" showSum="1">
+<set label="January" value="14.67"/>
+<set label="February" value="16.75"/>
+<set label="March" value="12.2"/>
+<set label="April" value="12.51"/>
+<set label="May" value="23.35"/>
+<set label="June" value="13.2"/>
+<set label="July" value="29.09"/>
+<set label="August" value="11.23"/>
+<set label="September" value="19.92"/>
+<set label="october" value="24.79"/>
+<set label="November" value="16.89"/>
+<set label="December" value="25.96"/>
+<styles>
+  <definition>
+    <style name='Bevel' type='bevel' distance='4' blurX='2' blurY='2'/>
+    <style name='DataValuesFont' type='font' borderColor='1D8BD1' bgColor='2a4480' color='FFFFFF' />
+    <style name='myAnim' type='animation' param='_alpha' start='0' duration='1' />
+    <style name='dummyShadow' type='Shadow' alpha='0' />
+  </definition>
+  <application>
+    <apply toObject='DATAPLOT' styles='Bevel' />
+    <apply toObject='DATAVALUES' styles='DataValuesFont,dummyShadow,myAnim' />
+  </application>
+</styles>
+</chart>

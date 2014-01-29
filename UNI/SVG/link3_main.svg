@@ -1,0 +1,29 @@
+<svg width="500" height="200" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink" >
+<desc></desc>
+<defs>
+
+ <text id="testo" style="font-size:10;fill:#000000">
+   <textPath xlink:href="#linea" startOffset="0%">Grafica e animazione</textPath>
+   <animate id="primo" attributeName="font-size" attributeType="CSS" from="10" to="40" begin="1s" dur="1s" fill="freeze" />
+   <animateColor id="secondo" attributeName="fill" attributeType="CSS" from="#ACE270" to="#175E1A" begin="1s" dur="1s" fill="freeze" />
+ </text>
+
+ <g id="gruppo">
+ <path id="linea" d="M 30 50 C 200 0 200 150 420 50" style="fill:none;stroke:#7BDF80;stroke-width:5" />
+ <path id="linea" d="M 30 53 C 200 3 200 153 420 53" style="fill:none;stroke:#33CD3B;stroke-width:5;" />
+ <path id="linea" d="M 30 56 C 200 6 200 156 420 56" style="fill:none;stroke:#2CB232;stroke-width:5" />
+ <path id="linea" d="M 30 59 C 200 9 200 159 420 59" style="fill:none;stroke:#238F28;stroke-width:5" />
+ <path id="linea" d="M 30 62 C 200 11 200 162 420 62" style="fill:none;stroke:#134F16;stroke-width:5" />
+ 
+ <use xlink:href="#linea" />
+ <use xlink:href="#testo" />
+ </g>
+
+</defs>
+
+<rect id="bg" width="100%" height="100%" x="0" y="0" fill="#ACE270"/>
+<use id="scivolo" xlink:href="#gruppo">
+  
+</use>
+</svg>

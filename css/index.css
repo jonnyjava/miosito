@@ -1,0 +1,496 @@
+.prova{
+      border:1px solid red;
+    }
+body{
+  padding: 0px;
+  margin: 0px;
+  background-color: #072950;
+}
+.cabecera{
+  vertical-align: middle;
+  border-top: 1px solid #6790bd;
+  height: 3.5em;
+  background: #28517E ;
+}
+.logo{
+  color: #072950;
+  font-family: Righteous;
+  font-size:2.5em;
+  font-weight: bolder;
+  text-shadow: 1px 2px 1px #233e5c;
+  height: 100%;
+  cursor:pointer;
+}
+.logo p{
+  line-height: 1.5em;
+  vertical-align: middle;
+  text-align: center;
+}
+.navaja{
+	text-align: center;
+	vertical-align: middle;
+	background: transparent url('../img/navaja.png') no-repeat;
+	margin:auto;
+	max-width: 800px;
+  min-height:300px;
+  height:600px;
+	max-height:600px;
+	background-size: contain;
+	-moz-background-size: contain;  /* Firefox 3.6 */  
+	background-position: center;  /* Internet Explorer 7/8 */
+}
+.bandera{
+  background: #28517E;
+  min-width:118px;
+  text-align: center;
+  height: 100%;
+ }
+.bandera img{
+  margin-top:0.5em;
+	cursor: pointer;
+ }
+.lemma p{
+  text-align:right;
+  font-family: Ubuntu;
+  font-size: 15px;
+  font-weight: bolder;
+	color: #6790bd;
+}
+.lemma p b{
+  font-size: 20px;
+}
+.bottoniera{
+  height: 100%;
+  background: #28517E;
+}
+.bottoniera input{
+	color:#072950;
+	font-family: Nunito;
+  font-size:1.15em;
+	line-height: 40px;
+	font-weight: bolder;
+	margin-top: 0.5em;
+	width: 100%;
+	height: 2.5em;
+	border:none;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	background-color: transparent;
+	line-height: 32px;
+	height: 32px;
+	vertical-align: middle;
+	cursor:pointer;
+}
+.bottoniera input:hover {
+	color:#ffffff;
+	background-color: #072950;
+	border: 1px solid #6790bd;
+}
+.maincontent{
+	/*min-height: 650px;*/
+	background-color: #15457b;
+  border-top: 1px solid #072950;
+  border-bottom: 1px solid #6790bd;
+ }
+.footer{
+  width:100%;
+  height:40px;
+  vertical-align: middle;
+}
+a, a:hover, a:visited{
+  text-decoration:none;
+}
+.box{
+ text-align: center;    
+ padding: 10px 0 0 0;
+}
+.subtitulo{
+  background-color: #072950;
+	width:95%;
+  height: 36px;
+  margin:auto;
+  border-radius: 8px 8px 0px 0px;
+	-moz-border-radius: 8px 8px 0px 0px;
+  font-family: Nunito;
+  font-size: 15px;
+  font-weight: bolder;
+  text-align:center;
+}
+.subtitulo span{
+  line-height: 36px;
+  vertical-align: middle;
+  color:#6790bd;
+}
+.icon{
+  width:28px;
+  height:28px;
+  float:left;
+  margin: 4px 0px 0px 8px;
+}
+.imgbottonemini{
+  float:right;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border:0px;
+  margin: 2px 2px 0px 0px;
+}
+.bottonecontainer{
+  width:280px;
+  margin:auto;
+}
+.bottone{
+  width: 64px;
+  height: 64px;
+  border:3px solid #072950;
+  background: #15457b url('../img/adobe.png') 0px 0px;
+	-moz-border-radius: 36px;
+	border-radius: 36px;
+	cursor:pointer;
+  float:left;
+  
+}
+.bottone span{
+  line-height: 64px;
+  font-family: Nunito;
+  color: #6790bd;
+	font-size:24px;
+	font-weight: bolder;
+}
+.bottone:hover{
+  border:3px solid #15457b;
+  background-color: #072950;
+}
+.bottone:hover span{
+  color:#ffffff;
+}
+.textobottone span{
+  line-height: 5px;
+  font-size:15px;
+  font-weight: bolder;
+}
+.bottonemini{
+  float:right;
+  width: 28px;
+  height: 28px;
+	margin: 4px 4px 0px 0px;
+	border:1px solid #072950;
+	-moz-border-radius: 16px;
+	border-radius: 16px;
+	vertical-align: middle;
+	cursor:pointer;
+}
+.bottonemini:hover, .link:hover .bottonemini, .popupbutton:hover .bottonemini{
+  border:1px solid #6790bd;
+}
+
+.texto{
+  width:95%;
+  min-height:270px;
+  margin:auto;
+  background-color: #6790bd;
+  box-shadow: 0px 6px 6px -1px #072950
+}
+.texto p{
+  text-align: left;
+  margin: 0px 15px 0px 15px;
+  font-family: Ubuntu;
+  font-size: 13px;   
+  color:#000000;
+}
+.shifted{
+  position:relative;
+  top:-30px;
+}
+.top{
+   padding-top: 20px; 
+}
+.pop-up{
+  text-align: left;
+  margin: 15px 15px 0px 15px;
+  font-family: Ubuntu;
+  font-size: 13px;   
+  color:#000000;
+}
+.pop-up p{
+  margin-bottom:4px;
+  padding-bottom:4px;
+}
+.lista{
+  margin-left:8px;
+  padding-left:8px;
+  list-style: disc outside;
+}
+.lista li{
+  margin-bottom:4px;
+  padding-bottom:4px;
+}
+b{
+  font-weight: bolder;
+}
+.tabella{
+  border:1px solid #6790bd;
+  width:486px;
+  height: 160px;
+}
+.tabella .TL{
+  border:1px solid #6790bd;
+  width:100px;
+  height: 30px;
+  text-align: left;
+  padding-left: 10px;
+  color:#ffffff;
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: bold;
+}
+.tabella td{
+  border:1px solid #6790bd;
+  width:30px;
+  height: 30px;
+  text-align: center;
+  color:#ffffff;
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-weight: bold;
+}
+.anno{
+  border:none;
+  width: 384px;
+  height: 128px;
+  display:none;
+} 
+.anno .minibox{
+  border:1px solid #6790bd;
+  float:left;
+  width:30px;
+  height:30px;
+  text-align: center;
+  vertical-align: middle;
+  display:inherit;
+  cursor: pointer;
+}
+.year{
+  border:0px solid #6790bd;
+  background-color: #15457b;
+  width:500px;
+  height: 30px;
+  text-align: center;
+  color:#ffffff;
+  font-family: Nunito;
+  font-size: 22px;
+  font-weight: bold;
+}
+.lavagna{
+  width:500px;
+  height: auto;
+  color:#000000;
+  font-family: Ubuntu;
+  font-size: 13px;
+  text-decoration: none;
+}
+.lavagna a{
+  color:#000000;
+  text-decoration: none;
+}
+.portfolio{
+ height: 300px;
+ min-height: 300px;
+}
+.containerficha{
+  min-height: 80%;
+  max-height: 80%;
+  overflow:hidden;
+  background-color: none;
+}
+.ficha{
+  margin-top:5px;
+  background-color: none;
+}
+.ficha img{
+  width:220px;
+  height:165px;
+  display:block;
+}
+.ficha div p{
+  margin:5px 0px 0px 0px;
+  height: 70px;
+  width:100%;
+}
+.navbar{
+  height:30px;
+  position:relative;
+  top:10px;
+}
+.prev{
+  float:left;
+  margin: 0px 0px 0px 10px;
+}
+.next{
+  float:right;
+  margin: 0px 10px 0px 0px ;
+}
+.link{
+  font-family: Ubuntu;
+  font-size: 13px;
+  font-weight: bolder;
+  text-align:center;  
+  text-decoration: none;
+  background-color: #072950;
+  height: 36px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  cursor:pointer;
+}
+.popupbutton{
+  font-family: Ubuntu;
+  font-size: 13px;
+  font-weight: bolder;
+  text-align:center;  
+  text-decoration: none;
+  background-color: #072950;
+  height: 36px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  cursor:pointer;
+  width:50%;
+  margin:auto; 
+  position:relative; 
+  top:220px;
+}
+.link span, .popupbutton span{
+  line-height: 36px;
+  vertical-align: middle;
+  color:#6790bd;
+}
+.link:hover span, .popupbutton:hover span{
+  color:#ffffff;
+}
+.board{
+  height:130px;
+}
+.bigicon{
+  width:36px;
+  height:36px;
+  float:left;
+  margin: 5px 8px 15px 8px;
+}
+.navigator{
+  height:100%;
+  max-width: 300px;
+  margin:auto;
+  }
+.bottonegoto{
+  cursor:pointer;
+  border:none;
+  width:18px;
+  height: 18px;
+  line-height: 30px;
+  margin:6px 2px 0px 2px;
+  background: transparent url(../img/pallini.png) 0 0;
+}
+.bottonegoto:hover{
+ background: transparent url(../img/pallini.png) -18px 0; 
+}
+.active{
+  background: transparent url(../img/pallini.png) 18px 0; 
+}
+.active:hover{
+  background: transparent url(../img/pallini.png) 18px 0; 
+}
+.info{
+  width: 24px;
+  height: 24px;
+  margin: 1px 0px 0px 1px;
+  border:2px solid #072950;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  vertical-align: middle;
+  cursor:pointer;
+  background: #072950 url('../img/spriteicons.png') -120px 0px;
+}
+.info:hover{
+  border:2px solid #6790bd;
+  background: #15457b url('../img/spriteicons.png') -120px -24px;  
+}
+h3, h4, h5, h6{
+  text-align: center;
+  margin: auto;
+  color:#ffffff;
+  font-family: Nunito;
+  font-weight: bolder;
+  margin: 10px 0px 10px 0px;
+  }
+.form{
+  color:#ffffff;
+  font-family: Nunito;
+  padding:0px;
+}
+.form input{
+  width:100%;
+}
+.labelcontact{
+  width:auto;
+  min-width:100%;
+  height: 30px;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.inputcontact{
+  font-family: Nunito;
+  font-size: 16px;
+  border:2px solid #072950;
+ 	-moz-border-radius: 6px;
+	border-radius: 6px;
+  height: 30px;
+  width: 100%;
+}
+.textareacontact{
+  font-size: 16px;
+   border:2px solid #072950;
+ 	-moz-border-radius: 6px;
+	border-radius: 6px;
+  width: 100%
+}
+.aviso{
+  float:left;
+  display:none;
+  width:100%;
+  font-size:12px;
+}  
+#captchacontainer{
+  width:298px;
+  margin:auto;
+  border:2px solid #072950;	
+  -moz-border-radius: 6px;	
+  border-radius: 6px;
+}  
+.left{background: #072950 url('../img/spriteicons.png') -22px 2px;}
+.left:hover{background: #15457b url('../img/spriteicons.png') -22px -22px;}
+.right{background: #072950 url('../img/spriteicons.png') 74px 2px;}
+.right:hover{background: #15457b url('../img/spriteicons.png') 74px -22px;}
+.go{background: #072950 url('../img/spriteicons.png') 98px 2px;}
+.go:hover, .link:hover .go{background: #15457b url('../img/spriteicons.png') 98px -22px;}
+.php{ background: transparent url('../img/spriteiconstech.png') 0px 0px;}
+.html{ background: transparent url('../img/spriteiconstech.png') -36px 0px;}
+.asp{ background: transparent url('../img/spriteiconstech.png') -72px 0px;}
+.html5{ background: transparent url('../img/spriteiconstech.png') -108px 0px;}
+.css3{ background: transparent url('../img/spriteiconstech.png') -144px 0px;}
+.sql{ background: transparent url('../img/spriteiconstech.png') -180px 0px;}
+.flv{ background: transparent url('../img/spriteiconstech.png') -216px 0px;}
+.svg{ background: transparent url('../img/spriteiconstech.png') -252px 0px;}
+.ror{ background: transparent url('../img/spriteiconstech.png') -288px 0px;}
+.css{ background: transparent url('../img/spriteiconstech.png') -324px 0px;}
+.flash{ background: transparent url('../img/spriteiconstech.png') 0px -36px}
+.jquery{ background: transparent url('../img/spriteiconstech.png') -36px -36px}
+.mysql{ background: transparent url('../img/spriteiconstech.png') -72px -36px}
+.uml{ background: transparent url('../img/spriteiconstech.png') -108px -36px}
+.wordpress{ background: transparent url('../img/spriteiconstech.png') -144px -36px}
+.yii{ background: transparent url('../img/spriteiconstech.png') -180px -36px}
+.xml{ background: transparent url('../img/spriteiconstech.png') -216px -36px}
+.js{ background: transparent url('../img/spriteiconstech.png') -252px -36px}
+.xvr{ background: transparent url('../img/spriteiconstech.png') -288px -36px}
+.zoom{background: #072950 url('../img/spriteicons.png') -94px 2px;}
+.zoom:hover, .popupbutton:hover .zoom{background: #15457b url('../img/spriteicons.png') -94px -22px;}
+.plus{background: #072950 url('../img/spriteicons.png') 2px 2px;}
+.plus:hover{background: #15457b url('../img/spriteicons.png') 2px -22px;}

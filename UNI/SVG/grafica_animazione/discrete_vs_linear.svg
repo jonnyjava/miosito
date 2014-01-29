@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg  width="600" height="600" viewBox="0 0 600 600"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Discrete vs. Linear calcModes in animateColor and animateTransform</title>
+<desc>shows incremental, not interpolated, color change</desc>
+<rect id="bg"  width="800" height="600" x="-100" y="0" fill="#ACE270"/>
+<text x="150" y="75" style="text-anchor:middle;font-size:24">calcMode="discrete"</text>
+<circle cx="150" cy="250" r="125" fill="red">
+<animateColor attributeName="fill" values="red;blue;yellow;red" calcMode="discrete" dur="4s" begin="0s" repeatDur="indefinite"/>
+</circle>
+
+<text x="450" y="75" style="text-anchor:middle;font-size:24">calcMode="linear"</text>
+<circle cx="450" cy="250" r="125" fill="red">
+<animateColor attributeName="fill" values="red;blue;yellow;red" calcMode="linear" dur="4s" begin="0s" repeatDur="indefinite"/>
+</circle>
+
+<rect x="0" y="425" width="300" height="30" fill="cyan">
+<animateTransform attributeName="transform" type="translate" values="0,0;0,30;0,60;0,90" calcMode="discrete" dur="4s" begin="0s" repeatDur="indefinite"/>
+</rect>
+
+<text style="text-anchor:middle;font-size:24"><tspan x="150" y="450">red</tspan><tspan x="150" y="480">blue</tspan><tspan x="150" y="510">yellow</tspan><tspan x="150" y="540">red</tspan></text>
+
+<rect x="300" y="425" width="300" height="30" fill="cyan">
+<animateTransform attributeName="transform" type="translate" values="0,0;0,30;0,60;0,90" calcMode="linear" dur="4s" begin="0s" repeatDur="indefinite"/>
+</rect>
+
+<text style="text-anchor:middle;font-size:24"><tspan x="450" y="450">red</tspan><tspan x="450" y="480">blue</tspan><tspan x="450" y="510">yellow</tspan><tspan x="450" y="540">red</tspan></text>
+
+</svg>

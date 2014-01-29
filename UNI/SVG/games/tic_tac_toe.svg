@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+   "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+   <!ATTLIST svg xmlns:xlink CDATA #FIXED "http://www.w3.org/1999/xlink">
+ ]>
+
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+   onload="getSVGDoc(evt)">
+   <defs>
+ 
+    <symbol id="zu">
+       <rect x="0" y="0" width="100" height="100" style="fill: #FFF; stroke: #000"/>
+       <line x1="0" y1="0" x2="100" y2="100" style="stroke: #999"/>
+       <line x1="100" y1="0" x2="0" y2="100" style="stroke: #999"/>
+     </symbol>
+ 
+     <symbol id="s1"><!-- Spielfigur 1 -->
+      <rect x="0" y="0" width="100" height="100" style="fill: #FFF; stroke: #000"/>
+       <path fill="#F00" stroke="#000" stroke-width="0.3px"
+        transform="translate(-60,-10) scale(6)"
+         d="M14.2,3.8C15.6,5.6 17.1,7.4 18.8,9.0C20.2,7.3 21.5,5.4 22.7,3.4
+        C23.5,3.3 24.4,3.1 25.2,3.5C25.6,4.2 25.0,5.0 24.8,5.6C23.8,7.6 22.6,9.5
+        21.1,11.2C22.5,12.7 24.2,13.7 25.8,15.0C26.4,15.5 25.8,17.0 25.1,16.8
+        C24.5,16.4 24.1,17.5 23.6,16.8C21.8,15.8 20.1,14.8 18.5,13.5C17.1,15.0
+       15.4,16.2 13.7,17.2C13.0,17.6 12.1,17.3 11.4,17.1C11.6,16.7 11.6,16.4
+         11.2,16.2C10.4,15.4 11.6,14.9 12.2,14.5C13.5,13.6 14.8,12.6 16.0,11.5
+        C14.5,10.3 13.5,8.7 12.5,7.2C12.1,6.6 11.7,5.9 11.3,5.2C11.7,4.6 12.1,3.6
+     13.1,4.0C13.3,3.5 13.7,3.5 14.2,3.8Z"/>
+     </symbol>
+ 
+ <symbol id="s2">
+       <rect x="0" y="0" width="100" height="100" style="fill: #FFF; stroke: #000"/>
+      <path fill="#00C" stroke="#000" stroke-width="0.3px"
+         transform="translate(-60,-10) scale(6)"
+         d="M14.2,3.8C15.6,5.6 17.1,7.4 18.8,9.0C20.2,7.3 21.5,5.4 22.7,3.4
+         C23.5,3.3 24.4,3.1 25.2,3.5C25.6,4.2 25.0,5.0 24.8,5.6C23.8,7.6 22.6,9.5
+         21.1,11.2C22.5,12.7 24.2,13.7 25.8,15.0C26.4,15.5 25.8,17.0 25.1,16.8
+        C24.5,16.4 24.1,17.5 23.6,16.8C21.8,15.8 20.1,14.8 18.5,13.5C17.1,15.0
+        15.4,16.2 13.7,17.2C13.0,17.6 12.1,17.3 11.4,17.1C11.6,16.7 11.6,16.4
+        11.2,16.2C10.4,15.4 11.6,14.9 12.2,14.5C13.5,13.6 14.8,12.6 16.0,11.5
+         C14.5,10.3 13.5,8.7 12.5,7.2C12.1,6.6 11.7,5.9 11.3,5.2C11.7,4.6 12.1,3.6
+        13.1,4.0C13.3,3.5 13.7,3.5 14.2,3.8Z"/>
+   </symbol>
+     <script type="text/javascript">
+     <![CDATA[
+ 
+       var svgdoc,spielfeld,infoobj,sp1obj,sp2obj,use_elements;
+       var spieler1,spieler2,sp1=0,sp2=0,t=0,count=0,beg=1;
+       var ns="http://www.w3.org/1999/xlink",attr="xlink:href";
+       var ttt=[[0,0,0],[0,0,0],[0,0,0]];
+ 
+ 
+       function getSVGDoc(load_evt)
+       {
+         svgdoc=load_evt.target.ownerDocument;
+         spielfeld=svgdoc.getElementById("spielfeld");
+         infoobj=svgdoc.getElementById("info");
+        sp1obj=svgdoc.getElementById("sp1");
+         sp2obj=svgdoc.getElementById("sp2");
+         use_elements=spielfeld.getElementsByTagName("use");
+         NeuesSpiel();
+      }
+
+
+       function Zug(click_evt)
+       {
+         var obj,feldid,i,j;
+ 
+        obj=click_evt.currentTarget;
+         feldid=obj.getAttribute("id");
+         i=feldid.charAt(1)-1;
+         j=feldid.charAt(2)-1;
+       count++;
+        if(spieler1 && obj.getAttribute(attr)=="#zu" && t==0)
+       {
+           ttt[i][j]+=1;
+           obj.setAttributeNS(ns,attr,"#s1");
+          if(Check()==1)
+          {
+            infoobj.firstChild.nodeValue="Il giocatore 1 ha vinto!";
+            sp1++;
+            sp1obj.firstChild.nodeValue=sp1;
+             LauscherAus();
+          }
+          else
+          {
+            spieler1=false;
+            spieler2=true;
+             infoobj.style.setProperty("fill","#00C");
+             infoobj.firstChild.nodeValue="Turno del giocatore 2";
+         }
+         }
+       else if(spieler2 && obj.getAttribute(attr)=="#zu" && t==0)
+        {
+           ttt[i][j]+=10;
+        obj.setAttributeNS(ns,attr,"#s2");
+           if(Check()==2)
+           {
+             infoobj.firstChild.nodeValue="Il giocatore 2 ha vinto!";
+            sp2++;
+            sp2obj.firstChild.nodeValue=sp2;
+            LauscherAus();
+          }
+          else
+          {
+             spieler1=true;
+            spieler2=false;
+           infoobj.style.setProperty("fill","#F00");
+           infoobj.firstChild.nodeValue="turno del giocatore 1";
+          }
+       }
+       if(t==0 && count==9)
+       {
+         infoobj.style.setProperty("fill","#000");
+          infoobj.firstChild.nodeValue="PARITA'!";
+         LauscherAus();
+        }
+     }
+
+
+       function Check()
+       {
+         var rsd=new Array(8),i;
+ 
+        
+         rsd[0]=ttt[0][0]+ttt[0][1]+ttt[0][2];
+         rsd[1]=ttt[1][0]+ttt[1][1]+ttt[1][2];
+         rsd[2]=ttt[2][0]+ttt[2][1]+ttt[2][2];
+
+        
+       rsd[3]=ttt[0][0]+ttt[1][0]+ttt[2][0];
+        rsd[4]=ttt[0][1]+ttt[1][1]+ttt[2][1];
+        rsd[5]=ttt[0][2]+ttt[1][2]+ttt[2][2];
+ 
+        
+        rsd[6]=ttt[0][0]+ttt[1][1]+ttt[2][2];
+        rsd[7]=ttt[0][2]+ttt[1][1]+ttt[2][0];     
+ 
+        for(i=0;i<8;i++)
+         {
+          
+           if(rsd[i]==3)
+           {
+             t=1;
+             break;
+           }
+           
+           else if(rsd[i]==30)
+           {
+             t=2;
+             break;
+           }
+         }
+         return t;
+       }
+ 
+ 
+       function NeuesSpiel()
+       {
+         AllesVerstecken();
+         infoobj.firstChild.nodeValue="Turno del giocatore "+beg+ "";
+ 
+         if(beg==1)
+         {
+           beg=2;
+           spieler1=true;
+           spieler2=false;
+           infoobj.style.setProperty("fill","#F00");
+         }
+         else if(beg==2)
+         {
+           beg=1;
+           spieler1=false;
+           spieler2=true;
+          infoobj.style.setProperty("fill","#00C");
+         }
+ 
+         t=0;
+         count=0;
+         ttt=[[0,0,0],[0,0,0],[0,0,0]];
+         LauscherAn();
+       }
+ 
+      function AllesVerstecken()
+      {
+         for(i=0;i<use_elements.length;i++)
+          use_elements.item(i).setAttributeNS(ns,attr,"#zu");
+       }
+ 
+
+     function LauscherAn()
+      {
+       for(i=0;i<use_elements.length;i++)
+           use_elements.item(i).addEventListener("click",Zug,false);
+      }
+
+ 
+      function LauscherAus()
+       {
+       for(i=0;i<use_elements.length;i++)
+          use_elements.item(i).removeEventListener("click",Zug,false);
+       }
+ 
+       ]]>
+     </script>
+ 
+   </defs>
+ <rect id="bg"  width="500" height="500" x="0" y="0" fill="#ACE270"/>
+   <text x="20" y="30" style="fill: #000; font-size: 24px">
+     Gioco del TRIS</text>
+ 
+   <text id="info" x="20" y="55" style="fill: #F00; font-size: 14px">
+     Turno del giocatore 1 ...</text>
+ 
+   <text x="195" y="55" style="fill: #000; font-size: 14px">
+     <tspan id="sp1" style="fill: #F00">0</tspan>
+     <tspan style="fill: #000">:</tspan>
+   <tspan id="sp2" style="fill: #00C">0</tspan>
+   </text>
+ 
+   <a xlink:href="" onclick="NeuesSpiel()">
+     <text x="245" y="55" style="fill: #000; font-size: 14px">
+       Nuovo gioco
+   <set attributeName="fill" attributeType="CSS" to="#090"
+     begin="mouseover" end="mouseout"/>
+   </text>
+   </a>
+ 
+   <g id="spielfeld">
+     <use id="f11" xlink:href="#zu" x="20" y="70"/>
+    <use id="f12" xlink:href="#zu" x="120" y="70"/>
+    <use id="f13" xlink:href="#zu" x="220" y="70"/>
+
+    <use id="f21" xlink:href="#zu" x="20" y="170"/>
+     <use id="f22" xlink:href="#zu" x="120" y="170"/>
+    <use id="f23" xlink:href="#zu" x="220" y="170"/>
+
+   <use id="f31" xlink:href="#zu" x="20" y="270"/>
+    <use id="f32" xlink:href="#zu" x="120" y="270"/>
+    <use id="f33" xlink:href="#zu" x="220" y="270"/>
+   </g>
+ 
+</svg>

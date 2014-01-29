@@ -1,0 +1,455 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg width="900" height="500" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>SVG e Colori</title>
+<desc>Animazione del testo "Francesco e Margherita"</desc>
+
+<defs>
+ 
+ <!-- Inizio Linee caduta romboidi -->
+ <path id="linea1" d="M 0 0 L 0 400" />
+ <path id="linea2" d="M 0 0 L 0 800" />
+ <path id="linea3" d="M 0 0 L 0 860" />
+ <path id="linea4" d="M 0 0 L 0 920" />
+ <path id="linea5" d="M 0 0 L 0 980" />
+ <path id="linea6" d="M 0 0 L 0 940" />
+ <!-- Fine Linee caduta romboidi -->
+ 
+
+ <radialGradient id="MyGradient" gradientUnits="userSpaceOnUse"
+                      cx="100" cy="100" r="200" fx="20" fy="20">
+        <stop offset="10%" stop-color="brown" />
+        <stop offset="20%" stop-color="gold" />
+        <stop offset="50%" stop-color="yellow" />
+ </radialGradient>
+ <radialGradient id="MyGradient2" gradientUnits="userSpaceOnUse"
+                      cx="100" cy="100" r="200" fx="20" fy="20">
+        <stop offset="10%" stop-color="red" />
+        <stop offset="20%" stop-color="blue" />
+        <stop offset="50%" stop-color="cyan" />
+ </radialGradient>
+ <radialGradient id="MyGradient3" gradientUnits="userSpaceOnUse"
+                      cx="100" cy="100" r="200" fx="20" fy="20">
+        <stop offset="10%" stop-color="red" />
+        <stop offset="20%" stop-color="orange" />
+        <stop offset="50%" stop-color="yellow" />
+ </radialGradient>
+ <radialGradient id="MyGradient4" gradientUnits="userSpaceOnUse"
+                      cx="100" cy="100" r="200" fx="20" fy="20">
+        <stop offset="10%" stop-color="green" />
+        <stop offset="20%" stop-color="yellow" />
+        <stop offset="50%" stop-color="violet" />
+ </radialGradient>
+
+
+</defs>
+
+
+ <!-- desenez S -->
+<rect id="bg" width="900" height="500" x="0" y="0" fill="#ACE270"/>
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(70,-50) scale(0.5)">
+<animateMotion repeatCount="1" dur="2s" begin="2s" fill="freeze" >
+<mpath xlink:href="#linea6" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(100,-50) scale(0.5)">
+<animateMotion repeatCount="1" dur="3s" begin="4s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(130,-50) scale(0.5)">
+<animateMotion repeatCount="1" dur="1s" begin="1s" fill="freeze" >
+<mpath xlink:href="#linea6" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(160,-50) scale(0.5)">
+<animateMotion repeatCount="1" dur="2s" begin="1s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(190,-50) scale(0.5)">
+<animateMotion repeatCount="1" dur="1s" begin="5s" fill="freeze" >
+<mpath xlink:href="#linea4" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(210,-50) scale(0.5)">
+<animateMotion repeatCount="1" dur="3s" begin="1s" fill="freeze" >
+<mpath xlink:href="#linea3" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(190,-110) scale(0.5)">
+<animateMotion repeatCount="1" dur="1s" begin="8s" fill="freeze" >
+<mpath xlink:href="#linea4" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(160,-140) scale(0.5)">
+<animateMotion repeatCount="1" dur="3s" begin="2s" fill="freeze" >
+<mpath xlink:href="#linea4" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(130,-170) scale(0.5)">
+<animateMotion repeatCount="1" dur="5s" begin="4s" fill="freeze" >
+<mpath xlink:href="#linea4" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(100,-200) scale(0.5)">
+<animateMotion repeatCount="1" dur="1s" begin="6s" fill="freeze" >
+<mpath xlink:href="#linea4" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(90,-230) scale(0.5)">
+<animateMotion repeatCount="1" dur="1s" begin="1s" fill="freeze" >
+<mpath xlink:href="#linea4" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(100,-260) scale(0.5)">
+<animateMotion repeatCount="1" dur="2s" begin="5s" fill="freeze" >
+<mpath xlink:href="#linea4" />
+</animateMotion>
+</path>
+
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(160,-260) scale(0.5)">
+<animateMotion repeatCount="1" dur="1s" begin="4s" fill="freeze" >
+<mpath xlink:href="#linea4" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(130,-290) scale(0.5)">
+<animateMotion repeatCount="1" dur="1s" begin="9s" fill="freeze" >
+<mpath xlink:href="#linea4" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(190,-290) scale(0.5)">
+<animateMotion repeatCount="1" dur="4s" begin="1s" fill="freeze" >
+<mpath xlink:href="#linea4" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(220,-260) scale(0.5)">
+<animateMotion repeatCount="1" dur="2s" begin="1s" fill="freeze" >
+<mpath xlink:href="#linea4" />
+</animateMotion>
+</path>
+
+ <!-- fine desenez S -->
+
+ <!-- desenez V -->
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(400,-50) scale(0.5)">
+<animateMotion repeatCount="1" dur="2s" begin="6s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(380,-80) scale(0.5)">
+<animateMotion repeatCount="1" dur="3s" begin="1s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(420,-80) scale(0.5)">
+<animateMotion repeatCount="1" dur="3s" begin="4s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(360,-110) scale(0.5)">
+<animateMotion repeatCount="1" dur="2s" begin="7s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(440,-110) scale(0.5)">
+<animateMotion repeatCount="1" dur="1s" begin="4s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(340,-140) scale(0.5)">
+<animateMotion repeatCount="1" dur="1s" begin="8s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(460,-140) scale(0.5)">
+<animateMotion repeatCount="1" dur="3s" begin="6s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(320,-170) scale(0.5)">
+<animateMotion repeatCount="1" dur="1s" begin="9s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(480,-170) scale(0.5)">
+<animateMotion repeatCount="1" dur="2s" begin="3s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(300,-200) scale(0.5)">
+<animateMotion repeatCount="1" dur="4s" begin="5s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(500,-200) scale(0.5)">
+<animateMotion repeatCount="1" dur="1s" begin="5s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+
+ <!-- fine desenez V -->
+
+ <!-- desenez G -->
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(620,-50) scale(0.5)">
+<animateMotion repeatCount="1" dur="2s" begin="3s" fill="freeze" >
+<mpath xlink:href="#linea6" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(650,-50) scale(0.5)">
+<animateMotion repeatCount="1" dur="3s" begin="1s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(680,-50) scale(0.5)">
+<animateMotion repeatCount="1" dur="1s" begin="2s" fill="freeze" >
+<mpath xlink:href="#linea6" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(710,-50) scale(0.5)">
+<animateMotion repeatCount="1" dur="2s" begin="1s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(600,-90) scale(0.5)">
+<animateMotion repeatCount="1" dur="2s" begin="5s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(740,-50) scale(0.5)">
+<animateMotion repeatCount="1" dur="3s" begin="6s" fill="freeze" >
+<mpath xlink:href="#linea6" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(760,-80) scale(0.5)">
+<animateMotion repeatCount="1" dur="1s" begin="7s" fill="freeze" >
+<mpath xlink:href="#linea6" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(760,-110) scale(0.5)">
+<animateMotion repeatCount="1" dur="3s" begin="3s" fill="freeze" >
+<mpath xlink:href="#linea6" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(720,-110) scale(0.5)">
+<animateMotion repeatCount="1" dur="2s" begin="8s" fill="freeze" >
+<mpath xlink:href="#linea6" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(590,-120) scale(0.5)">
+<animateMotion repeatCount="1" dur="2s" begin="1s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(580,-150) scale(0.5)">
+<animateMotion repeatCount="1" dur="3s" begin="5s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(590,-180) scale(0.5)">
+<animateMotion repeatCount="1" dur="2s" begin="4s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(600,-210) scale(0.5)">
+<animateMotion repeatCount="1" dur="2s" begin="4s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(630,-240) scale(0.5)">
+<animateMotion repeatCount="1" dur="1s" begin="4s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(660,-210) scale(0.5)">
+<animateMotion repeatCount="1" dur="2s" begin="3s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(700,-240) scale(0.5)">
+<animateMotion repeatCount="1" dur="2s" begin="4s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(720,-210) scale(0.5)">
+<animateMotion repeatCount="1" dur="2s" begin="5s" fill="freeze" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+ <!-- fine desenez G -->
+
+
+
+ <!-- other -->
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(200,-70) scale(0.5)">
+<animateMotion repeatCount="indefinite" dur="3s" begin="0s" >
+<mpath xlink:href="#linea3" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(75,-70) scale(0.5)">
+<animateMotion repeatCount="indefinite" dur="3s" begin="1s" >
+<mpath xlink:href="#linea2" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(100,-70) scale(0.5)">
+<animateMotion repeatCount="indefinite" dur="2s" begin="0s" >
+<mpath xlink:href="#linea3" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(200,-70) scale(0.2)">
+<animateMotion repeatCount="indefinite" dur="5s" begin="2s" >
+<mpath xlink:href="#linea3" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(250,-70) scale(0.8)">
+<animateMotion repeatCount="indefinite" dur="3s" begin="2s" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(400,-70) scale(0.7)">
+<animateMotion repeatCount="indefinite" dur="4s" begin="1s" >
+<mpath xlink:href="#linea1" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(300,-70) scale(0.3)">
+<animateMotion repeatCount="indefinite" dur="2s" begin="4s" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(500,-70) scale(0.4)">
+<animateMotion repeatCount="indefinite" dur="6s" begin="2s" >
+<mpath xlink:href="#linea1" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(750,-70) scale(0.2)">
+<animateMotion repeatCount="indefinite" dur="2s" begin="0s" >
+<mpath xlink:href="#linea5" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(350,-70) scale(0.5)">
+<animateMotion repeatCount="indefinite" dur="7s" begin="1s" >
+<mpath xlink:href="#linea1" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(620,-70) scale(0.7)">
+<animateMotion repeatCount="indefinite" dur="2s" begin="0s" >
+<mpath xlink:href="#linea3" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(700,-70) scale(0.4)">
+<animateMotion repeatCount="indefinite" dur="4s" begin="1s" >
+<mpath xlink:href="#linea12" />
+</animateMotion>
+</path>
+
+<path fill="url(#MyGradient4)" d="M 10 10 L 120 10 L 120 60 L 10 60 Z"
+            transform="translate(580,-70) scale(0.6)">
+<animateMotion repeatCount="indefinite" dur="3s" begin="0s" >
+<mpath xlink:href="#linea12" />
+</animateMotion>
+</path>
+
+</svg>
+

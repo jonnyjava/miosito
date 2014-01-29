@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg width="200" height="100" viewBox="0 0 200 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>bluranim.svg</title> 
+<desc>blur filter effect started by clicking the mouse</desc>
+
+<style type="text/css">
+	<![CDATA[
+@font-face{font-family:'Helvetica';src:url("data:;base64,\
+T1RUTwADACAAAQAQQ0ZGIBH4xi8AAAA8AAACJEdQT1OvzL8aAAACrAAAAFBjbWFwALwBJQAAAmAA\
+AABMAQAEAgABAQEKSGVsdmV0aWNhAAEBASD4GwH4FwT7Ovt1+nz6NwUdAACunQ33fg/3jRGw+JMS\
+AAEBAa5Db3B5cmlnaHQgKGMpIDE5ODUsIDE5ODcsIDE5ODksIDE5OTAsIDE5OTcsIDE5OTgsIDE5\
+OTkgQWRvYmUgU3lzdGVtcyBJbmNvcnBvcmF0ZWQuICBBbGwgUmlnaHRzIFJlc2VydmVkLkhlbHZl\
+dGljYSBpcyBhIHRyYWRlbWFyayBvZiBMaW5vdHlwZS1IZWxsIEFHIGFuZC9vciBpdHMgc3Vic2lk\
+aWFyaWVzLgAAAAABAAIAJgApACoALgA1AAgBAQIDJ053i977Dg6L8fj8dwHl7AP3T/EVKiXsBnP3\
+PxWj98oF94Eq+4EHo/vKBQ5Yi+H3hOH3cOEB4ewD+PzhFfxF94T4HeH8Hfdw+D7h/J/9YvimBg6P\
+oHb34+H3vXcB2Oz4C+wD+Ln4ORX8C/e9Kv1i7Pfj+Av74+z5YioGDqB2+WJ3AebsA/dQ+WIVKv1i\
+7AYO9weL9wMxdvjv9weLdxLU6fiI6RNc+Y0W+WL7HgcTnPtg/PMFiQb7YfjzBfsf/WLp+DwGE2yg\
+iebNGo0G91787gXrBvde+O8FjQZIiTB2Gvw8Bw4goHb5DOEB95XsA5n5DBX3h/0M7PkM94fh/NsG\
+Dnie+WKe+2qa9yqaBveilvyJmAceoEN5F/8MCdcK4wv3qhT5YhUAAAABAAAAAwAAAAwABABAAAAA\
+DAAIAAIABAAhAEUASQBNAFT//wAAACAARQBIAE0AVP///+H/vv+8/7n/swABAAAAAAAAAAAAAAAA\
+AAEAAAAKAB4ALAABREZMVAAIAAQAAAAA//8AAQAAAAFrZXJuAAgAAAABAAAAAQAEAAIAAAABAAgA\
+AQASAAQAAAABAAwAAQAH/84AAQABAAE=")}
+	]]>
+	</style>
+<defs>
+	<filter id="AnimateBlur" filterUnits="objectBoundingBox" x="-25%" y="-25%" width="150%" height="150%">
+
+		<feGaussianBlur result="BlurredSource" stdDeviation="0" in="SourceGraphic">
+
+			<animate id="AnimateClick" begin="indefinite" attributeName="stdDeviation" values="8;0" dur="1s" repeatCount="1"/>
+
+		</feGaussianBlur>
+
+	</filter>
+
+</defs>
+<rect id="bg"  width="200" height="100" x="0" y="0" fill="#ACE270"/>
+
+<text transform="matrix(1 0 0 1 40 50)"> <tspan x="0" y="0" style="font-family:'Helvetica';font-size:40;filter:url(#AnimateBlur);">HIT ME!</tspan></text>
+
+<text transform="matrix(1 0 0 1 40 50)"><tspan x="0" y="0" style="font-family:'Helvetica';font-size:40;stroke:black;stroke-width:.5;fill:none;fill-rule:evenodd;">HIT ME!</tspan></text>
+
+<a xlink:href="#AnimateClick">
+
+	<path id="click" style="opacity:0;" d="M22.5,28.1h155v40h-155V28.1z"/>
+
+</a>
+
+</svg>
+

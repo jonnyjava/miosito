@@ -1,0 +1,28 @@
+<chart caption="Sales Summary" subCaption="For the year 2011" bgColor='66a3d2 3f9dd2' divLineColor='000000' divLineAlpha='100' numVDivlines='10' vDivLineisDashed='1' showAlternateVGridColor='1'  toolTipBgColor='406181' toolTipBorderColor='406181' bgAlpha='100' baseFontColor='000000' canvasBgAlpha='0' canvasBorderColor='FFFFFF' numberPrefix="€" sformatNumberScale="1" sNumberPrefix="$" syncAxisLimits="1" rotateValues="0" showSum="1">
+  <categories>
+    <category label='Jan' />
+    <category label='Feb' />
+    <category label='Mar' />
+    <category label='Apr' />
+    <category label='May' />
+    <category label='Jun' />
+    <category label='Jul' />
+    <category label='Aug' />
+    <category label='Sep' />
+    <category label='Oct' />
+    <category label='Nov' />
+    <category label='Dec' />
+  </categories>
+  <dataset seriesName='Product One'>
+    <set value='96.31'/><set value='69.49'/><set value='93.48'/><set value='59.58'/><set value='91.7'/><set value='22.07'/><set value='17.49'/><set value='70.1'/><set value='80.47'/><set value='58.28'/><set value='18.25'/><set value='54.24'/><set value='15.08'/><set value='48.33'/><set value='2.32'/><set value='34.51'/><set value='93.18'/><set value='84.98'/><set value='26.68'/><set value='89.61'/><set value='11.14'/><set value='0.33'/><set value='47.45'/><set value='87.03'/><set value='76.06'/><set value='11.66'/><set value='34.08'/><set value='49.33'/><set value='7.79'/><set value='14.74'/>
+  </dataset>
+  <dataset seriesName='Product Two'>
+    <set value='37.95'/><set value='52.09'/><set value='18.5'/><set value='88.13'/><set value='42.25'/><set value='67.86'/><set value='68.14'/><set value='47.11'/><set value='18.97'/><set value='43.25'/><set value='9.22'/><set value='10.33'/><set value='98.57'/><set value='98.9'/><set value='28.19'/><set value='86.08'/><set value='86.74'/><set value='64.45'/><set value='55.14'/><set value='7.85'/><set value='21.82'/><set value='42.14'/><set value='67.56'/><set value='46.26'/><set value='40.43'/><set value='52.82'/><set value='71.58'/><set value='34.84'/><set value='35.2'/><set value='87.22'/>
+  </dataset>
+  <dataset seriesName='Product Three'>
+    <set value='76.63'/><set value='63.86'/><set value='66.04'/><set value='18.07'/><set value='71.32'/><set value='34.09'/><set value='23.96'/><set value='22.76'/><set value='36.97'/><set value='98.97'/><set value='76.46'/><set value='24.22'/><set value='21.56'/><set value='58.38'/><set value='40.62'/><set value='35.86'/><set value='15.53'/><set value='2.12'/><set value='32.28'/><set value='88.58'/><set value='67.53'/><set value='70.26'/><set value='70.83'/><set value='82.38'/><set value='78.77'/><set value='12.77'/><set value='16.23'/><set value='85.81'/><set value='41'/><set value='64.58'/>
+  </dataset>
+  <dataset seriesName='Product Four'>
+    <set value='8.37'/><set value='29.5'/><set value='87.14'/><set value='55.36'/><set value='81.82'/><set value='75'/><set value='12.21'/><set value='56.56'/><set value='43.1'/><set value='33.43'/><set value='19.13'/><set value='17.2'/><set value='94.77'/><set value='7.41'/><set value='2.52'/><set value='76.93'/><set value='1.7'/><set value='59.89'/><set value='61.53'/><set value='1.76'/><set value='79.75'/><set value='29.87'/><set value='24.56'/><set value='5.28'/><set value='19.63'/><set value='2.45'/><set value='59.64'/><set value='6.15'/><set value='95.86'/><set value='56.47'/>
+  </dataset>
+</chart>

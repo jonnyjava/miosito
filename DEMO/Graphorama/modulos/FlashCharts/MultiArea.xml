@@ -1,0 +1,28 @@
+<chart caption="Sales Summary" subCaption="For the years 2009 - 2011" bgColor='5ccccc 009999' divLineColor='000000' divLineAlpha='100' 
+numVDivlines='10' vDivLineisDashed='1' showAlternateVGridColor='1'  toolTipBgColor='406181' toolTipBorderColor='406181' bgAlpha='100' 
+baseFontColor='000000' canvasBgAlpha='0' canvasBorderColor='FFFFFF' numberPrefix="€" sformatNumberScale="1" sNumberPrefix="$" 
+syncAxisLimits="1" rotateValues="0" showSum="1">
+  <categories>
+  <category label='January' />
+  <category label='February' />
+  <category label='March' />
+  <category label='April' />
+  <category label='May' />
+  <category label='June' />
+  <category label='July' />
+  <category label='August' />
+  <category label='September' />
+  <category label='October' />
+  <category label='November' />
+  <category label='December' />
+  </categories>
+    <dataset seriesName='2011' color='B1D1DC' plotBorderColor='B1D1DC'>
+      <set value='58.77'/><set value='51.3'/><set value='81.21'/><set value='48.5'/><set value='78.74'/><set value='77.86'/><set value='60.5'/><set value='48.31'/><set value='35.6'/><set value='40.42'/><set value='35.79'/><set value='71.15'/><set value='93.99'/>
+    </dataset>
+    <dataset seriesName='2010' color='C8A1D1' plotBorderColor='C8A1D1'>
+     <set value='26.21'/><set value='32.21'/><set value='38.68'/><set value='31.05'/><set value='36.22'/><set value='50.15'/><set value='22.21'/><set value='43.28'/><set value='32.43'/><set value='21.17'/><set value='13.84'/><set value='27.87'/><set value='7.77'/>
+    </dataset>
+    <dataset seriesName='2009' color='d4f1a1' plotBorderColor='d4f1a1'>
+     <set value='4.71'/><set value='5.21'/><set value='8.46'/><set value='3.88'/><set value='2.16'/><set value='7.54'/><set value='8.17'/><set value='6.39'/><set value='7.44'/><set value='7.09'/><set value='0.69'/><set value='2.75'/><set value='4.43'/>
+    </dataset>
+</chart>

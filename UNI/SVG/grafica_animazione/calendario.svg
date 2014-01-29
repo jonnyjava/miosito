@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+   "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+   <!ATTLIST svg xmlns:xlink CDATA #FIXED "http://www.w3.org/1999/xlink">
+ ]>
+ 
+ <svg xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+   onload="Init(evt)">
+   <title>SVG - Imparare con gli esempi</title>
+   <desc>SVG-imparare dal codice</desc>
+ 
+   <defs>
+ 
+     <style type="text/css">
+       <![CDATA[
+ 
+       tspan, text
+       {
+         fill: #00C;
+         font-size: 16px;
+         font-weight: bold;
+         font-family: "Courier New", Courier, monospace;
+       }
+ 
+       tspan > tspan
+       {
+         fill: #F00;
+       }
+
+       ]]>
+     </style>
+ 
+     <script type="text/javascript">
+      <![CDATA[
+
+      var svgdoc,datum,monat,jahr; 
+ 
+ 
+       function Init(load_evt)
+       {
+         svgdoc=load_evt.target.ownerDocument;
+ 
+
+         datum=new Date();
+         jahr=datum.getFullYear();
+         monat=datum.getMonth()+1;      
+         Ausgabe(Kalender(monat,jahr));
+       }
+ 
+ 
+       function PrevNextMonth(pn)
+       {
+
+         monat+=pn;
+         datum=new Date(jahr,monat-1,1);
+         jahr=datum.getFullYear();
+         monat=datum.getMonth()+1;
+         Ausgabe(Kalender(monat,jahr));
+       }
+ 
+ 
+       function Kalender(monat,jahr)
+       {
+
+         var tim,etim,tag,leer=String.fromCharCode(160),
+             tmparr=new Array(42),kalarr=new Array(6);
+ 
+         tim=new Date(jahr,monat,0).getDate();   // Tage im Monat (28, 29, 30, 31)
+         etim=new Date(jahr,monat-1,1).getDay(); // ersten (Wochen-)Tag im Monat 
+         if(etim==0)etim=7;                      // bestimmen: Mo = 1 ... So = 7
+ 
+         for(i=0;i<42;i++)
+         {
+  
+           if(i<etim-1 || i>tim+etim-2)tmparr[i]=leer+leer;
+           else
+           {
+             tag=(i-etim+2).toString();
+            tag=(tag.length<2) ? leer+tag : tag;
+            tmparr[i]=tag;
+           }
+         }
+         for(i=0,j=6;i<42;i+=7,j+=7)kalarr[i/7]=tmparr.slice(i,j+1);
+         return kalarr;
+       }
+ 
+ 
+       function Ausgabe(kalarr)
+       {
+         var monatjahr,mj,ausgabe,tspans,leer=String.fromCharCode(160);
+ 
+       monatjahr=svgdoc.getElementById("monatjahr");
+         ausgabe=svgdoc.getElementById("ausgabe");
+         tspans=ausgabe.getElementsByTagName("tspan");
+ 
+         for(i=0;i<6;i++)
+         {
+           tspans.item(2*i).firstChild.nodeValue=
+           kalarr[i].slice(0,6).join(",").replace(/,/g,leer);
+           tspans.item(2*i+1).firstChild.nodeValue=leer+kalarr[i][6];
+         }
+ 
+         mj=(monat<10) ? "0"+monat+"/"+jahr : monat+"/"+jahr;
+         monatjahr.firstChild.nodeValue=mj;
+      }
+ 
+       ]]>
+     </script>
+ 
+ </defs>
+ <rect  width="1000" height="600" x="0" y="0" fill="#ACE270"/>
+   <text x="20" y="30" style="fill: #000; font-size: 24px; font-weight: normal;
+   font-family: sans-serif">Calendario in SVG</text>
+  <a xlink:href="" onclick="PrevNextMonth(-1)">
+     <text x="30" y="70">&lt;&lt;
+       <set attributeName="fill" attributeType="CSS" to="#F00" begin="mouseover"/>
+       <set attributeName="fill" attributeType="CSS" to="#00C" begin="mouseout"/>
+     </text>
+   </a>
+ 
+   <text id="monatjahr" x="90" y="70"> </text>
+ 
+   <a xlink:href="" onclick="PrevNextMonth(1)">
+     <text x="200" y="70">&gt;&gt;
+       <set attributeName="fill" attributeType="CSS" to="#F00" begin="mouseover"/>
+       <set attributeName="fill" attributeType="CSS" to="#00C" begin="mouseout"/>
+     </text>
+   </a>
+ 
+   <text x="30" y="90"><tspan>LU Ma Me Gi Ve Sa <tspan>Do</tspan></tspan></text>
+   <text x="30" y="105">--------------------</text>
+   <text id="ausgabe" x="30" y="100">
+     <tspan x="30" dy="1.2em"> <tspan> </tspan></tspan>
+     <tspan x="30" dy="1.2em"> <tspan> </tspan></tspan>
+     <tspan x="30" dy="1.2em"> <tspan> </tspan></tspan>
+     <tspan x="30" dy="1.2em"> <tspan> </tspan></tspan>
+     <tspan x="30" dy="1.2em"> <tspan> </tspan></tspan>
+   <tspan x="30" dy="1.2em"> <tspan> </tspan></tspan>
+   </text>
+ 
+ </svg>

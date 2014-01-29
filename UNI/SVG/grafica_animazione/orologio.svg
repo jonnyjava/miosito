@@ -1,0 +1,154 @@
+<svg width="100%" height="100%" onload="on_load(evt)" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<style type="text/css"><![CDATA[
+	.main {
+		fill:rgb(5,124,150);
+		stroke:none;
+	}
+	.dot0 {
+			fill:#BBE789; 
+			stroke:rgb(5,124,150);
+			stroke-width:0.3px;
+	}
+	.dot1 {
+			fill:#456E16; 
+			stroke:rgb(0,0,0);
+			stroke-width:0.5px;
+	}	
+		
+]]></style>
+<script><![CDATA[
+var dateTime, Hours, Minutes, Seconds
+clock=null
+window.clock = clock
+function on_load(evt){
+  doc = evt.getTarget() != null ? evt.getTarget().getOwnerDocument() : null;
+	setClock()
+	setInterval("setClock()",1000)
+}
+function setClock(){
+	dateTime 	= new Date()
+	secs 								= dateTime.getSeconds().toString()
+	mins 								= dateTime.getMinutes().toString()
+  hours 							= dateTime.getHours()
+	if(hours > 24) hours-=24
+	hours = hours.toString()
+	for (i=0;i<hours.length;i++){
+			tDigitGroup = hours.length==1 ? doc.getElementById("H"+(i+1)).getElementsByTagName("use") : doc.getElementById("H"+i).getElementsByTagName("use")
+			tDigitNum = parseInt(hours.substring(i,i+1))
+			for (j=0;j<tDigitGroup.getLength();j++)	tDigitGroup.item(j).setAttribute("class","dot"+eval("numbers[tDigitNum].d"+j)) 							
+	}
+	for (i=0;i<mins.length;i++){
+			tDigitGroup = mins.length==1 ? doc.getElementById("M"+(i+1)).getElementsByTagName("use") : doc.getElementById("M"+i).getElementsByTagName("use")
+			tDigitNum = parseInt(mins.substring(i,i+1))
+			for (j=0;j<tDigitGroup.getLength();j++)	tDigitGroup.item(j).setAttribute("class","dot"+eval("numbers[tDigitNum].d"+j)) 							
+	}
+	if(mins.length==1){
+			tDigitGroup = doc.getElementById("M"+0).getElementsByTagName("use")
+			tDigitNum = 0
+			for (j=0;j<tDigitGroup.getLength();j++)	tDigitGroup.item(j).setAttribute("class","dot"+eval("numbers[tDigitNum].d"+j)) 							
+	}
+	for (i=0;i<secs.length;i++){
+			tDigitGroup = secs.length==1 ? doc.getElementById("S"+(i+1)).getElementsByTagName("use") : doc.getElementById("S"+i).getElementsByTagName("use")
+			tDigitNum = parseInt(secs.substring(i,i+1))
+			for (j=0;j<tDigitGroup.getLength();j++)	tDigitGroup.item(j).setAttribute("class","dot"+eval("numbers[tDigitNum].d"+j)) 							
+	}
+	if(secs.length==1){
+			tDigitGroup = doc.getElementById("S"+0).getElementsByTagName("use")
+			tDigitNum = 0
+			for (j=0;j<tDigitGroup.getLength();j++)	tDigitGroup.item(j).setAttribute("class","dot"+eval("numbers[tDigitNum].d"+j)) 							
+	}
+}
+var numbers = new Array()
+numbers[0] 	= new dotNum(1,1,1,0,1,1,1)
+numbers[1] 	= new dotNum(0,0,1,0,0,1,0)
+numbers[2] 	= new dotNum(1,0,1,1,1,0,1)
+numbers[3] 	= new dotNum(1,0,1,1,0,1,1)
+numbers[4] 	= new dotNum(0,1,1,1,0,1,0)
+numbers[5] 	= new dotNum(1,1,0,1,0,1,1)
+numbers[6] 	= new dotNum(1,1,0,1,1,1,1)
+numbers[7] 	= new dotNum(1,0,1,0,0,1,0)
+numbers[8] 	= new dotNum(1,1,1,1,1,1,1)
+numbers[9] 	= new dotNum(1,1,1,1,0,1,1)
+function dotNum(){
+	this.d0 = dotNum.arguments[0]
+	this.d1 = dotNum.arguments[1]
+	this.d2 = dotNum.arguments[2]
+	this.d3 = dotNum.arguments[3]
+	this.d4 = dotNum.arguments[4]
+	this.d5 = dotNum.arguments[5]
+	this.d6 = dotNum.arguments[6]
+}
+]]></script>
+<symbol id="digitH">
+	<path d="M3,2 l2,-2 l16,0 l2,2 l-2,2 l-16,0	l-2,-2" class="dotOff"/>
+</symbol>
+<symbol id="digitV">
+	<path d="M2,3 l-2,2 l0,16 l2,2 l2,-2 l0,-16 l-2,-2" class="dotOff"/>
+</symbol>
+</defs>
+<rect id="bg" width="100%" height="100%" x="0" y="0" fill="#ACE270"/>
+<rect x="0" y="0" height="0" width="0" id="outline" style="fill:none;stroke:rgb(0,0,0);stroke-width:1px"/>
+<g transform="translate(30,40),scale(3)">
+	<g id="H0">
+	 <use xlink:href="#digitH" x="0" y="0" class="dot0" /> 
+	 <use xlink:href="#digitV" x="0" y="0" class="dot0" /> 
+	 <use xlink:href="#digitV" x="22" y="0" class="dot0" /> 
+	 <use xlink:href="#digitH" x="0" y="22" class="dot0" /> 
+	 <use xlink:href="#digitV" x="0" y="22" class="dot0" /> 
+	 <use xlink:href="#digitV" x="22" y="22" class="dot0" /> 
+	 <use xlink:href="#digitH" x="0" y="44" class="dot0" />
+	</g>
+	<g id="H1" transform="translate(30,0)">
+	 <use xlink:href="#digitH" x="0" y="0" class="dot0" /> 
+	 <use xlink:href="#digitV" x="0" y="0" class="dot0" /> 
+	 <use xlink:href="#digitV" x="22" y="0" class="dot0" /> 
+	 <use xlink:href="#digitH" x="0" y="22" class="dot0" /> 
+	 <use xlink:href="#digitV" x="0" y="22" class="dot0" /> 
+	 <use xlink:href="#digitV" x="22" y="22" class="dot0" /> 
+	 <use xlink:href="#digitH" x="0" y="44" class="dot0" />
+	</g>
+	<rect x="60" y="14" height="4" width="4" class="dot1"/>
+	<rect x="60" y="30" height="4" width="4" class="dot1"/>
+	<g id="M0" transform="translate(68,0)">
+	 <use xlink:href="#digitH" x="0" y="0" class="dot0" /> 
+	 <use xlink:href="#digitV" x="0" y="0" class="dot0" /> 
+	 <use xlink:href="#digitV" x="22" y="0" class="dot0" /> 
+	 <use xlink:href="#digitH" x="0" y="22" class="dot0" /> 
+	 <use xlink:href="#digitV" x="0" y="22" class="dot0" /> 
+	 <use xlink:href="#digitV" x="22" y="22" class="dot0" /> 
+	 <use xlink:href="#digitH" x="0" y="44" class="dot0" />
+	</g>
+	<g id="M1" transform="translate(98,0)">
+	 <use xlink:href="#digitH" x="0" y="0" class="dot0" /> 
+	 <use xlink:href="#digitV" x="0" y="0" class="dot0" /> 
+	 <use xlink:href="#digitV" x="22" y="0" class="dot0" /> 
+	 <use xlink:href="#digitH" x="0" y="22" class="dot0" /> 
+	 <use xlink:href="#digitV" x="0" y="22" class="dot0" /> 
+	 <use xlink:href="#digitV" x="22" y="22" class="dot0" /> 
+	 <use xlink:href="#digitH" x="0" y="44" class="dot0" />
+	</g>
+</g>
+<g transform="translate(450,120),scale(1.5)">
+	<g id="S0">
+	 <use xlink:href="#digitH" x="0" y="0" class="dot0" /> 
+	 <use xlink:href="#digitV" x="0" y="0" class="dot0" /> 
+	 <use xlink:href="#digitV" x="22" y="0" class="dot0" /> 
+	 <use xlink:href="#digitH" x="0" y="22" class="dot0" /> 
+	 <use xlink:href="#digitV" x="0" y="22" class="dot0" /> 
+	 <use xlink:href="#digitV" x="22" y="22" class="dot0" /> 
+	 <use xlink:href="#digitH" x="0" y="44" class="dot0" />
+	</g>
+	<g id="S1" transform="translate(30,0)">
+	 <use xlink:href="#digitH" x="0" y="0" class="dot0" /> 
+	 <use xlink:href="#digitV" x="0" y="0" class="dot0" /> 
+	 <use xlink:href="#digitV" x="22" y="0" class="dot0" /> 
+	 <use xlink:href="#digitH" x="0" y="22" class="dot0" /> 
+	 <use xlink:href="#digitV" x="0" y="22" class="dot0" /> 
+	 <use xlink:href="#digitV" x="22" y="22" class="dot0" /> 
+	 <use xlink:href="#digitH" x="0" y="44" class="dot0" />
+	</g>	
+</g>
+</svg>
+

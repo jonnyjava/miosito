@@ -1,0 +1,93 @@
+ <svg  id="grafik" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+   <defs>
+ 
+    <style type="text/css">
+     <![CDATA[
+     text
+    {
+       font-family: "Courier New", Courier, monospace;
+       font-size: 24px;
+       font-weight: bold;
+       fill: #090;
+     visibility: hidden;
+     }
+ 
+    line
+     {
+       stroke: #E00;
+       stroke-width: 2px;
+     visibility: hidden;
+     }
+ text.headline
+   {
+     fill: #000;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 24px;
+       visibility: visible;
+    }
+
+    ]]>
+    </style>
+
+  </defs>
+<rect id="bg" width="100%" height="100%" x="0" y="0" fill="#ACE270"/>
+   <title>SVG - Learning By Coding</title>
+  <desc>SVG-Spezifikation in Beispielen</desc>
+  <text x="20" y="30" class="headline">Animazione del testo</text>
+   <text x="10" y="80">S<set attributeType="CSS" attributeName="visibility"
+    to="visible" begin="grafik.load+1s"/></text>
+  <text x="30" y="80">C<set attributeType="CSS" attributeName="visibility"
+     to="visible" begin="grafik.load+1.25s"/></text>
+  <text x="50" y="80">A<set attributeType="CSS" attributeName="visibility"
+    to="visible" begin="grafik.load+1.5s"/></text>
+   <text x="70" y="80">L<set attributeType="CSS" attributeName="visibility"
+     to="visible" begin="grafik.load+1.75s"/></text>
+  <text x="90" y="80">A<set attributeType="CSS" attributeName="visibility"
+     to="visible" begin="grafik.load+2s"/></text>
+  <text x="110" y="80">B<set attributeType="CSS" attributeName="visibility"
+    to="visible" begin="grafik.load+2.25s"/></text>
+   <text x="130" y="80">L<set attributeType="CSS" attributeName="visibility"
+    to="visible" begin="grafik.load+2.5s"/></text>
+   <text x="150" y="80">E<set attributeType="CSS" attributeName="visibility"
+   to="visible" begin="grafik.load+2.75s"/></text>
+   <text x="170" y="80"> <set attributeType="CSS" attributeName="visibility"
+     to="visible" begin="grafik.load+3s"/></text>
+   <text x="190" y="80">V<set attributeType="CSS" attributeName="visibility"
+     to="visible" begin="grafik.load+3.25s"/></text>
+ <text x="210" y="80">E<set attributeType="CSS" attributeName="visibility"
+   to="visible" begin="grafik.load+3.5s"/></text>
+   <text x="230" y="80">C<set attributeType="CSS" attributeName="visibility"
+     to="visible" begin="grafik.load+3.75s"/></text>
+  <text x="250" y="80">T<set attributeType="CSS" attributeName="visibility"
+     to="visible" begin="grafik.load+4s"/></text>
+  <text x="270" y="80">O<set attributeType="CSS" attributeName="visibility"
+     to="visible" begin="grafik.load+4.25s"/></text>
+   <text x="290" y="80">R<set attributeType="CSS" attributeName="visibility"
+     to="visible" begin="grafik.load+4.5s"/></text>
+   <text x="310" y="80"> <set attributeType="CSS" attributeName="visibility"
+   to="visible" begin="grafik.load+4.75s"/></text>
+   <text x="330" y="80">G<set attributeType="CSS" attributeName="visibility"
+     to="visible" begin="grafik.load+5s"/></text>
+   <text x="350" y="80">R<set attributeType="CSS" attributeName="visibility"
+    to="visible" begin="grafik.load+5.25s"/></text>
+   <text x="370" y="80">A<set attributeType="CSS" attributeName="visibility"
+    to="visible" begin="grafik.load+5.5s"/></text>
+  <text x="390" y="80">P<set attributeType="CSS" attributeName="visibility"
+     to="visible" begin="grafik.load+5.75s"/></text>
+   <text x="410" y="80">H<set attributeType="CSS" attributeName="visibility"
+     to="visible" begin="grafik.load+6s"/></text>
+ <text x="430" y="80">I<set attributeType="CSS" attributeName="visibility"
+   to="visible" begin="grafik.load+6.25s"/></text>
+   <text x="450" y="80">C<set attributeType="CSS" attributeName="visibility"
+     to="visible" begin="grafik.load+6.5s"/></text>
+   <text x="470" y="80">S<set attributeType="CSS" attributeName="visibility"
+     to="visible" begin="grafik.load+6.75s"/></text>
+
+   <line x1="10" y1="55" x2="485" y2="55"><set attributeType="CSS"
+     attributeName="visibility" to="visible" begin="grafik.load+7s"/></line>
+  <line x1="10" y1="90" x2="485" y2="90"><set attributeType="CSS"
+     attributeName="visibility" to="visible" begin="grafik.load+7s"/></line>
+ 
+ </svg>

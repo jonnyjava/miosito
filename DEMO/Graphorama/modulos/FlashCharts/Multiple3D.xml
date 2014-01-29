@@ -1,0 +1,38 @@
+<chart caption="Sales Summary" subCaption="For the year 2011 grouped by area" bgColor='227722 6DA5DB' divLineColor='000000' divLineAlpha='100' numVDivlines='10' vDivLineisDashed='1' showAlternateVGridColor='1'  toolTipBgColor='406181' toolTipBorderColor='406181' bgAlpha='100' baseFontColor='000000' canvasBgAlpha='0' canvasBorderColor='FFFFFF' numberPrefix="€" sformatNumberScale="1" sNumberPrefix="$" syncAxisLimits="1" rotateValues="0" showSum="1">
+    <categories>
+        <category label="Area one" />
+        <category label="Area two" />
+        <category label="Area three" />
+        <category label="Area four" />
+        <category label="Area five" />
+        <category label="Area six" />
+    </categories>
+<dataset seriesName="Product one">
+  <set value='45.83'/><set value='52.89'/><set value='15.46'/><set value='90.82'/><set value='87.35'/><set value='38.5'/>
+</dataset>
+<dataset seriesName="Product two">
+<set value='44.99'/><set value='31.56'/><set value='9.76'/><set value='80.37'/><set value='7.95'/><set value='36.15'/>
+</dataset>
+<dataset seriesName="Product three">
+<set value='89.45'/><set value='96.91'/><set value='58.4'/><set value='30.34'/><set value='38.34'/><set value='77.53'/>
+</dataset>
+<dataset seriesName="Product four">
+<set value='80.13'/><set value='31.52'/><set value='98.24'/><set value='83.62'/><set value='37.55'/><set value='85.9'/>
+</dataset>
+<dataset seriesName="Product five">
+<set value='76.07'/><set value='12.85'/><set value='54.32'/><set value='34.49'/><set value='66.33'/><set value='82.36'/>
+</dataset>
+<dataset seriesName="Product six">
+<set value='94.37'/><set value='67.05'/><set value='90.25'/><set value='64.1'/><set value='38.33'/><set value='97.09'/>
+</dataset>
+  <styles>
+    <definition>
+      <style type="font" name="CaptionFont" color="666666" size="15" />
+      <style type="font" name="SubCaptionFont" bold="0" />
+    </definition>
+    <application>
+      <apply toObject="caption" styles="CaptionFont" />
+      <apply toObject="SubCaption" styles="SubCaptionFont" />
+    </application>
+  </styles>
+</chart>

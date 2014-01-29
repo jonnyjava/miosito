@@ -1,0 +1,40 @@
+<chart caption="Sales Summary" subCaption="For the year 2006 2011" bgColor='1F7B67, 006B53' divLineColor='000000' divLineAlpha='100' numVDivlines='10' vDivLineisDashed='1' showAlternateVGridColor='1'  toolTipBgColor='406181' toolTipBorderColor='406181' bgAlpha='100' baseFontColor='000000' canvasBgAlpha='0' canvasBorderColor='FFFFFF' numberPrefix="€" sformatNumberScale="1" sNumberPrefix="$" syncAxisLimits="1" rotateValues="0" showSum="1">
+    <categories font='Arial' fontSize='12' fontColor='000000'>
+        <category label='2006'/>
+        <category label='2007'/>
+        <category label='2008'/>
+        <category label='2009'/>
+        <category label='2010'/>
+        <category label='2011'/>
+    </categories>
+    <dataSet>
+        <dataset seriesname='Service A' color='8BBA00'  showValues='1'>
+          <set value='64'/><set value='48.36'/><set value='70.83'/><set value='12.63'/><set value='48.61'/><set value='27.8'/>
+        </dataset>
+        <dataset seriesname='Service B' color='A66EDD'  showValues='1'>
+          <set value='74.6'/><set value='61.01'/><set value='77.58'/><set value='90.07'/><set value='75.08'/><set value='3.28'/>
+        </dataset>
+        <dataset seriesname='Service C' color='F984A1' showValues='1'>
+          <set value='82.09'/><set value='6.09'/><set value='63.28'/><set value='6.59'/><set value='1.53'/><set value='74.91'/>
+        </dataset>
+    </dataSet>
+    <dataset>
+        <dataSet seriesName='Product A' color='AFD8F8' showValues='1'>
+          <set value='41.96'/><set value='58.64'/><set value='22.81'/><set value='98.99'/><set value='86.22'/><set value='37.75'/>
+        </dataSet>
+        <dataSet seriesName='Product B' color='F6BD0F' showValues='1'>
+          <set value='41.96'/><set value='58.64'/><set value='22.81'/><set value='98.99'/><set value='86.22'/><set value='37.75'/>
+        </dataSet>
+    </dataset>
+    <dataSet>
+        <dataset seriesname='Area A' color='8BBA00'  showValues='1'>
+          <set value='18.74'/><set value='74.24'/><set value='48.53'/><set value='65.12'/><set value='5.84'/><set value='21.79'/>
+        </dataset>
+        <dataset seriesname='Area B' color='A66EDD'  showValues='1'>
+          <set value='55.95'/><set value='24.93'/><set value='45.56'/><set value='53.91'/><set value='54.52'/><set value='67.01'/>
+        </dataset>
+        <dataset seriesname='Area C' color='F984A1' showValues='1'>
+          <set value='2.9'/><set value='70.51'/><set value='11.57'/><set value='88.79'/><set value='42.94'/><set value='30.39'/>
+        </dataset>
+    </dataSet>
+</chart>

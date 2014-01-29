@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Documento senza titolo</title>
+<style type="text/css">
+body {
+	background-color: #000000;
+	margin-top: 0px;
+}
+.miniatura{
+  width:160px;
+  height:120px;
+  cursor:pointer;
+}
+</style>
+<script type="text/javascript">
+  function apriimg(img){
+    document.getElementById('boxrender').style.backgroundImage="url('renders/"+img+".jpg')";
+    document.getElementById('boxgrande').style.display ="block";
+  }
+  function chiudibox(){
+    document.getElementById('boxgrande').style.display ="none";
+  }
+</script>
+</head>
+<body><!--
+<div align="center">
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="640" height="480">
+    <param name="movie" value="play.swf">
+    <param name="quality" value="high">
+    <embed src="play.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="640" height="480"></embed></object>
+</div>-->
+  <div style="width:640px;height:500px;border:1px solid white; z-index:5;position:absolute; top:10px; left:25%;display:none;" id="boxgrande">
+  <div style="width:640px;height:20px;float:left;color:#FFFFFF; background-color: #000000;text-align: right;cursor:pointer;" onclick="chiudibox();">[X]</div>
+  <div style="width:640px;height:480px;" id="boxrender" onclick="chiudibox();"></div>
+  </div>
+<div align="center"style="width:100%;">  
+<img src="minirenders/01.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('01');"/>
+<img src="minirenders/02.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('02');"/>
+<img src="minirenders/03.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('03');"/>
+<img src="minirenders/04.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('04');"/>
+<img src="minirenders/05.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('05');"/>
+<img src="minirenders/06.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('06');"/>
+<img src="minirenders/07.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('07');"/>
+<img src="minirenders/08.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('08');"/>
+<img src="minirenders/09.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('09');"/>
+<img src="minirenders/10.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('10');"/>
+<img src="minirenders/11.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('11');"/>
+<img src="minirenders/12.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('12');"/>
+<img src="minirenders/13.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('13');"/>
+<img src="minirenders/14.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('14');"/>
+<img src="minirenders/15.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('15');"/>
+<img src="minirenders/16.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('16');"/>
+<img src="minirenders/17.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('17');"/>
+<img src="minirenders/18.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('18');"/>
+<img src="minirenders/19.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('19');"/>
+<img src="minirenders/20.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('20');"/>
+<img src="minirenders/21.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('21');"/>
+<img src="minirenders/22.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('22');"/>
+<img src="minirenders/23.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('23');"/>
+<img src="minirenders/24.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('24');"/>
+<img src="minirenders/25.jpg" class="miniatura" alt="" title= "" onclick="chiudibox();apriimg('25');"/>
+  
+</body>
+</html>

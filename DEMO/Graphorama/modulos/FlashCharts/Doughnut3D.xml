@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<chart caption="Sales Summary" subCaption="For the year 2011" bgColor='200772' bgAngle='45' 
+pieYScale='45' startingAngle='1' plotFillAlpha='80' pieInnerfaceAlpha='60' slicingDistance='35'
+smartLineColor='7D8892' smartLineThickness='2' divLineColor='000000' divLineAlpha='100' numVDivlines='10' 
+vDivLineisDashed='1' showAlternateVGridColor='1'  toolTipBgColor='406181' toolTipBorderColor='406181' 
+bgAlpha='100' baseFontColor='FFFFFF' canvasBgAlpha='0' canvasBorderColor='FFFFFF' numberPrefix="€" 
+sformatNumberScale="1" sNumberPrefix="$" syncAxisLimits="1" rotateValues="0" showSum="1">
+  <set label="January" value="164.67" isSliced='1' />
+  <set label="February" value="196.75" />
+  <set label="March" value="192.2" isSliced='1' />
+  <set label="April" value="172.51" />
+  <set label="May" value="233.35" isSliced='1' />
+  <set label="June" value="153.2" />
+  <set label="July" value="289.09" isSliced='1' />
+  <set label="August" value="131.23" />
+  <set label="September" value="169.92" isSliced='1' />
+  <set label="October" value="248.79" />
+  <set label="November" value="126.89" isSliced='1' />
+  <set label="December" value="295.96"  />
+</chart>

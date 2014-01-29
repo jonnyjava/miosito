@@ -1,0 +1,187 @@
+// Global scene parameters
+
+SET SCENE_FOV = 60;
+SET SCENE_NEAR = 0.5;
+SET SCENE_FAR = 1000;
+
+// Needed includes 
+
+#include <Script3d.h>
+#include <GLConst.h>
+#include <Impulse.h>
+
+// Global variables
+
+// Camera globals
+var CamPos = [0.0,0.0,0.0];			//camera position
+var RotX = 0, RotY = 0, Distance = 20;
+var X = RotX, Y = RotY, D = Distance;
+
+// Light globals
+var Luce;
+var PosL = [0.0,10.0,0.0];	//default light position
+
+//Mesh
+var	M_ingranaggio36;
+
+//Obj
+var	O_ingranaggio36;
+
+// Function declarations
+function CameraMoveMouse();
+function DrawGrid();
+
+function OnDownload()
+{
+	FileDownload("ingranaggio2.zip");
+
+	// TO DO		
+}
+
+function OnInit(params)
+{
+	// Camera
+	SetCameraTarget(CamPos);
+
+	// Light
+	Luce = NewLight();
+	Luce.SetDiffuse(1,1,1);
+	Luce.Enable();	
+
+	// Light initial position
+	Luce.SetPosition(PosL);
+
+	//Init Mesh and Obj
+	M_ingranaggio36 = LoadNewMesh("ingranaggio36.aam");
+
+	O_ingranaggio36 = NewObject();
+	O_ingranaggio36.LinkToMesh(M_ingranaggio36);
+	O_ingranaggio36.SetPosition(0.0,0.0,0.0);
+
+
+	//TO DO
+}
+
+function OnFrame()
+{
+	// Camera manager
+	CameraMoveMouse();
+
+	SceneBegin();
+
+	//Draw Obj
+	O_ingranaggio36.Draw();
+
+	// Draws grid
+	DrawGrid();
+
+	// TO DO
+
+
+
+	SceneEnd();
+
+}
+
+function DownloadReady( RequestID )
+{
+	// TO DO
+}
+
+
+
+function OnTimer()
+{
+	// TO DO
+}
+
+
+
+function OnExit()
+{
+	// TO DO
+}
+
+
+
+// Camera manager (using mouse)
+function CameraMoveMouse()
+{
+	static var InMouseR = false, InMouseL = false;				
+	static var PrecX = 0, PrecY = 0;			
+	if (Mouse.ButtonL)
+	{
+		if (InMouseL)
+		{	
+			X = RotX - (Mouse.X - PrecX)/4.0;		
+			Y = RotY + (Mouse.Y - PrecY)/10.0;
+
+			if( Y > 100 ) Y = 100;	// Rotation lower limit
+			if( Y <  10 ) Y =  10;	// Rotation Upper limit
+		}
+		else
+		{
+			PrecX = Mouse.X;
+			PrecY = Mouse.Y;
+		}
+		InMouseL = true;		
+	}
+	else
+		if( InMouseL )
+		{
+			RotX = X; RotY = Y;
+			InMouseL = false;
+		}
+
+	if (!Mouse.ButtonL && Mouse.ButtonR)
+	{
+		if (InMouseR)
+		{
+			D = Distance - ( PrecY - Mouse.Y)/10.0;
+			if( D < 10  ) D = 10;	// Zoom in limit
+			if( D > 150 ) D = 150;	// Zoom out limit
+		}
+		else
+		{
+			PrecX = Mouse.X;
+			PrecY = Mouse.Y;
+		}
+		InMouseR = true;
+	}
+	else
+		if(InMouseR)
+		{
+			Distance = D;
+			InMouseR = false;
+		}
+
+	CamPos = [0,D,0];	
+	CamPos = VectorRotate(-Y, 1,0,0,CamPos);
+
+	var Temp = VectorRotate( X, 0,1,0, [CamPos[0],0,CamPos[2]]);
+
+	Temp[1] = CamPos[1];
+	SetCameraPosition(Temp);	
+
+}
+
+// Draws a grid
+function DrawGrid()
+{
+	var i;
+	glLineWidth(1);
+	
+	glDisable(GL_LIGHTING);
+	glColor(0.5,0.5,0.5);
+	
+	glBegin(GL_LINES);
+	for( i= -100; i<=100; i+=10 )
+	{
+		glVertex(i, 0,  100 );
+		glVertex(i, 0, -100 );
+		
+		glVertex( 100, 0, i );
+		glVertex(-100, 0, i );
+	}
+	glEnd();
+}

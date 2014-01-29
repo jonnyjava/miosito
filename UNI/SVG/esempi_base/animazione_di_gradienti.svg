@@ -1,0 +1,94 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20001102//EN" 
+  "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd">
+<svg width="600" height="500" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+   <title>SVG - Imparare con gli esempi</title>
+	<defs>
+		<radialGradient id="MyRadialGradient" gradientUnits="objectBoundingBox"
+                      cx="50%" cy="50%" r="80%" fx="50%" fy="50%" spreadMethod="reflect">
+			<stop offset="0%" style="stop-color:#ff5500; stop-opacity:1" >
+				<animate attributeName="offset" begin="0s" dur="4s"
+					values="0%;0%;0%" keyTimes="0;2;4" repeatCount="indefinite"/>
+			</stop>
+			<stop offset="0%" style="stop-color:#00ff00; stop-opacity:1" >
+				<animate attributeName="offset" begin="0s" dur="4s"
+					values="0%;0%;50%" keyTimes="0;2;4" repeatCount="indefinite"/>
+			</stop>
+			<stop offset="0%" style="stop-color:#ff5500; stop-opacity:1" >
+				<animate attributeName="offset" begin="0s" dur="4s"
+					values="0%;50%;100%" keyTimes="0;2;4" repeatCount="indefinite"/>
+			</stop>
+			<stop offset="50%" style="stop-color:#00ff00; stop-opacity:1" >
+				<animate attributeName="offset" begin="0s" dur="4s"
+					values="50%;100%;100%" keyTimes="0;2;4" repeatCount="indefinite"/>
+			</stop>
+			<stop offset="100%" style="stop-color:#ff5500; stop-opacity:1" >
+				<animate attributeName="offset" begin="0s" dur="4s"
+					values="100%;100%;100%" keyTimes="0;2;4" repeatCount="indefinite"/>
+			</stop>
+			<animate attributeName="fx" begin="0s" dur="8s"
+				values="50%;0%;50%;100%;50%" keyTimes="0;2;4;6;8" repeatCount="indefinite"/>
+		</radialGradient>
+<radialGradient id="blu" cx="50%" cy="50%" r="7%" fx="50%" fy="50%" spreadMethod="reflect" gradientUnits="objectBoundingBox">
+	<stop offset="0%" style="stop-color:rgb(0,0,128);stop-opacity:1">
+		<animate attributeName="offset" begin="0s" dur="1.5s"
+			values="0%;0%;0%" keyTimes="0;2;4" repeatCount="indefinite"/></stop>
+	<stop offset="25%" style="stop-color:rgb(168,178,216);stop-opacity:1">
+		<animate attributeName="offset" begin="0s" dur="1.5s"
+			values="0%;0%;50%" keyTimes="0;2;4" repeatCount="indefinite"/></stop>
+	<stop offset="50%" style="stop-color:rgb(0,0,128);stop-opacity:1">
+		<animate attributeName="offset" begin="0s" dur="1.5s"
+			values="0%;50%;100%" keyTimes="0;2;4" repeatCount="indefinite"/></stop>
+	<stop offset="75%" style="stop-color:rgb(168,178,216);stop-opacity:1">
+		<animate attributeName="offset" begin="0s" dur="1.5s"
+			values="50%;100%;100%" keyTimes="0;2;4" repeatCount="indefinite"/></stop>
+	<stop offset="100%" style="stop-color:rgb(0,0,128);stop-opacity:1">
+		<animate attributeName="offset" begin="0s" dur="1.5s"
+			values="100%;100%;100%" keyTimes="0;2;4" repeatCount="indefinite"/></stop>
+
+</radialGradient>
+<linearGradient id="rosso" x1="0" y1="0" x2="1" y2="1" spreadMethod="reflect">
+       <stop offset="0%" style="stop-color: #ffbbbb"/>
+       <stop offset="50%" style="stop-color: #ff4422"/>
+      <stop offset="100%" style="stop-color: #ee8855"/>
+
+      <animate attributeName="x1" attributeType="XML" begin="0s" dur="5s"
+         from="0" to="1" repeatCount="indefinite"/>
+      <animate attributeName="y1" attributeType="XML" begin="0s" dur="5s"
+         from="0" to="1" repeatCount="indefinite"/>
+ 
+       <animate attributeName="x2" attributeType="XML" begin="0s" dur="5s"
+         from="1" to="0" repeatCount="indefinite"/>
+       <animate attributeName="y2" attributeType="XML" begin="0s" dur="5s"
+         from="1" to="0" repeatCount="indefinite"/>
+</linearGradient>
+
+<linearGradient id="marrone-viola">
+       <stop offset="0%" style="stop-color: #996622">
+
+      <animate attributeName="stop-color" attributeType="CSS" begin="0s" dur="5s"
+           from="#996622" to="#ffff22" repeatCount="indefinite"/>
+       </stop>
+
+       <stop offset="50%" style="stop-color: #ffff22">
+         <animate attributeName="stop-color" attributeType="CSS" begin="0s" dur="5s"
+           from="#ffff22" to="#aa00ff" repeatCount="indefinite"/>
+       </stop>
+
+       <stop offset="100%" style="stop-color: #aa00ff">
+        <animate attributeName="stop-color" attributeType="CSS" begin="0s" dur="5s"
+           from="#aa00ff" to="#996622" repeatCount="indefinite"/>
+       </stop>
+</linearGradient>
+
+</defs>
+<rect id="bg"  width="550" height="500" x="0" y="0" fill="#ACE270"/>
+<rect x="0" y="40" width="275" height="200" style="fill:url(#blu)"/>
+<rect x="275" y="40" width="275" height="200" style="fill:url(#MyRadialGradient)"/>
+<rect x="0" y="270" width="550" height="80" style="fill:url(#marrone-viola)"/>
+<rect x="0" y="350" width="550" height="80" style="fill:url(#rosso)"/>
+
+  
+<text x="20" y="30" style="fill: #000; font-size: 20px">Animazione di gradienti circolari</text>
+<text x="20" y="260" style="fill: #000; font-size: 20px">Animazione di gradienti lineari</text>
+</svg>

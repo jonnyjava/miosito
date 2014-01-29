@@ -1,0 +1,204 @@
+<HTML>
+<HEAD>
+<TITLE>
+vespa1
+</TITLE>
+</HEAD>
+<style>
+.avanti{background-image:url('play.gif');
+background-repeat:no-repeat;
+background-position:center center;
+width:90px;height:90px;
+background-color:ffffff;}
+.ferma{background-image:url('pause.gif');
+background-repeat:no-repeat;
+background-position:center center;
+width:90px;height:90px;
+background-color:ffffff;}
+.indietro{background-image:url('playback.gif');
+background-repeat:no-repeat;
+background-position:center center;
+width:90px;height:90px;
+background-color:ffffff;}
+.rewind{background-image:url('rwd.gif');
+background-repeat:no-repeat;
+background-position:center center;
+width:90px;height:90px;
+background-color:ffffff;}
+.forward{background-image:url('fwd.gif');
+background-repeat:no-repeat;
+background-position:center center;
+width:90px;height:90px;
+background-color:ffffff;}
+.steprew{background-image:url('rwdstep.gif');
+background-repeat:no-repeat;
+background-position:center center;
+width:90px;height:90px;
+background-color:ffffff;}
+.stepffw{background-image:url('fwdstep.gif');
+background-repeat:no-repeat;
+background-position:center center;
+width:90px;height:90px;
+background-color:ffffff;}
+
+.uno{background-image:url('ingra1.bmp');
+background-repeat:no-repeat;
+background-position:center center;
+width:70px;height:70px;
+background-color:ffffff;}
+.due{background-image:url('ingra2.bmp');
+background-repeat:no-repeat;
+background-position:center center;
+width:70px;height:70px;
+background-color:ffffff;}
+.tre{background-image:url('ingra3.bmp');
+background-repeat:no-repeat;
+background-position:center center;
+width:70px;height:70px;
+background-color:ffffff;}
+.quat{background-image:url('ingra4.bmp');
+background-repeat:no-repeat;
+background-position:center center;
+width:70px;height:70px;
+background-color:ffffff;}
+.ghiera{background-image:url('ghiera.bmp');
+background-repeat:no-repeat;
+background-position:center center;
+width:70px;height:70px;
+background-color:ffffff;}
+.semi{background-image:url('semiasse.bmp');
+background-repeat:no-repeat;
+background-position:center center;
+width:70px;height:70px;
+background-color:ffffff;}
+.tappo{background-image:url('tappo.bmp');
+background-repeat:no-repeat;
+background-position:center center;
+width:70px;height:70px;
+background-color:ffffff;}
+.tamb{background-image:url('tamburo.bmp');
+background-repeat:no-repeat;
+background-position:center center;
+width:70px;height:70px;
+background-color:ffffff;}
+.cambio{background-image:url('cambio.bmp');
+background-repeat:no-repeat;
+background-position:center center;
+width:70px;height:70px;
+background-color:ffffff;}
+.asse{background-image:url('asse.bmp');
+background-repeat:no-repeat;
+background-position:center center;
+width:70px;height:70px;
+background-color:ffffff;}
+</style>
+
+<BODY bgcolor = "#000000" style="margin:0; padding:0" scroll="yes"  >
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function fwd_onClick()
+{	vespa1.DataIn("1");
+}
+
+function rew_onClick()
+{	vespa1.DataIn("2");
+}
+
+function pause_onClick()
+{	vespa1.DataIn("0");
+}
+
+function avanti_onClick()
+{	vespa1.DataIn("3");
+}
+
+function indietro_onClick()
+{	vespa1.DataIn("4");
+}
+function avantiDiUno_onClick()
+{	vespa1.DataIn("5");
+}
+
+function indietroDiUno_onClick()
+{	vespa1.DataIn("6");
+}
+
+function cambiaImg(numero){
+nuovo=new Array("schedaUno.gif","schedaDue.gif","schedaTre.gif","schedaQuat.gif","schedaSemi.gif","schedaAsse.gif","schedaCambio.gif","schedaGhiera.gif","schedaTamburo.gif","schedaTappo.gif");
+document.schedaPezzi.src=nuovo[numero];
+}
+
+-->
+</SCRIPT>
+
+	<table border="0">
+	 <tr>
+	  <td> <!--prima cella tabella principale -->
+		<table width="889" border="0" cellspacing="0" cellpadding="0">
+		 <tr><td colspan="3"><img src="sopra.gif"></td>
+		 </tr>
+		 <tr>
+		     <td><img src="sinistra.gif"></td>
+		     <td>
+			 	 <OBJECT ID="vespa1" WIDTH="858" HEIGHT="486" CLASSID="CLSID:5D589287-1496-4223-AE64-65FA078B5EAB" TYPE="application/x-oleobject" CODEBASE="http://client.vrmedia.it/XVRPlayer.cab#Version=1,0,0,900">
+				 <PARAM NAME="ScriptName" VALUE="vespa1.s3d.bin"><PARAM NAME="EngineVersion" VALUE="0141"><PARAM NAME="BackgroundColor" VALUE="#000000">
+				 </OBJECT>
+			 </td>
+		     <td><img src="destra.gif"></td>
+		 </tr>
+		 <tr><td colspan="3"><img src="sotto.gif"></td></tr>
+		</table>
+	  </td><!-- FINE prima cella tabella principale -->
+	  <td> <!--seconda cella tabella principale -->
+		<table width="300" border="0" cellspacing="0" cellpadding="0">
+		  <tr><td><img src="schedaZero.gif" name="schedaPezzi"></td></tr>
+		</table>
+	  </td><!--FINE seconda cella tabella principale -->
+	 </tr>
+
+<tr>
+	<td>
+	<FORM NAME="Controls">
+	<div align="center">
+	<table border="0" cellpadding="0" cellspacing="0" bgcolor="ffffff">
+		<tr>
+			<td><input name="steprew" type="button" class="steprew" onClick="indietroDiUno_onClick()"></td> 
+			<td><input name="rewStep" type="button" class="rewind" onClick="indietro_onClick()"></td> 
+			<td><input name="rew" type="button" class="indietro" onClick="rew_onClick()"></td>
+			<td><input name="pause" type="button" class="ferma" onClick="pause_onClick()"></td>
+			<td><input name="fwd" type="button" class="avanti" onClick="fwd_onClick()"></td>
+			<td><input name="fwdStep" type="button" class="forward" onClick="avanti_onClick()"></td>
+			<td><input name="stepffw" type="button" class="stepffw" onClick="avantiDiUno_onClick()"></td>
+<!--	<td><input type="text" name="Descrizione" size="50" value="Descr" style="text-align: Center"></td>-->
+		</tr>
+	</table>
+	</div>
+	</FORM>
+</td><!--qui finisce la cella dei comandi filmato -->
+
+<td><!--qui inizia la cella dei pulsanti x le finestrelle 3d -->
+	<table border="0" cellpadding="0" cellspacing="0" bgcolor="000000">
+		<tr>
+		 <td>
+			<input name="uno" type="button" class="uno" onMouseDown="cambiaImg(0);" onClick="window.open('ingranaggio33.htm','ingranaggio','width=300,height=300 ,toolbar=no, location=no,status=no,menubar=no,scrollbars=no,resizable=no');">
+			<input name="due" type="button" class="due" onMouseDown="cambiaImg(1);"onClick="window.open('ingranaggio34.htm','ingranaggio','width=300,height=300 ,toolbar=no, location=no,status=no,menubar=no,scrollbars=no,resizable=no');">
+			<input name="tre" type="button" class="tre" onMouseDown="cambiaImg(2);"onClick="window.open('ingranaggio3.htm','ingranaggio','width=300,height=300 ,toolbar=no, location=no,status=no,menubar=no,scrollbars=no,resizable=no');">
+			<input name="quat" type="button" class="quat"onMouseDown="cambiaImg(3);" onClick="window.open('ingranaggio2.htm','ingranaggio','width=300,height=300 ,toolbar=no, location=no,status=no,menubar=no,scrollbars=no,resizable=no');">
+			<input name="ghiera" type="button" class="ghiera"onMouseDown="cambiaImg(7);" onClick="window.open('ghiera.htm','ghiera','width=300,height=300 ,toolbar=no, location=no,status=no,menubar=no,scrollbars=no,resizable=no');">
+		</td></tr>
+		<tr>
+		 <td>
+			<input name="cambio" type="button" class="cambio" onMouseDown="cambiaImg(6);" onClick="window.open('cambio.htm','cambio','width=300,height=300 ,toolbar=no, location=no,status=no,menubar=no,scrollbars=no,resizable=no');">
+			<input name="semi" type="button" class="semi" onMouseDown="cambiaImg(4);" onClick="window.open('semiasse.htm','semiasse','width=300,height=300 ,toolbar=no, location=no,status=no,menubar=no,scrollbars=no,resizable=no');">
+			<input name="tappo" type="button" class="tappo"onMouseDown="cambiaImg(9);" onClick="window.open('tappo.htm','tappo','width=300,height=300 ,toolbar=no, location=no,status=no,menubar=no,scrollbars=no,resizable=no');">
+			<input name="tamb" type="button" class="tamb"onMouseDown="cambiaImg(8);" onClick="window.open('tamburo.htm','tamburo','width=300,height=300 ,toolbar=no, location=no,status=no,menubar=no,scrollbars=no,resizable=no');">
+			<input name="asse" type="button" class="asse"onMouseDown="cambiaImg(5);" onClick="window.open('asse.htm','asse','width=300,height=300 ,toolbar=no, location=no,status=no,menubar=no,scrollbars=no,resizable=no');">
+		</td></tr>
+	</table> 
+</td> <!--FINE cella dei pulsanti x le finestrelle 3d -->
+</tr><!--fine seconda riga -->
+</table>	<!--FINE tabella principale -->
+	
+</BODY>
+</HTML>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<chart caption="Sales Summary" subCaption="For the year 2011" numberPrefix="€" sformatNumberScale="1" sNumberPrefix="$" syncAxisLimits="1" rotateValues="0" showSum="1">
+<set label="January" value="64.67"/>
+<set label="February" value="96.75"/>
+<set label="March" value="92.2"/>
+<set label="April" value="72.51"/>
+<set label="May" value="33.35"/>
+<set label="June" value="53.2"/>
+<set label="July" value="89.09"/>
+<set label="August" value="31.23"/>
+<set label="September" value="69.92"/>
+<set label="October" value="48.79"/>
+<set label="November" value="26.89"/>
+<set label="December" value="95.96"/>
+</chart>

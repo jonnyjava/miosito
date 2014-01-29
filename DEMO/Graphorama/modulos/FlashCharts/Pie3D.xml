@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<chart  caption="Sales Summary" subCaption="For the year 2011" bgColor='333300' divLineColor='000000' divLineAlpha='100' numVDivlines='10' 
+vDivLineisDashed='1' showAlternateVGridColor='1'  toolTipBgColor='000000' toolTipBorderColor='000000' bgAlpha='100' baseFontColor='ffffff' 
+canvasBgAlpha='0' canvasBorderColor='000000' numberPrefix="€" sformatNumberScale="1" sNumberPrefix="$" syncAxisLimits="1" rotateValues="0" 
+showSum="1">
+<set value='221.7' label='Jan' color=''/>
+<set value='277.39' label='Feb' color=''/>
+<set value='51.84' label='Mar' color=''/>
+<set value='183.7' label='Apr' color=''/>
+<set value='291.98' label='May' color='' isSliced='1'/>
+<set value='288.46' label='Jun' color=''/>
+<set value='129.27' label='Jul' color=''/>
+<set value='219.75' label='Aug' color=''/>
+<set value='100.11' label='Sep' color=''/>
+<set value='119.85' label='Oct' color=''/>
+<set value='248.79' label='Nov' color=''/>
+<set value='229.26' label='Dec' color=''/>
+<styles>
+  <definition>
+    <style type="font" name="CaptionFont" color="666666" size="15" />
+    <style type="font" name="SubCaptionFont" bold="0" />
+  </definition>
+  <application>
+    <apply toObject="caption" styles="CaptionFont" />
+    <apply toObject="SubCaption" styles="SubCaptionFont" />
+  </application>
+</styles>
+</chart>

@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+   "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+   <!ATTLIST svg xmlns:xlink CDATA #FIXED "http://www.w3.org/1999/xlink">
+ ]>
+ 
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+   onload="getSVGDoc(evt)">
+   <title>SVG - Imparare con gli esempi</title>
+   <desc>SVG-Imparare dagli esempi</desc>
+ 
+   <defs>
+ 
+     <script type="text/javascript">
+       <![CDATA[
+ 
+       var svgdoc,svgroot,newline,newcircle,newrect,posx,posy,startx,starty,anzahl;
+       var aktfill,aktline,radius,maxradius,grid,drawing,shape,shapes,shapeobj,shapetag;
+       var posminx=50,posminy=50,zbreite=640,zhoehe=480,gridbox=20,gr=true,check=false;
+       var curshape="l",linecol="#000",fillcol="none",linewidth="1px",ausgabe="";
+
+
+      function getSVGDoc(load_evt)
+     {
+         svgdoc=load_evt.target.ownerDocument;
+         svgroot=svgdoc.rootElement;
+ 
+         aktfill=svgdoc.getElementById("aktfill");
+         aktline=svgdoc.getElementById("aktline");
+         drawing=svgdoc.getElementById("drawing");
+         grid=svgdoc.getElementById("grid");
+         shape=svgdoc.getElementById("shape");
+ 
+         svgroot.addEventListener("mousedown",MDown,false);
+        svgroot.addEventListener("mousemove",MMove,false);
+       svgroot.addEventListener("mouseup",MUp,false);
+ 
+         DrawGrid(zbreite,zhoehe,posminx,posminy,gridbox);
+       }
+ 
+ 
+       function MDown(mousedown_event)
+       {
+         fillcol=aktfill.style.getPropertyValue("fill");
+         linecol=aktline.style.getPropertyValue("stroke");
+ 
+         Coords(mousedown_event);
+         startx=posx;
+         starty=posy;
+ 
+         if(curshape=="l")StartLine();
+         if(curshape=="c")StartCircle();
+         if(curshape=="r")StartRect();
+ 
+         check=true;
+       }
+ 
+
+       function MMove(mousemove_event)
+       {
+         if(check)
+         {
+           Coords(mousemove_event);
+           if(Math.abs(startx-posx)>0 && Math.abs(starty-posy)>0)
+           {
+             if(curshape=="l")FinishLine();
+             if(curshape=="c")FinishCircle();
+             if(curshape=="r")FinishRect();
+           }
+         }
+       }
+ 
+ 
+      function MUp()
+      {
+        check=false;
+     }
+ 
+ 
+       function StartLine()
+       {
+         newline=svgdoc.createElement("line");
+         newline.setAttribute("x1",posx);
+         newline.setAttribute("x2",posx);
+         newline.setAttribute("y1",posy);
+         newline.setAttribute("y2",posy);
+         newline.setAttribute("stroke",linecol);
+         newline.setAttribute("stroke-width",linewidth);
+      }
+
+
+ function FinishLine()
+     {
+       newline.setAttribute("x2",posx);
+        newline.setAttribute("y2",posy);
+         drawing.appendChild(newline);
+       }
+ 
+ 
+       function StartCircle()
+       {
+         radius=0;
+        newcircle=svgdoc.createElement("circle");
+        newcircle.setAttribute("cx",posx);
+         newcircle.setAttribute("cy",posy);
+         newcircle.setAttribute("r",radius);
+         newcircle.setAttribute("fill",fillcol);
+         newcircle.setAttribute("stroke",linecol);
+         newcircle.setAttribute("stroke-width",linewidth);
+       }
+ 
+ 
+       function FinishCircle()
+       {
+         radius=parseInt(Math.sqrt(Math.pow(posx-startx,2)+Math.pow(posy-starty,2)));
+         maxradius=Math.min(Math.min(startx-posminx,zbreite-(startx-posminx)),Math.min(starty-posminy,zhoehe-(starty-posminy)));
+         if(radius>maxradius)radius=maxradius;      
+        newcircle.setAttribute("r",radius);
+         drawing.appendChild(newcircle);
+       }
+ 
+ 
+       function StartRect()
+       {
+         newrect=svgdoc.createElement("rect");
+         newrect.setAttribute("x",posx);
+         newrect.setAttribute("y",posy);
+         newrect.setAttribute("width","0");
+         newrect.setAttribute("height","0");
+         newrect.setAttribute("fill",fillcol);
+         newrect.setAttribute("stroke",linecol);
+         newrect.setAttribute("stroke-width",linewidth);
+       }
+ 
+ 
+       function FinishRect()
+       {
+         w=parseInt(posx-startx);
+         h=parseInt(posy-starty);
+         newrect.setAttribute("width",w);
+         newrect.setAttribute("height",h);
+         drawing.appendChild(newrect);
+       }
+ 
+ 
+       function Coords(mouse_event)
+       {
+         posx=mouse_event.clientX;
+         posy=mouse_event.clientY;
+ 
+       if(posx<posminx)posx=posminx;
+        if(posy<posminy)posy=posminy;
+         if(posx>zbreite+posminx)posx=zbreite+posminx;
+        if(posy>zhoehe+posminy)posy=zhoehe+posminy;
+       }
+ 
+
+      function SetColors(mousedown_event)
+       {
+       setcol=mousedown_event.target.style.getPropertyValue("fill");
+         if(setcol=="#FFF")setcol="none";
+         if(curshape=="l")aktline.style.setProperty("stroke",setcol);
+        else if(curshape=="c")aktfill.style.setProperty("fill",setcol);
+        else if(curshape=="r")aktfill.style.setProperty("fill",setcol);
+   }
+ 
+ 
+       function SetLineWidth(mousedown_event)
+     {
+         linewidth=mousedown_event.target.style.getPropertyValue("stroke-width");
+         aktline.style.setProperty("stroke-width",linewidth);
+       }
+
+ 
+       function SetShape(mousedown_event)
+       {
+         shapetag=mousedown_event.target.tagName;
+         shapeobj=shape.childNodes;
+ 
+         for(i=0;i<shapeobj.length;i++)
+         {
+           if(shapeobj.item(i).tagName==shapetag)
+           {
+             curshape=shapetag.charAt(0);
+             shapeobj.item(i).style.setProperty("stroke-width","3px");
+           }
+          else if(shapeobj.item(i).nodeType==1)
+           {
+             shapeobj.item(i).style.setProperty("stroke-width","1px");
+          }
+        }
+      }
+
+      function UndoLastShape()
+      {
+        shapes=drawing.childNodes;
+         anzahl=shapes.length;
+         if(anzahl>0)drawing.removeChild(drawing.lastChild);
+       }
+ 
+ 
+       function ClearDrawing()
+       {
+         shapes=drawing.childNodes;
+         anzahl=shapes.length;
+ 
+              if(anzahl>0)
+         {
+           if(top.confirm && top.confirm("Sicuro di voler cancellare tutto?"))
+           {
+             for(i=0;i<anzahl;i++)drawing.removeChild(drawing.lastChild);
+           }
+           else if(!top.confirm)alert("Il disegno non può essere cancellato!");
+         }
+       }
+ 
+ 
+       function ShowHideGrid()
+       {
+         if(gr)
+         {
+           grid.style.setProperty("visibility","hidden");
+           gr=false;
+         }
+         else
+         {
+           grid.style.setProperty("visibility","visible");
+           gr=true;
+         }
+       }
+ 
+ 
+       function Copy2Clipboard()
+       {
+         shapes=drawing.childNodes;
+         anzahl=shapes.length;
+ 
+      if(top.clipboardData && anzahl>0)
+         {
+           ausgabe="<?xml version=\"1.0\" encoding=\"ISO-8859-1\" standalone=\"no\"?>\r\n";
+           ausgabe+="<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.0//EN\"\r\n";
+           ausgabe+="  \"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd\">\r\n\r\n";
+           ausgabe+="<svg xmlns=\"http://www.w3.org/2000/svg\">\r\n\r\n";
+           ausgabe+="  <title>SVG - Learning By Coding | http://www.datenverdrahten.de/svglbc/</title>\r\n";
+           ausgabe+="  <desc>Disegnare oggetti</desc>\r\n";
+ 
+           for(i=0;i<anzahl;i++)
+           {
+             ausgabe+="\r\n  "+printNode(shapes.item(i));
+           }
+ 
+           ausgabe+="\r\n\r\n</svg>\r\n";
+           ausgabe+="\r\n<!-- generated by http://www.datenverdrahten.de/svglbc/?doc=drawshapes -->\r\n";
+ 
+           top.clipboardData.setData("Text",ausgabe);
+           alert("L'oggetto verrà copiato.");
+         }
+         else alert("Impossibile copiare, non c'è nessun oggetto!");
+       }
+ 
+ 
+       function DrawGrid(breite,hoehe,xstart,ystart,step)
+       {
+       
+         var bmax,vmax,xs,xe,ys,ye,i,gridline;
+ 
+         hmax=parseInt(breite/step);
+         vmax=parseInt(hoehe/step);
+         xs=xstart;
+         xe=xstart+breite;
+         ys=ystart;
+         ye=ystart+hoehe;
+ 
+         for(i=1;i<vmax;i++)
+         {
+           gridline=svgdoc.createElement("line");
+           gridline.setAttribute("x1",xs);
+           gridline.setAttribute("x2",xe);
+           gridline.setAttribute("y1",ys+i*step);
+           gridline.setAttribute("y2",ys+i*step);
+           grid.appendChild(gridline);
+         }
+ 
+         for(i=1;i<hmax;i++)
+         {
+           gridline=svgdoc.createElement("line");
+           gridline.setAttribute("x1",xs+i*step);
+           gridline.setAttribute("x2",xs+i*step);
+           gridline.setAttribute("y1",ys);
+           gridline.setAttribute("y2",ye);
+           grid.appendChild(gridline);
+         }
+       }
+ 
+      ]]>
+     </script>
+ 
+   </defs>
+ 
+ 
+   <text x="40" y="30" style="fill: #000; font-size: 24px">
+     Disegnare figure geometriche </text>
+ 
+ 
+   <rect x="50" y="50" width="640" height="480" rx="5" ry="5"
+     style="fill: #FFF; stroke: #000"/>
+ 
+  
+   <g id="grid" style="visibility: visible"></g>
+ 
+  
+   <g id="drawing"></g>
+ 
+
+   <text x="5" y="60" style="fill: #00C; pointer-events: none">Colori</text>
+ 
+   <rect id="aktfill" x="10" y="70" width="10" height="160"
+    style="stroke: #000; fill: none"/>
+  <g onclick="SetColors(evt)">
+     <rect x="30" y="70" width="10" height="10"
+      style="fill: #FFF; stroke: #000"/>
+
+    <rect x="30" y="85" width="10" height="10"
+       style="fill: #FF0; stroke: #000"/>
+ 
+     <rect x="30" y="100" width="10" height="10"
+       style="fill: #FC0; stroke: #000"/>
+ 
+     <rect x="30" y="115" width="10" height="10"
+      style="fill: #F69; stroke: #000"/>
+
+    <rect x="30" y="130" width="10" height="10"
+       style="fill: #F00; stroke: #000"/>
+ 
+     <rect x="30" y="145" width="10" height="10"
+       style="fill: #9F9; stroke: #000"/>
+ 
+     <rect x="30" y="160" width="10" height="10"
+       style="fill: #090; stroke: #000"/>
+ 
+     <rect x="30" y="175" width="10" height="10"
+      style="fill: #39F; stroke: #000"/>
+
+    <rect x="30" y="190" width="10" height="10"
+       style="fill: #00C; stroke: #000"/>
+ 
+    <rect x="30" y="205" width="10" height="10"
+     style="fill: #CCC; stroke: #000"/>
+ 
+    <rect x="30" y="220" width="10" height="10"
+       style="fill: #000; stroke: #000"/>
+ 
+   </g>
+ 
+
+   <text x="5" y="250" style="fill: #00C; pointer-events: none">Linee</text>
+ 
+   <line id="aktline" x1="15" y1="258" x2="15" y2="323"
+     style="stroke: #000; stroke-width: 1px"/>
+ 
+   <g onclick="SetLineWidth(evt)">
+ 
+     <line x1="30" y1="260" x2="40" y2="260"
+       style="stroke: #000; stroke-width: 1px"/>
+ 
+     <line x1="30" y1="275" x2="40" y2="275"
+       style="stroke: #000; stroke-width: 2px"/>
+ 
+     <line x1="30" y1="290" x2="40" y2="290"
+       style="stroke: #000; stroke-width: 3px"/>
+ 
+     <line x1="30" y1="305" x2="40" y2="305"
+       style="stroke: #000; stroke-width: 4px"/>
+ 
+     <line x1="30" y1="320" x2="40" y2="320"
+       style="stroke: #000; stroke-width: 5px"/>
+ 
+   </g>
+ 
+
+   <text x="5" y="345" style="fill: #00C; pointer-events: none">Forme</text>
+ 
+   <g id="shape" onclick="SetShape(evt)">
+ 
+
+     <line id="l" x1="15" y1="375" x2="35" y2="355"
+       style="stroke: #000; stroke-width: 3px"/>
+
+     <circle id="c" cx="25" cy="395" r="10"
+       style="stroke: #000; stroke-width: 1px; fill: #FFF"/>
+
+ 
+     <rect id="r" x="15" y="420" width="20" height="20"
+       style="stroke: #000; stroke-width: 1px; fill: #FFF"/>
+
+   </g>
+ 
+
+   <text x="5" y="463" style="fill: #00C; pointer-events: none">Opzioni</text>
+ 
+
+   <a xlink:href="" onclick="UndoLastShape()">
+     <text x="5" y="480">&gt; Undo
+       <set attributeName="fill" attributeType="CSS" to="#F00" begin="mouseover"/>
+       <set attributeName="fill" attributeType="CSS" to="#000" begin="mouseout"/>
+     </text>
+   </a>
+ 
+
+   <a xlink:href="" onclick="ClearDrawing()">
+     <text x="5" y="495">&gt; Pulisci
+      <set attributeName="fill" attributeType="CSS" to="#F00" begin="mouseover"/>
+    <set attributeName="fill" attributeType="CSS" to="#000" begin="mouseout"/>
+    </text>
+   </a>
+
+   <a xlink:href="" onclick="ShowHideGrid()">
+     <text x="5" y="510">&gt; Griglia
+       <set attributeName="fill" attributeType="CSS" to="#F00" begin="mouseover"/>
+       <set attributeName="fill" attributeType="CSS" to="#000" begin="mouseout"/>
+     </text>
+   </a>
+
+</svg>
