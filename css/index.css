@@ -104,7 +104,7 @@ a, a:hover, a:visited{
  text-align: center;    
  padding: 10px 0 0 0;
 }
-.subtitulo{
+.subtitulo, .tariffa{
   background-color: #072950;
 	width:95%;
   height: 36px;
@@ -112,11 +112,16 @@ a, a:hover, a:visited{
   border-radius: 8px 8px 0px 0px;
 	-moz-border-radius: 8px 8px 0px 0px;
   font-family: Nunito;
-  font-size: 15px;
   font-weight: bolder;
   text-align:center;
 }
-.subtitulo span{
+.subtitulo{
+  font-size: 15px;
+}
+.tariffa{
+  font-size: 20px;
+}
+.subtitulo span, .tariffa span{
   line-height: 36px;
   vertical-align: middle;
   color:#6790bd;
@@ -183,20 +188,29 @@ a, a:hover, a:visited{
 .bottonemini:hover, .link:hover .bottonemini, .popupbutton:hover .bottonemini{
   border:1px solid #6790bd;
 }
-
-.texto{
+.texto, .tariffario{
   width:95%;
-  min-height:270px;
   margin:auto;
   background-color: #6790bd;
-  box-shadow: 0px 6px 6px -1px #072950
+  box-shadow: 0px 6px 6px -1px #072950;
+  min-height:470px;
+}
+.texto p, .tariffario p{
+  margin: 0px 15px 0px 15px;
+  font-family: Ubuntu;
 }
 .texto p{
   text-align: left;
-  margin: 0px 15px 0px 15px;
-  font-family: Ubuntu;
   font-size: 13px;   
-  color:#000000;
+  color: #000000;  
+}
+.tariffario p{
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;   
+  font-weight: bolder;
+  padding: 10px 0px;
+  border-bottom: 1px solid #15457b;
 }
 .shifted{
   position:relative;
