@@ -47,7 +47,7 @@ function cambiaidioma(i){
   $('#AndreaCarrozzo').fadeOut('slow');
   $('#portfolio').fadeOut('slow');
   $('#contact').fadeOut('slow');
-  $('#tarifas').fadeOut('slow',function(){idioma(i);});
+  $('#precios').fadeOut('slow',function(){idioma(i);});
   
 }
 function idioma(i){
@@ -55,9 +55,9 @@ function idioma(i){
   var esp =["Quien soy","Portfolio","Contacto","Precios","Fotografía"];
   var eng =["About me","Portfolio","Contact me","Prices","Photography"];
   var ita =["Chi sono","Portfolio","Contattami","Tariffe","Fotografia"];
-  var pesp =["ESP/AcercaAndreaCarrozzo.html","ESP/PortfolioAndreaCarrozzo.html","ESP/ContactameAndreaCarrozzo.html","ESP/TarifasAndreaCarrozzo","PhotograpyAndreaCarrozzo.html"];
-  var peng =["ENG/AboutAndreaCarrozzo.html","ENG/PortfolioAndreaCarrozzo.html","ENG/ContactmeAndreaCarrozzo.html","ENG/PricesAndreaCarrozzo","PhotograpyAndreaCarrozzo.html"];
-  var pita =["ITA/SuAndreaCarrozzo.html","ITA/PortfolioAndreaCarrozzo.html","ITA/ContattamiAndreaCarrozzo.html","ITA/TariffeAndreaCarrozzo","PhotograpyAndreaCarrozzo.html"];
+  var pesp =["ESP/AcercaAndreaCarrozzo.html","ESP/PortfolioAndreaCarrozzo.html","ESP/ContactameAndreaCarrozzo.html","ESP/PreciosAndreaCarrozzo.html","PhotograpyAndreaCarrozzo.html"];
+  var peng =["ENG/AboutAndreaCarrozzo.html","ENG/PortfolioAndreaCarrozzo.html","ENG/ContactmeAndreaCarrozzo.html","ENG/PricesAndreaCarrozzo.html","PhotograpyAndreaCarrozzo.html"];
+  var pita =["ITA/SuAndreaCarrozzo.html","ITA/PortfolioAndreaCarrozzo.html","ITA/ContattamiAndreaCarrozzo.html","ITA/TariffeAndreaCarrozzo.html","PhotograpyAndreaCarrozzo.html"];
   switch(i){
   case 1:
     a = esp;
@@ -82,15 +82,15 @@ function idioma(i){
   $('#portfolio').attr("title",b[1]);
   $('#contact').attr("value",a[2]);
   $('#contact').attr("title",b[2]);
-  $('#tarifas').attr("value",a[3]);
-  $('#tarifas').attr("title",b[3]);
+  $('#precios').attr("value",a[3]);
+  $('#precios').attr("title",b[3]);
   //hago aparecer los textos
   $('#AndreaCarrozzo').fadeIn('slow');
   $('#portfolio').fadeIn('slow');
   $('#contact').fadeIn('slow');
-  $('#tarifas').fadeIn('slow');
+  $('#precios').fadeIn('slow');
   }
-    function next(gallery, max){
+  function next(gallery, max){
     var seed = $('#'+gallery).attr('seed');
     var next = (seed*1.0+1);
     $('#'+gallery+'prev').css('visibility','visible'); 
