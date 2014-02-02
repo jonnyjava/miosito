@@ -46,17 +46,18 @@ function cambiaidioma(i){
   //hago desaparecer los textos
   $('#AndreaCarrozzo').fadeOut('slow');
   $('#portfolio').fadeOut('slow');
-  $('#contact').fadeOut('slow',function (){idioma(i);});
+  $('#contact').fadeOut('slow');
+  $('#precios').fadeOut('slow',function(){idioma(i);});
   
 }
 function idioma(i){
   var a = [];
-  var esp =["Acerca de mi","Portfolio","Contactame","Fotografía"];
-  var eng =["About me","Portfolio","Contact me","Photography"];
-  var ita =["Su di me","Portfolio","Contattami","Fotografia"];
-  var pesp =["ESP/AcercaAndreaCarrozzo.html","ESP/PortfolioAndreaCarrozzo.html","ESP/ContactameAndreaCarrozzo.html","PhotograpyAndreaCarrozzo.html"];
-  var peng =["ENG/AboutAndreaCarrozzo.html","ENG/PortfolioAndreaCarrozzo.html","ENG/ContactmeAndreaCarrozzo.html","PhotograpyAndreaCarrozzo.html"];
-  var pita =["ITA/SuAndreaCarrozzo.html","ITA/PortfolioAndreaCarrozzo.html","ITA/ContattamiAndreaCarrozzo.html","PhotograpyAndreaCarrozzo.html"];
+  var esp =["Quien soy","Portfolio","Contacto","Precios","Fotografía"];
+  var eng =["About me","Portfolio","Contact me","Prices","Photography"];
+  var ita =["Chi sono","Portfolio","Contattami","Tariffe","Fotografia"];
+  var pesp =["ESP/AcercaAndreaCarrozzo.html","ESP/PortfolioAndreaCarrozzo.html","ESP/ContactameAndreaCarrozzo.html","ESP/PreciosAndreaCarrozzo.html","PhotograpyAndreaCarrozzo.html"];
+  var peng =["ENG/AboutAndreaCarrozzo.html","ENG/PortfolioAndreaCarrozzo.html","ENG/ContactmeAndreaCarrozzo.html","ENG/PricesAndreaCarrozzo.html","PhotograpyAndreaCarrozzo.html"];
+  var pita =["ITA/SuAndreaCarrozzo.html","ITA/PortfolioAndreaCarrozzo.html","ITA/ContattamiAndreaCarrozzo.html","ITA/TariffeAndreaCarrozzo.html","PhotograpyAndreaCarrozzo.html"];
   switch(i){
   case 1:
     a = esp;
@@ -81,15 +82,15 @@ function idioma(i){
   $('#portfolio').attr("title",b[1]);
   $('#contact').attr("value",a[2]);
   $('#contact').attr("title",b[2]);
-  //$('#foto').attr("value",a[3]);
-  //$('#foto').attr("title",b[3]);
+  $('#precios').attr("value",a[3]);
+  $('#precios').attr("title",b[3]);
   //hago aparecer los textos
   $('#AndreaCarrozzo').fadeIn('slow');
   $('#portfolio').fadeIn('slow');
   $('#contact').fadeIn('slow');
-  //$('#foto').fadeIn('slow');
+  $('#precios').fadeIn('slow');
   }
-    function next(gallery, max){
+  function next(gallery, max){
     var seed = $('#'+gallery).attr('seed');
     var next = (seed*1.0+1);
     $('#'+gallery+'prev').css('visibility','visible'); 
