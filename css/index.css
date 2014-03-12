@@ -515,6 +515,7 @@ h3, h4, h5, h6{
 .xml{ background: transparent url('../img/spriteiconstech.png') -216px -36px}
 .js{ background: transparent url('../img/spriteiconstech.png') -252px -36px}
 .xvr{ background: transparent url('../img/spriteiconstech.png') -288px -36px}
+.android{ background: transparent url('../img/spriteiconstech.png') -324px -36px;}
 .zoom{background: #072950 url('../img/spriteicons.png') -94px 2px;}
 .zoom:hover, .popupbutton:hover .zoom{background: #15457b url('../img/spriteicons.png') -94px -22px;}
 .plus{background: #072950 url('../img/spriteicons.png') 2px 2px;}
