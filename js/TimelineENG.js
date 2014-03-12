@@ -45,8 +45,8 @@ var testi =["After 21 months I left my work as pizza chef in order to complete m
 "1st prize in a web development contest organized by 'Ferrario' foundation, consisting in a complete portal of services for elderly people.",
 "I celebrated the new Year's Eve with Carmen and my friends in Milán.",
 "I start to work for Nexus Advanced Tecnologies.<br/>For my firsts six months I was internal developer and after I became external web developer consultant for Fineco Bank in Milán.",
-"My first proyect as freelancer: Omniamarmi. A web page for a marble artist.",
-"Second proyect as freelancer: Gilgamesh lounge bar.",
+"My first proyect as freelance: Omniamarmi. A web page for a marble artist.",
+"Second proyect as freelance: Gilgamesh lounge bar.",
 "End of the training about COM and .NET technologies. <br/>Four of us, will be recruited by a software house called Nexus Advanced Technologies.",
   "MXP - VLC a/r",
   "MXP - VLC a/r",
@@ -55,8 +55,8 @@ var testi =["After 21 months I left my work as pizza chef in order to complete m
   "MXP - VLC a/r 2x",
   "Carmen and I, for the first time, went to see the buildig site where our future home will surge.",
 "Romantic New Year's Eve at Milan, only Carmen and I.", 
-"Third work as freelancer: Excalibur. A web page with forum for a fantasy shop.",
-"Fourth work as freelancer. Webpage for the restaurant 'Rebelot'.",
+"Third work as freelance: Excalibur. A web page with forum for a fantasy shop.",
+"Fourth work as freelance. Webpage for the restaurant 'Rebelot'.",
 "I left my work at Nexus.",
 "My first work in Spain. Web developer for a little web studio in Manises:Alerce.",
   "MXP  - VLC a/r",
@@ -94,13 +94,19 @@ var testi =["After 21 months I left my work as pizza chef in order to complete m
 "Long weekend in Andalucía, Carmen and I visited Malaga y Granada.",
 "I leaved in ZED WORLDWIDE to participate in the creation of JUGO: a startup of CANALES CORPORATIVOS",
 "New work as freelance: corporative wev of <b><a href='http://www.madeinnovation.es' target='_blank'>Madeinnovation</a></b> : a R&D of industrial design consulting company.",
-"Due to the incompatibility between my work profile and the company needs, my collaboration with CANALES CORPORATIVOS stops."
+"Due to the incompatibility between my work profile and the company needs, my collaboration with CANALES CORPORATIVOS stops.",
+"2013 starts with a new project as freelance: <b><a href='http://www.accidente.pro' target='_blank'>Accidente.pro</a></b>. A community of professional which helps car accidents victims.",
+"I publish my first android application: <b><a href='https://play.google.com/store/apps/details?id=pro.adtech.projects.plus112.activities'>112 Plus</a></b>. An app to connect with 112 emergency service.",
+"I start to work for EMERGIA group as backend developer with <b>Ruby on Rails</b>.",
+"In collaboration with the journalist Patricia Ruiz Machí, I publish, for a group of joung directors <b><a href='http://totsaunaveu.es' target='_blank'>Totsaunaveu</a></b>.",
+"I publish a new project as freelance: <b><a href='http://www.frutasgrande.com' target='_blank'>Frutas grande</a></b>. A corporative webpage for a fruit wholesaler.",
+"My year working for EMERGIA ends."
 ];
 $(function() {
 		$( "#slider" ).slider({
-			value:2012,
+			value:2014,
 			min: 2001,
-			max: 2012,
+			max: 2014,
 			step: 1,
 			slide: function( event, ui ) {
 				$( "#year" ).val(ui.value);
