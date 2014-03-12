@@ -44,8 +44,8 @@ var testi =["He dejado, despues de casi dos años, mi trabajo como pizzero para 
   "Ganador de un concurso de desarrollo de páginas web convocado por la fundación 'Ferrario' para el rediseño del portal de los servicios para los ancianos.",
   "Celebro la nochevieja junto a Carmen y mis amigos en Milán",
   "Comienza mi trabajo para Nexus Advanced Tecnologies.<br/>Inicialmente como trabajador interno a la empresa y después como consultor de desarrollo web empleado en el banco Fineco de Milán.",
-  "Mi primero proyecto como freelancer: Omniamarmi. Una pagina web para un artesán del marmól.",
-  "Segundo trabajo como freelancer: Gilgamesh lounge bar.",
+  "Mi primero proyecto como freelance: Omniamarmi. Una pagina web para un artesán del marmól.",
+  "Segundo trabajo como freelance: Gilgamesh lounge bar.",
   "Conclusión del curso en tecnologías COM y .NET. <br/>De los partecipantes,4 serán contratados por una empresa de desarrollo software llamada Nexus advanced technologies.",
   "MXP - VLC a/r",
   "MXP - VLC a/r",
@@ -54,8 +54,8 @@ var testi =["He dejado, despues de casi dos años, mi trabajo como pizzero para 
   "MXP - VLC a/r 2x",
   "Carmen y yo, por la primera vez, podemos visitar la obra donde surgirá nuestra nueva futura casa.",
   "Nochevieja en Milán a solas Carmen y yo.",
-  "Tercer trabajo como freelancer. Excalibur: web mas foro para una tienda de maquetas y juegos de rol.",
-  "Cuarto trabajo como freelancer. Web para el restaurante 'Rebelot'",
+  "Tercer trabajo como freelance. Excalibur: web mas foro para una tienda de maquetas y juegos de rol.",
+  "Cuarto trabajo como freelance. Web para el restaurante 'Rebelot'",
   "Dejo mi trabajo en Nexus",
   "Mi primer trabajo en España. Desarrollador web para una pequeña empresa en Manises: Alerce",
   "MXP  - VLC a/r",
@@ -92,14 +92,20 @@ var testi =["He dejado, despues de casi dos años, mi trabajo como pizzero para 
   "Viaje de novios a Australia.",
   "Fin de semana largo en Andalucía, Carmen y yo visitaremos Malaga y Granada.",
   "Dejo mi trabajo en ZED WORLDWIDE para participar a la creación de JUGO: una startup de la empresa CANALES CORPORATIVOS",
-  "Nuevo trabajo como freelancer: web corporativa de <b><a href='http://www.madeinnovation.es' target='_blank'>Madeinnovation</a></b> : un estudio de asesores de gestión de la producción industrial.",
-  "Causa incompatibilidad entre mi perfil profesional y las necesidades de la empresa, mi colaboración con CANALES CORPORATIVOS se interrumpe."
+  "Nuevo trabajo como freelance: web corporativa de <b><a href='http://www.madeinnovation.es' target='_blank'>Madeinnovation</a></b> : un estudio de asesores de gestión de la producción industrial.",
+  "Causa incompatibilidad entre mi perfil profesional y las necesidades de la empresa, mi colaboración con CANALES CORPORATIVOS se interrumpe.",
+  "Comienza el año nuevo con un nuevo encargo como freelance:  <b><a href='http://www.accidente.pro' target='_blank'>Accidente.pro</a></b>. Una comunidad de profesionales que se dedica a la Ayuda a las Víctimas de Accidente de Tráfico.",
+  "Realizo mi primera aplicación android: <b><a href='https://play.google.com/store/apps/details?id=pro.adtech.projects.plus112.activities'>112 Plus</a></b>. Una aplicación para conectar con el 112 en caso de emergencia.",
+  "Entro a trabajar en el Grupo EMERGIA como desarrollador backend en <b>Ruby on Rails</b>.",
+  "En colaboración con la periodista Patricia Ruiz Machí, realizo, para un grupo de jovenes directores de cine la pagina web <b><a href='http://totsaunaveu.es' target='_blank'>Totsaunaveu</a></b>.",
+  "Publico un nuevo trabajo como freelance: <b><a href='http://www.frutasgrande.com' target='_blank'>Frutas grande</a></b>. Una pagina corporativa para un mayorista de fruta.",
+  "Se concluye mi contrato de trabajo en EMERGIA."
 ];
 $(function() {
 		$( "#slider" ).slider({
-			value:2012,
+			value:2014,
 			min: 2001,
-			max: 2012,
+			max: 2014,
 			step: 1,
 			slide: function( event, ui ) {
 				$( "#year" ).val(ui.value);
