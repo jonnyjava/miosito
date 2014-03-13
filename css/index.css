@@ -396,32 +396,35 @@ b{
 }
 .bigicon{
   width:36px;
-  height:36px;
-  float:left;
+  height: 36px;
+  float: left;
   margin: 5px 8px 15px 8px;
 }
 .navigator{
-  height:100%;
+  height: 100%;
   max-width: 300px;
-  margin:auto;
-  }
+  margin: auto;
+ }
 .bottonegoto{
-  cursor:pointer;
-  border:none;
-  width:18px;
-  height: 18px;
-  line-height: 30px;
-  margin:6px 2px 0px 2px;
-  background: transparent url(../img/pallini.png) 0 0;
+  cursor: pointer;
+  border: 1px solid #072950;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin: 8px 1px;
+  background-color: #072950;
+  display: inline-block;
 }
 .bottonegoto:hover{
- background: transparent url(../img/pallini.png) -18px 0; 
+  border: 1px solid transparent;  
+  background-color: #15457b;
 }
 .active{
-  background: transparent url(../img/pallini.png) 18px 0; 
+  background-color: transparent;
 }
 .active:hover{
-  background: transparent url(../img/pallini.png) 18px 0; 
+  border: 1px solid #072950;
+  background-color: transparent;
 }
 .info{
   width: 24px;
