@@ -95,7 +95,7 @@ var testi =["After 21 months I left my work as pizza chef in order to complete m
 "I leaved in ZED WORLDWIDE to participate in the creation of JUGO: a startup of CANALES CORPORATIVOS",
 "New work as freelance: corporative wev of <b><a href='http://www.madeinnovation.es' target='_blank'>Madeinnovation</a></b> : a R&D of industrial design consulting company.",
 "Due to the incompatibility between my work profile and the company needs, my collaboration with CANALES CORPORATIVOS stops.",
-"2013 starts with a new project as freelance: <b><a href='http://www.accidente.pro' target='_blank'>Accidente.pro</a></b>. A community of professional which helps car accidents victims.",
+"2013 starts with a new project as freelance: <b><a href='http://www.accidente.pro' target='_blank'>Accidente.pro</a></b>. A community of professionals which helps car accidents victims.",
 "I publish my first android application: <b><a href='https://play.google.com/store/apps/details?id=pro.adtech.projects.plus112.activities'>112 Plus</a></b>. An app to connect with 112 emergency service.",
 "I start to work for EMERGIA group as backend developer with <b>Ruby on Rails</b>.",
 "In collaboration with the journalist Patricia Ruiz Machí, I publish, for a group of joung directors <b><a href='http://totsaunaveu.es' target='_blank'>Totsaunaveu</a></b>.",
