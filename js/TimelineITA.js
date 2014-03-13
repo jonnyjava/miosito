@@ -45,8 +45,8 @@ var testi =["Dopo quasi due anni, lascio il mio lavoro di pizzaiolo per dedicarm
   "Vincitore del concorso per lo sviluppo di un portale di servizi per la terza etá convocato dalla fondazione 'Ferrario' di Vanzago.",
   "Festeggio il capodanno insieme a Carmen e i miei amici a Milano",
   "Comincio a lavorare per Nexus Advanced Tecnologies.<br/>Inizialmente come sviluppatore interno e successivamente come consulente di sviluppo web allocato presso la banca Fineco di Milano.",
-  "Il mio primo progetto da freelancer: Omniamarmi. Una pagina web per un artigiano del marmo.",
-  "Secondo lavoro da freelancer: Gilgamesh lounge bar.",
+  "Il mio primo progetto da freelance: Omniamarmi. Una pagina web per un artigiano del marmo.",
+  "Secondo lavoro da freelance: Gilgamesh lounge bar.",
   "Conclusione del corso in tecnologie COM y .NET. <br/>Tra gli alunni, 4 di noi saranno assunti da un azienda di sviluppo software chiamata Nexus Advanced Technologies.",
   "MXP - VLC a/r",
   "MXP - VLC a/r",
@@ -55,8 +55,8 @@ var testi =["Dopo quasi due anni, lascio il mio lavoro di pizzaiolo per dedicarm
   "MXP - VLC a/r 2x",
   "Io e Carmen, per la prima volta, possiamo visitare il cantiere dove sorgerá la nostra nuova futura casa.",
   "Capodanno a Milano, Carmen ed io.",
-  "Terzo incarico da freelancer. Excalibur: sito web e forum per un negozio di modellismo di giochi di ruolo.",
-  "Quarto incarico da freelancer. Sito web per il ristorante 'Rebelot'",
+  "Terzo incarico da freelance. Excalibur: sito web e forum per un negozio di modellismo di giochi di ruolo.",
+  "Quarto incarico da freelance. Sito web per il ristorante 'Rebelot'",
   "Lascio il mio lavoro in Nexus",
   "La mia prima esperienza di lavoro in Spagna. Sviluppatore web per uno studio di Manises: Alerce",
   "MXP  - VLC a/r",
@@ -93,14 +93,20 @@ var testi =["Dopo quasi due anni, lascio il mio lavoro di pizzaiolo per dedicarm
   "Viaggio di nozze in Australia",
   "Weekend lungo in Andalucía, io e Carmen visitiamo Malaga e Granada.",
   "Dimetto da ZED WORLDWIDE per participare alla creazione di JUGO: una startup dell'azienda CANALES CORPORATIVOS",
-  "Nuovo progetto come freelancer: web corporativa di <b><a href='http://www.madeinnovation.es' target='_blank'>Madeinnovation</a></b> : uno studio consulenza per la gestione di progetti di disegno industriale.",
-  "A causa dell'incompatibilitá tra il mio profilo professionale e le necessitá dell'azienda, la mia collaborazione con CANALES CORPORATIVOS si conclude."
+  "Nuovo progetto come freelance: web corporativa di <b><a href='http://www.madeinnovation.es' target='_blank'>Madeinnovation</a></b> : uno studio consulenza per la gestione di progetti di disegno industriale.",
+  "A causa dell'incompatibilitá tra il mio profilo professionale e le necessitá dell'azienda, la mia collaborazione con CANALES CORPORATIVOS si conclude.",
+  "L'anno nuovo comincia con un nuovo incarico come freelance:  <b><a href='http://www.accidente.pro' target='_blank'>Accidente.pro</a></b>. Una comunitá di professionisti al servizio delle vittime di incidenti stradali.",
+  "Realizzo la mia prima applicazione android: <b><a href='https://play.google.com/store/apps/details?id=pro.adtech.projects.plus112.activities'>112 Plus</a></b>. Una app per contattare il 112 in caso di emergenza.",
+  "Inizio a lavorare per il grupoo EMERGIA come sviluppatore backend utilizzando <b>Ruby on Rails</b>.",
+  "Con la collaborazione della giornalista Patricia Ruiz Machí, pubblico, per un gruppo di giovani registi la pagina web <b><a href='http://totsaunaveu.es' target='_blank'>Totsaunaveu</a></b>.",
+  "Pubblico un nuovo lavoro come freelance: <b><a href='http://www.frutasgrande.com' target='_blank'>Frutas grande</a></b>. Una pagina corporativa per un grossista di frutta e verdura.",
+  "Si conclude il mio contratto di lavoro in EMERGIA."
 ];
 $(function() {
 		$( "#slider" ).slider({
-			value:2012,
+			value:2014,
 			min: 2001,
-			max: 2012,
+			max: 2014,
 			step: 1,
 			slide: function( event, ui ) {
 				$( "#year" ).val(ui.value);
