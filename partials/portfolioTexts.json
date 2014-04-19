@@ -1,0 +1,188 @@
+{
+	"work" : [
+	{
+	"imgTitle" : "Rankia",
+	"title" : "Rankia",
+	"description" : "Comunidad online de finanza y economia.",
+	"link" : "http://www.rankia.com",
+	"icons": "ror, jquery, html5, css3, mysql",
+	"image": "Rankia"
+	},
+	{
+	"imgTitle" : "Verema",
+	"title" : "Verema",
+	"description" : "Comunidad online de vino y gastronomia.",
+	"link" : "http://www.verema.com",
+	"icons": "ror, jquery, html5, css3, mysql",
+	"image": "verema"
+	},
+	{
+	"imgTitle" : "Eurotri",
+	"title" : "Eurotri",
+	"description" : "Portal de triatlón: Rediseño, maquetación y desarrollo de la TPV.",
+	"link" : "http://www.eurotri.com",
+	"icons": "yii, jquery, html, css, mysql, php",
+	"image": "eurotri"
+	},
+	{
+	"imgTitle" : "Platano de Canarias",
+	"title" : "Platano de Canarias",
+	"description" : "Remaquetación de la web existente.",
+	"link" : "http://www.platanodecanarias.net",
+	"icons": "html, css",
+	"image": "platano"
+	},
+	{
+	"imgTitle" : "Healty Girls and the pink planet",
+	"title" : "Healty Girls and the pink planet",
+	"description" : "Primera applicación web del framework JUGO.",
+	"link" : "#",
+	"icons" : "ror, jquey, html5, css3",
+	"image" : "healtygirls"
+	},
+	{
+	"imgTitle" : "Desafio Claro",
+	"title" :  "Desafio Claro",
+	"description" : "Web realizada para la operadora Claro de Brasil para promocionar un concurso basado en el envio de sms.",
+	"link" : "http://www.desafioclaro.com.br",
+	"icons": "wordpress, jquery, html, css, mysql, php",
+	"image": "desafioclaro"
+	},
+	{
+	"imgTitle" : "Win win",
+	"title" : "Win win",
+	"description" : "Web realizada para una operadora de telefonía movíl italiana para promocionar un concurso basado en el envio de sms.",
+	"link" : "http://www.jonnyjava.net/WORK/WINWIN/index.html",
+	"icons": "html, css, jquery, php. mysql",
+	"image": "winwin"
+	},
+	{
+	"imgTitle" : "Inplace TV",
+	"title" : "Inplace TV",
+	"description" : "Estudio televisivo para videos publicitarios.",
+	"link" : "http://www.jonnyjava.net/WORK/Inplace/index.htm",
+	"icons": "flash, flv, html",
+	"image": "Inplace"
+	}
+	],
+	"free" : [{
+	"imgTitle" : "Frutas Grande",
+	"title" : "Frutas Grande",
+	"description" : "Web corporativa para un mayorista de fruta y verdura.",
+	"link" : "http://www.frutasgrande.com",
+	"icons": "wordpress, jquery, html, css",
+	"image": "frutasgrande"
+	},
+	{
+	"imgTitle" : "Totsaunaveu",
+	"title" : "Totsaunaveu",
+	"description" : "Web realizada para un grupo de jovenes directores de cine.<br/>En colaboración con la periodista Patricia Ruiz Machí. ",
+	"link" : "http://totsaunaveu.es",
+	"icons": "wordpress, jquery, html, css",
+	"image": "totsaunaveu"
+	},
+	{
+	"imgTitle" : "112plus",
+	"title" : "112plus",
+	"description" : "Aplicación para contactar con el 112 en caso de emergencia.",
+	"link" : "https://play.google.com/store/apps/details?id=pro.adtech.projects.plus112.activities",
+	"icons": "android",
+	"image": "112"
+	},
+	{
+	"imgTitle" : "Accidente.pro",
+	"title" : "Accidente.pro",
+	"description" : "Una comunidad de profesionales que se dedica a la ayuda a las víctimas de accidente de tráfico.",
+	"link" : "http://www.accidente.pro",
+	"icons": "wordpress, jquery, html, css",
+	"image": "accidente"
+	},
+	{
+	"imgTitle" : "Madeinnovation",
+	"title" : "Madeinnovation",
+	"description" : "Estudio de I+D y gestión de proyectos de diseño industrial.",
+	"link" : "http://madeinnovation.es",
+	"icons": "wordpress, jquery, html, css",
+	"image": "madeinnovation"
+	},
+	{
+	"imgTitle" : "Restaurante Spazio Rebelot",
+	"title" : "Restaurante Spazio Rebelot",
+	"description" : ">La web incluíe un gestor de contenidos y un modulo para la edicción y envio de newsletters a tema.",
+	"link" : "http://www.jonnyjava.net/FREE/spaziorebelot/index.html",
+	"icons": "flash, xml, php, mysql, js",
+	"image": "ristorantespaziorebelot"
+	},
+	{
+	"imgTitle" : "Fondazione Ferrario",
+	"title" : "Fondazione Ferrario",
+	"description" : "Web realizada para el concurso convocado por la fundación.",
+	"link" : "http://www.fondazione-ferrario.it/",
+	"icons": "flash, html, css, js",
+	"image": "fondazioneferrario"
+	},
+	{
+	"imgTitle" : "Omniamarmi",
+	"title" : "Omniamarmi",
+	"description" : "Web realizada para un artesano del marmól.",
+	"link" : "http://www.omniamarmi.it/",
+	"icons": "html, js, css",
+	"image": "Omniamarmi"
+	},
+	{
+	"imgTitle" : "Gilgamesh Lounge Bar",
+	"title" : "Gilgamesh Lounge Bar",
+	"description" : "Web realizada para un local de copas.",
+	"link" : "http://www.jonnyjava.net/FREE/gilga/index.htm",
+	"icons": "html, css, js",
+	"image": "gilgameshloungebar"
+	},
+	{
+	"imgTitle" : "Excalibur",
+	"title" : "Excalibur",
+	"description" : "Tienda de maquetas fantasy y juegos de rol. <br/> Con foro y modulo de newsletters.",
+	"link" : "http://www.jonnyjava.net/FREE/excalibur/index2.htm",
+	"icons": "flash, html, css, php, mysql",
+	"image": "excalibur"
+	}],
+	"demo" : [{
+	  "imgTitle" : "GraphORama",
+	  "title" : "GraphORama",
+	  "description" : "Demo de utilizo de las principales librería para dibujar graficos. ",
+	  "link" : "http://www.jonnyjava.net/DEMO/Graphorama/index.html",
+	  "icons": "php, jquery, flash",
+	  "image": "graphorama"
+	}],
+	"uni" : [{
+	  "imgTitle" : "Comunicación visual",
+	  "title" : "Proyecto para la asiñatura de Comunicación visual",
+	  "description" : "Objetivo: explicar los contenidos del curso con ejemplos praticos.",
+	  "link" : "http://www.jonnyjava.net/UNI/visiva/sito.html",
+	  "icons": "flash",
+	  "image": "visiva"
+	},
+	{
+	  "imgTitle" : "AI for the NEUROMANCER",
+	  "title" : "AI for the NEUROMANCER",
+	  "description" : "Proyecto para las asiñaturas conjuntas de 'Realidad virtual' y 'Sistemas multimediales'",
+	  "link" : "http://www.jonnyjava.net/UNI/neuro/index.htm",
+	  "icons": "html, css, js",
+	  "image": "aifortheneuromancer"
+	},
+	{
+	  "imgTitle" : "Scalable vector graphics",
+	  "title" : "Diseño web 1 y 2.",
+	  "description" : "Objetivo: proporcionar un manual con tutoriales para aprender la tecnologia SVG: Scalable vector graphics.",
+	  "link" : "http://www.jonnyjava.net/UNI/svg/pagina1.html",
+	  "icons": "svg, html, js",
+	  "image": "scalablevectorgraphics"
+	},
+	{
+	  "imgTitle" : "MAYA to XVR",
+	  "title" : "MAYA to XVR",
+	  "description" : "Proyecto de fin de carrera. Objetivo: realizar un plugin para Maya para exportar los datos de los modelos 3D al formato XVR.",
+	  "link" : "http://www.jonnyjava.net/UNI/mayatoxvr/index.htm",
+	  "icons": "xvr, html, css, js",
+	  "image": "mayatoxvr"
+	}]
+}
