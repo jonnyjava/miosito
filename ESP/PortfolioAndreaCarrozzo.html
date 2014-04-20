@@ -52,28 +52,21 @@
   embed_json();
 
   function buildPage(deck){
-    $("div[data-tag='work']").append(deck["work"]);
-    $("div[data-tag='free']").append(deck["free"]);
-    $("div[data-tag='demo']").append(deck["demo"]);
-    $("div[data-tag='uni']").append(deck["uni"]);
+    $.each(deck, function(key, val) {
+      $("div[data-tag='"+key+"']").append(deck[key]);
+      $("#"+key+"_navigator").load("partials/_"+key+"_navigator.html");
+    });
     embedGoToPage();
-    $('#work_navigator').load('partials/_work_navigator.html');
-    $('#free_navigator').load('partials/_free_navigator.html');
-    $('#uni_navigator').load('partials/_uni_navigator.html');
   }
 
   function embed_json(){
-    var deck = ["","", ""];
-    deck["work"] = "";
-    deck["free"] = "";
-    deck["demo"] = "";
-    deck["uni"] = "";
-    $.getJSON( "partials/portfolioTexts.json",{}).done(function(data){
+    var deck = {};
+    $.getJSON("partials/portfolioTexts.json",{}).done(function(data){
       $.each(data, function(key, val) {
-        if (key == "work"){ deck["work"] += createDeck(key, val); }
-        if (key == "free"){ deck["free"] += createDeck(key, val); }
-        if (key == "demo"){ deck["demo"] += createDeck(key, val); }
-        if (key == "uni"){ deck["uni"] += createDeck(key, val); }
+        deck[key] = "";
+      });
+      $.each(data, function(key, val) {
+        deck[key] += createDeck(key, val);
       });
       buildPage(deck);
     });
