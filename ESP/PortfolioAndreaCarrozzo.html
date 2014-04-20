@@ -61,7 +61,7 @@
 
   function embed_json(){
     var deck = {};
-    $.getJSON("partials/portfolioTexts.json",{}).done(function(data){
+    $.getJSON("partials/portfolioStructure.json",{}).done(function(data){
       $.each(data, function(key, val) {
         deck[key] = "";
       });
@@ -90,7 +90,7 @@
   }
 
   function getImage(item){
-    return "<div class='four columns '><img src='img/"+item.image+".png' alt='"+item.imgTitle+"' title='"+item.imgTitle+"' class='ficha' border='0' /></div>";
+    return "<div class='four columns '><img src='img/"+item.image+".png' alt='"+item.title+"' title='"+item.title+"' class='ficha' border='0' /></div>";
   }
 
   function getTexts(item){
