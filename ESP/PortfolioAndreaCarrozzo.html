@@ -49,17 +49,33 @@
   </div>
 </div>
 <script type="text/javascript">
-  embed_json();
+  buildPageFromJson('ESP');
+
+  function buildPageFromJson(locale){
+    buildStructure();
+    embedTexts(locale);
+  }
 
   function buildPage(deck){
     $.each(deck, function(key, val) {
       $("div[data-tag='"+key+"']").append(deck[key]);
       $("#"+key+"_navigator").load("partials/_"+key+"_navigator.html");
     });
-    embedGoToPage();
   }
 
-  function embed_json(){
+  function embedTexts(locale){
+    $.getJSON("partials/portfolio"+locale+".json",{}).done(function(data){
+      $.each(data, function(key, val) {
+        $.each( val, function( index, item ) { 
+          texto = "<p><b>"+item.title+"</b><br/>"+item.description+"</p>";
+          card = $("div[data-name='"+key+"-"+index+"']");
+          card.html(texto);
+        });
+      });
+    });
+  }
+
+  function buildStructure(){
     var deck = {};
     $.getJSON("partials/portfolioStructure.json",{}).done(function(data){
       $.each(data, function(key, val) {
@@ -76,7 +92,7 @@
     var deck = "";
     $.each( val, function( index, item ) {
       var image = getImage(item);
-      var allTexts = getTexts(item);
+      var allTexts = getTexts(key, index);
       var link = getLink(item);
       var icons = createIcons(item.icons.split(", "));
       var card = "<div class='containerficha'><div id='"+key+"container"+(index+1)+"' class='ficha'>"+image+"<div class='three columns alpha omega'>"+icons+link+"</div>"+allTexts+"</div></div>";
@@ -86,15 +102,16 @@
  }
 
   function getLink(item){
-    return "<a href='"+item.link+"' target='_blank' class='js_linkToPage'></a>";
+    linkToPage = "<div class='link'><span>Ir a la pagina web</span><div class='bottonemini go'></div></div>"
+    return "<a href='"+item.link+"' target='_blank' class='js_linkToPage'>"+linkToPage+"</a>";
   }
 
   function getImage(item){
-    return "<div class='four columns '><img src='img/"+item.image+".png' alt='"+item.title+"' title='"+item.title+"' class='ficha' border='0' /></div>";
+    return "<div class='four columns'><img src='img/"+item.image+".png' alt='"+item.title+"' title='"+item.title+"' class='ficha' border='0' /></div>";
   }
 
-  function getTexts(item){
-    return "<div class='seven columns'><p><b>"+item.title+"</b><br/>"+item.description+"</p></div>";
+  function getTexts(key,index){
+    return "<div class='seven columns' data-name="+key+"-"+index+"></div>";
   }
 
   function createIcons(arrayIcons){
@@ -105,10 +122,5 @@
    }
    icons += "</div>";
    return icons;
-  }
-
-  function embedGoToPage(){
-    var linkToPage = "<div class='link'><span>Ir a la pagina web</span><div class='bottonemini go'></div></div>"
-    $('.js_linkToPage').html(linkToPage);
   }
 </script>

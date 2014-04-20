@@ -1,0 +1,96 @@
+{
+	"work" : [
+	{
+	"title" : "Rankia",
+	"description" : "Comunidad online de finanza y economia."
+	},
+	{
+	"title" : "Verema",
+	"description" : "Comunidad online de vino y gastronomia."
+	},
+	{
+	"title" : "Eurotri",
+	"description" : "Portal de triatlón: Rediseño, maquetación y desarrollo de la TPV."
+	},
+	{
+	"title" : "Platano de Canarias",
+	"description" : "Remaquetación de la web existente."
+	},
+	{
+	"title" : "Healty Girls and the pink planet",
+	"description" : "Primera applicación web del framework JUGO."
+	},
+	{
+	"title" :  "Desafio Claro",
+	"description" : "Web realizada para la operadora Claro de Brasil para promocionar un concurso basado en el envio de sms."
+	},
+	{
+	"title" : "Win win",
+	"description" : "Web realizada para una operadora de telefonía movíl italiana para promocionar un concurso basado en el envio de sms."
+	},
+	{
+	"title" : "Inplace TV",
+	"description" : "Estudio televisivo para videos publicitarios."
+	}
+	],
+	"free" : [{
+	"title" : "Frutas Grande",
+	"description" : "Web corporativa para un mayorista de fruta y verdura."
+	},
+	{
+	"title" : "Totsaunaveu",
+	"description" : "Web realizada para un grupo de jovenes directores de cine.<br/>En colaboración con la periodista Patricia Ruiz Machí. "
+	},
+	{
+	"title" : "112plus",
+	"description" : "Aplicación para contactar con el 112 en caso de emergencia."
+	},
+	{
+	"title" : "Accidente.pro",
+	"description" : "Una comunidad de profesionales que se dedica a la ayuda a las víctimas de accidente de tráfico."
+	},
+	{
+	"title" : "Madeinnovation",
+	"description" : "Estudio de I+D y gestión de proyectos de diseño industrial."
+	},
+	{
+	"title" : "Restaurante Spazio Rebelot",
+	"description" : ">La web incluíe un gestor de contenidos y un modulo para la edicción y envio de newsletters a tema."
+	},
+	{
+	"title" : "Fondazione Ferrario",
+	"description" : "Web realizada para el concurso convocado por la fundación."
+	},
+	{
+	"title" : "Omniamarmi",
+	"description" : "Web realizada para un artesano del marmól."
+	},
+	{
+	"title" : "Gilgamesh Lounge Bar",
+	"description" : "Web realizada para un local de copas."
+	},
+	{
+	"title" : "Excalibur",
+	"description" : "Tienda de maquetas fantasy y juegos de rol. <br/> Con foro y modulo de newsletters."
+	}],
+	"demo" : [{
+	  "title" : "GraphORama",
+	  "description" : "Demo de utilizo de las principales librería para dibujar graficos. "
+	}],
+	"uni" : [{
+	  "title" : "Proyecto para la asiñatura de Comunicación visual",
+	  "description" : "Objetivo: explicar los contenidos del curso con ejemplos praticos."
+	},
+	{
+	  "title" : "AI for the NEUROMANCER",
+	  "description" : "Proyecto para las asiñaturas conjuntas de 'Realidad virtual' y 'Sistemas multimediales'"
+	},
+	{
+	  "title" : "Diseño web 1 y 2.",
+	  "description" : "Objetivo: proporcionar un manual con tutoriales para aprender la tecnologia SVG: Scalable vector graphics."
+	},
+	{
+	  "title" : "MAYA to XVR",
+	  "description" : "Proyecto de fin de carrera. Objetivo: realizar un plugin para Maya para exportar los datos de los modelos 3D al formato XVR."
+	}]
+}
