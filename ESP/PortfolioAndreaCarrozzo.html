@@ -1,50 +1,6 @@
-<div class="row">
-  <div class="eight columns alpha box">
-    <div class="subtitulo"> 
-      <span class="icon work"></span>
-      <span>Trabajos</span>
-    </div>
-    <div class="texto portfolio">
-      <div class="containerficha js_embed" data-tag="work">
-      </div>
-      <div id="work_navigator"></div>
-    </div>
-  </div>
-  <div class="eight columns alpha box">
-    <div class="subtitulo"> 
-      <span class="icon free"></span>
-      <span>Proyectos como Freelance</span>
-    </div>
-    <div class="texto portfolio">
-      <div class="containerficha js_embed" data-tag="free">
-      </div>
-      <div id="free_navigator"></div>
-    </div>
-  </div>
-  <div class="row">
-  <div class="eight columns alpha box">
-    <div class="subtitulo"> 
-      <span class="icon demo"></span>
-      <span>Productos y Demos</span>
-    </div>
-    <div class="texto portfolio">
-      <div class="containerficha js_embed" data-tag="demo">
-      </div>
-    </div>
-  </div>
+<div class="js_porfolio" data-language="ESP"></div>
 
-  <div class="eight columns alpha box">
-    <div class="subtitulo"> 
-      <span class="icon uni"></span>
-      <span>Proyectos Universitarios</span>
-    </div>
-    <div class="texto portfolio">
-      <div class="containerficha js_embed" data-tag="uni">
-      </div>
-      <div id="uni_navigator"></div>
-    </div>
-  </div>
-</div>
 <script type="text/javascript">
-  buildPageFromJson('ESP');
+  var lang = $('.js_porfolio').attr('data-language');
+  buildPortfolio(lang);
 </script>

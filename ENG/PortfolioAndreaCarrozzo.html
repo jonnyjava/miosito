@@ -1,50 +1,6 @@
-<div class="row">
-<div class="eight columns alpha box">
-  <div class="subtitulo"> 
-    <img src="img/work.png" alt="works" title="works" class="icon"/> 
-    <span>Works</span>
-  </div>
-  <div class="texto portfolio">
-    <div class="containerficha js_embed" data-tag="work">
-    </div>
-    <div id="work_navigator"></div> 
-  </div>
-</div>
-<div class="eight columns omega box">
- <div class="subtitulo"> 
-    <img src="img/freelance.png" alt="Projects as Freelance" title="Projects as Freelance" class="icon"/>
-    <span>Projects as Freelance</span>
- </div>
-  <div class="texto portfolio">
-    <div class="containerficha js_embed" data-tag="free">
-    </div>
-    <div id="free_navigator"></div>
-  </div>
-</div>
-</div>
-<div class="row">
-<div class="eight columns alpha box">
-  <div class="subtitulo"> 
-    <img src="img/demo.png" alt="Products and Demos" title="Products and Demos" class="icon"/> 
-    <span>Products and Demos</span>
-  </div>
-  <div class="texto portfolio">
-    <div class="containerficha js_embed" data-tag="demo">
-  </div>
-  </div>
-</div>
-<div class="eight columns omega box">
- <div class="subtitulo"> 
-    <img src="img/uni.png" alt="University projects" title="University projects" class="icon"/>
-    <span>University projects</span>
-      </div>
-  <div class="texto portfolio">
-    <div class="containerficha js_embed" data-tag="uni">
-    </div>
-    <div id="uni_navigator"></div>
-  </div>
-</div>
-</div>
+<div class="js_porfolio" data-language="ENG"></div>
+
 <script type="text/javascript">
-  buildPageFromJson('ENG');
+  var lang = $('.js_porfolio').attr('data-language');
+  buildPortfolio(lang);
 </script>

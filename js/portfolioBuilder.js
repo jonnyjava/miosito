@@ -1,7 +1,49 @@
-  function buildPageFromJson(locale){
+  function buildPortfolio(lang){
+    var sections = ["work","free","demo","uni"];
+    switch(lang){
+      case 'ESP':
+        var titles = ["Trabajos","Proyectos como Freelance","Productos y Demos","Proyectos Universitarios"];  
+        break;
+      case 'ENG':
+        var titles = ["Works","Projects as Freelance","Products and Demos","University projects"];  
+        break;
+      case 'ITA':
+        var titles = ["Lavori","Progetti come Freelance","Productos y Demos","Proyectos Universitarios"];  
+        break;
+      default:
+        var titles = ["","","",""];
+    }
+    buildRows(sections, titles);
+    buildContentFromJson(lang);
+  }
+
+  function buildContentFromJson(locale){
     buildStructure();
     embedTexts(locale);
   }
+  
+  function buildRows(sections, titles){
+    var portfoliorow = "";
+    var rowcontainer = "";
+    for(var i = 0; i<sections.length; i++){
+      rowcontainer += buildSection(sections[i], titles[i]);
+      if (i%2==1&&i>0){
+        portfoliorow += "<div class='row'>"+rowcontainer+"</div>";
+        rowcontainer = "";
+      }
+    }
+    $('.js_porfolio').append(portfoliorow);
+  }
+
+  function buildSection(section, title){
+    container = "<div class='containerficha js_embed' data-tag='"+section+"'></div><div id='"+section+"_navigator'></div>";
+    portfolio = "<div class='texto portfolio'>"+container+"</div>"
+    section = "<span class='icon "+section+"'></span><span>"+title+"</span>";
+    subtitle = "<div class='subtitulo'>"+section+"</div>";
+    content = "<div class='eight columns alpha box'>"+subtitle+portfolio+"</div>";
+    return content;
+  }
+
 
   function buildPage(deck){
     $.each(deck, function(key, val) {
