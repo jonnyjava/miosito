@@ -1,6 +1,3 @@
-.prova{
-      border:1px solid red;
-    }
 body{
   padding: 0px;
   margin: 0px;
@@ -87,7 +84,6 @@ body{
 	border: 1px solid #6790bd;
 }
 .maincontent{
-	/*min-height: 650px;*/
 	background-color: #15457b;
   border-top: 1px solid #072950;
   border-bottom: 1px solid #6790bd;
@@ -127,10 +123,10 @@ a, a:hover, a:visited{
   color:#6790bd;
 }
 .icon{
-  width:28px;
-  height:28px;
+  width:24px;
+  height:24px;
   float:left;
-  margin: 4px 0px 0px 8px;
+  margin: 6px 0px 0px 12px;
 }
 .imgbottonemini{
   float:right;
@@ -396,32 +392,35 @@ b{
 }
 .bigicon{
   width:36px;
-  height:36px;
-  float:left;
+  height: 36px;
+  float: left;
   margin: 5px 8px 15px 8px;
 }
 .navigator{
-  height:100%;
+  height: 100%;
   max-width: 300px;
-  margin:auto;
-  }
+  margin: auto;
+ }
 .bottonegoto{
-  cursor:pointer;
-  border:none;
-  width:18px;
-  height: 18px;
-  line-height: 30px;
-  margin:6px 2px 0px 2px;
-  background: transparent url(../img/pallini.png) 0 0;
+  cursor: pointer;
+  border: 1px solid #072950;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin: 8px 1px;
+  background-color: #072950;
+  display: inline-block;
 }
 .bottonegoto:hover{
- background: transparent url(../img/pallini.png) -18px 0; 
+  border: 1px solid transparent;  
+  background-color: #15457b;
 }
 .active{
-  background: transparent url(../img/pallini.png) 18px 0; 
+  background-color: transparent;
 }
 .active:hover{
-  background: transparent url(../img/pallini.png) 18px 0; 
+  border: 1px solid #072950;
+  background-color: transparent;
 }
 .info{
   width: 24px;
@@ -490,12 +489,6 @@ h3, h4, h5, h6{
   -moz-border-radius: 6px;	
   border-radius: 6px;
 }  
-.left{background: #072950 url('../img/spriteicons.png') -22px 2px;}
-.left:hover{background: #15457b url('../img/spriteicons.png') -22px -22px;}
-.right{background: #072950 url('../img/spriteicons.png') 74px 2px;}
-.right:hover{background: #15457b url('../img/spriteicons.png') 74px -22px;}
-.go{background: #072950 url('../img/spriteicons.png') 98px 2px;}
-.go:hover, .link:hover .go{background: #15457b url('../img/spriteicons.png') 98px -22px;}
 .php{ background: transparent url('../img/spriteiconstech.png') 0px 0px;}
 .html{ background: transparent url('../img/spriteiconstech.png') -36px 0px;}
 .asp{ background: transparent url('../img/spriteiconstech.png') -72px 0px;}
@@ -516,7 +509,29 @@ h3, h4, h5, h6{
 .js{ background: transparent url('../img/spriteiconstech.png') -252px -36px}
 .xvr{ background: transparent url('../img/spriteiconstech.png') -288px -36px}
 .android{ background: transparent url('../img/spriteiconstech.png') -324px -36px;}
+
+.left{background: #072950 url('../img/spriteicons.png') -22px 2px;}
+.left:hover{background: #15457b url('../img/spriteicons.png') -22px -22px;}
+.right{background: #072950 url('../img/spriteicons.png') 74px 2px;}
+.right:hover{background: #15457b url('../img/spriteicons.png') 74px -22px;}
+.go{background: #072950 url('../img/spriteicons.png') 98px 2px;}
+.go:hover, .link:hover .go{background: #15457b url('../img/spriteicons.png') 98px -22px;}
 .zoom{background: #072950 url('../img/spriteicons.png') -94px 2px;}
 .zoom:hover, .popupbutton:hover .zoom{background: #15457b url('../img/spriteicons.png') -94px -22px;}
 .plus{background: #072950 url('../img/spriteicons.png') 2px 2px;}
 .plus:hover{background: #15457b url('../img/spriteicons.png') 2px -22px;}
+
+.work{background: #072950 url('../img/spritePortfolioIcons.png') 48px 0px;}
+.free{background: #072950 url('../img/spritePortfolioIcons.png') 96px 0px;}
+.demo{background: #072950 url('../img/spritePortfolioIcons.png') 192px 24px;}
+.uni{background: #072950 url('../img/spritePortfolioIcons.png') 72px 24px;}
+
+.studies{background: #072950 url('../img/spritePortfolioIcons.png') 192px 0px;}
+.whoami{background: #072950 url('../img/spritePortfolioIcons.png') 72px 0px;}
+.knowledge{background: #072950 url('../img/spritePortfolioIcons.png') 168px 0px;}
+.workexp{background: #072950 url('../img/spritePortfolioIcons.png') 144px 24px;}
+.bio{background: #072950 url('../img/spritePortfolioIcons.png') 144px 0px;}
+.myexp{background: #072950 url('../img/spritePortfolioIcons.png') 120px 0px;}
+.courses{background: #072950 url('../img/spritePortfolioIcons.png') 96px 24px;}
+.faq{background: #072950 url('../img/spritePortfolioIcons.png') 168px 24px;}
+.timeline{background: #072950 url('../img/spritePortfolioIcons.png') 120px 24px;}
