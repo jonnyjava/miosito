@@ -171,13 +171,13 @@ a, a:hover, a:visited{
   font-weight: bolder;
 }
 .bottonemini{
-  float:right;
+  display: inline-block;
   width: 28px;
   height: 28px;
 	margin: 4px 4px 0px 0px;
 	border:1px solid #072950;
-	-moz-border-radius: 16px;
-	border-radius: 16px;
+	-moz-border-radius: 50%;
+	border-radius: 20%;
 	vertical-align: middle;
 	cursor:pointer;
 }
@@ -354,6 +354,9 @@ b{
   -moz-border-radius: 6px;
   border-radius: 6px;
   cursor:pointer;
+  width: 40%;
+  margin: 0 5%;
+  display: inline-block;
 }
 .popupbutton, .bluebutton{
   font-family: Ubuntu;
@@ -376,10 +379,16 @@ b{
 .popupbutton{
   top:220px;
 }
+.popupbutton .bottonemini{
+  float: right;
+}
 .link span, .popupbutton span, .bluebutton span{
   line-height: 36px;
   vertical-align: middle;
   color:#6790bd;
+}
+.link .bottonemini{
+  margin-right: 0px;
 }
 .bluebutton span{
   font-size: 20px
@@ -517,7 +526,7 @@ h3, h4, h5, h6{
 .go{background: #072950 url('../img/spriteicons.png') 98px 2px;}
 .go:hover, .link:hover .go{background: #15457b url('../img/spriteicons.png') 98px -22px;}
 .zoom{background: #072950 url('../img/spriteicons.png') -94px 2px;}
-.zoom:hover, .popupbutton:hover .zoom{background: #15457b url('../img/spriteicons.png') -94px -22px;}
+.zoom:hover, .link:hover .zoom, .popupbutton:hover .zoom{background: #15457b url('../img/spriteicons.png') -94px -22px;}
 .plus{background: #072950 url('../img/spriteicons.png') 2px 2px;}
 .plus:hover{background: #15457b url('../img/spriteicons.png') 2px -22px;}
 

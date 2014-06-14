@@ -40,7 +40,7 @@
     portfolio = "<div class='texto portfolio'>"+container+"</div>"
     section = "<span class='icon "+section+"'></span><span>"+title+"</span>";
     subtitle = "<div class='subtitulo'>"+section+"</div>";
-    content = "<div class='eight columns alpha box'>"+subtitle+portfolio+"</div>";
+    content = "<div class='eight columns box'>"+subtitle+portfolio+"</div>";
     return content;
   }
 
@@ -84,15 +84,22 @@
       var image = getImage(item);
       var allTexts = getTexts(key, index);
       var link = getLink(item);
+      var sheet = getSheet(item);
       var icons = createIcons(item.icons.split(", "));
-      var card = "<div class='containerficha'><div id='"+key+"container"+(index+1)+"' class='ficha'>"+image+"<div class='three columns alpha omega'>"+icons+link+"</div>"+allTexts+"</div></div>";
+      var sheet_and_link = "<div class='row'>"+sheet+link+"</div>";
+      var card = "<div class='containerficha'><div id='"+key+"container"+(index+1)+"' class='ficha'>"+image+"<div class='three columns'>"+icons+sheet_and_link+"</div>"+allTexts+"</div></div>";
       deck += card;
     });
     return deck;
  }
 
+  function getSheet(item){
+    linkToSheet = "<div class='link'><div class='bottonemini zoom'></div></div>"
+    return "<a href='"+item.link+"' target='_blank' class='js_linkToSheet'>"+linkToSheet+"</a>";
+  }
+
   function getLink(item){
-    linkToPage = "<div class='link'><span>Ir a la pagina web</span><div class='bottonemini go'></div></div>"
+    linkToPage = "<div class='link'><div class='bottonemini go'></div></div>"
     return "<a href='"+item.link+"' target='_blank' class='js_linkToPage'>"+linkToPage+"</a>";
   }
 
@@ -105,7 +112,7 @@
   }
 
   function createIcons(arrayIcons){
-   var icons = "<div class='board'>";
+   var icons = "<div class='row'>";
    for(var i = 0; i< arrayIcons.length; i++){
      if(i%2==0){ icons += "<div class='omega bigicon "+arrayIcons[i]+"'></div>"; }
      else{ icons += "<div class='bigicon "+arrayIcons[i]+"'></div>"; }
