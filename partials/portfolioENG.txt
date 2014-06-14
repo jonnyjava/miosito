@@ -1,0 +1,96 @@
+{
+	"work" : [
+	{
+	"title" : "Rankia",
+	"description" : "Online community about finance and economy."
+	},
+	{
+	"title" : "Verema",
+	"description" : "Online community about food and wine."
+	},
+	{
+	"title" : "Eurotri",
+	"description" : "Triathlon portal: design, markup and POS development."
+	},
+	{
+	"title" : "Platano de Canarias",
+	"description" : "Restyling the web."
+	},
+	{
+	"title" : "Healty Girls and the pink planet",
+	"description" : "First application of JUGO framework."
+	},
+	{
+	"title" :  "Desafio Claro",
+	"description" : "Website for CLARO mobile company to promote a SMS based contest in Brasil."
+	},
+	{
+	"title" : "Win win",
+	"description" : "Website for an italian mobile company to promote a SMS based contest."
+	},
+	{
+	"title" : "Inplace TV",
+	"description" : "Tv studio for video advertising."
+	}
+	],
+	"free" : [{
+	"title" : "Frutas Grande",
+	"description" : "Corporative web for a wholesaler of fruits and vegetables."
+	},
+	{
+	"title" : "Totsaunaveu",
+	"description" : "This project has been realized for a group of joung directors.<br/>In collaboration with the journalist Patricia Ruiz Machí."
+	},
+	{
+	"title" : "112plus",
+	"description" : "Android app to connect with 112 emergency service."
+	},
+	{
+	"title" : "Accidente.pro",
+	"description" : "A community of professionals which helps car accidents victims."
+	},
+	{
+	"title" : "Madeinnovation",
+	"description" : "Corporative web of a R&D industrial design consulting company."
+	},
+	{
+	"title" : "Restaurante Spazio Rebelot",
+	"description" : ""
+	},
+	{
+	"title" : "Fondazione Ferrario",
+	"description" : "The website has a content management system and a newsletter module to write and send tematical emails."
+	},
+	{
+	"title" : "Omniamarmi",
+	"description" : "Website for a marble craftsman."
+	},
+	{
+	"title" : "Gilgamesh Lounge Bar",
+	"description" : "Fusion bar and pub."
+	},
+	{
+	"title" : "Excalibur",
+	"description" : "Modeling and fantasy shop. With forum and newsletter."
+	}],
+	"demo" : [{
+	  "title" : "GraphORama",
+	  "description" : "Demo showing how to use the most common graph and plotting libraries."
+	}],
+	"uni" : [{
+	  "title" : "Project for the 'visual communication' exam",
+	  "description" : ">Goal: explain the course contents with practical examples."
+	},
+	{
+	  "title" : "AI for the NEUROMANCER",
+	  "description" : "Project for 'Virtual reality' and 'Multimedia systems' exams.<br/>Based on 'The Neuromancer' novel of William Gibson."
+	},
+	{
+	  "title" : "Diseño web 1 y 2.",
+	  "description" : "Goal: write a practical handbook with tutorials and examples to learn SVG: Scalable vector graphics"
+	},
+	{
+	  "title" : "MAYA to XVR",
+	  "description" : "Bachelor thesis; goal: implement a plugin for Maya to export the 3D model's to XVR format."
+	}]
+}
