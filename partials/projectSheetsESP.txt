@@ -1,0 +1,249 @@
+{
+	"work" : [
+	{
+	"company" : "Rankia S.L.",
+	"customer" : "Rankia",
+	"description" : "Comunidad online de finanza y economia.",
+	"data" : [
+		{"percentage" : "0.45", "fillColor" : "#072950", "label" : "Ruby On Rails"},
+		{"percentage" : "0.15", "fillColor" : "#6790bd", "label" : "JQuery"},
+		{"percentage" : "0.1", "fillColor" : "#28517E", "label" : "HAML"},
+		{"percentage" : "0.15", "fillColor" : "#233e5c", "label" : "SASS"},
+		{"percentage" : "0.15", "fillColor" : "#6790bd", "label" : "MySql"}
+		]
+	},
+	{
+	"company" : "Rankia S.L.",
+	"customer" : "Verema",
+	"description" : "Comunidad online de vino y gastronomia.",
+	"data" : [
+		{"percentage" : "0.45", "fillColor" : "#072950", "label" : "Ruby On Rails"},
+		{"percentage" : "0.15", "fillColor" : "#6790bd", "label" : "JQuery"},
+		{"percentage" : "0.1", "fillColor" : "#28517E", "label" : "HAML"},
+		{"percentage" : "0.15", "fillColor" : "#233e5c", "label" : "SASS"},
+		{"percentage" : "0.15", "fillColor" : "#6790bd", "label" : "MySql"}
+		]
+	},
+	{
+	"company" : "Canales Corporativos",
+	"customer" : "Eurotri",
+	"description" : "Portal de triatlón: Rediseño, maquetación y desarrollo de la TPV.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "Yii"},
+		{"percentage" : "0.1", "fillColor" : "#28517E", "label" : "Html"},
+		{"percentage" : "0.1", "fillColor" : "#6790bd", "label" : "CSS"},
+		{"percentage" : "0.2", "fillColor" : "#233e5c", "label" : "MySql"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "Php"}
+		]
+	},
+	{
+	"company" : "Canales Corporativos",
+	"customer" : "Platano de Canarias",
+	"description" : "Remaquetación de la web existente.",
+	"data" : [
+		{"percentage" : "0.5", "fillColor" : "#072950", "label" : "HTML"},
+		{"percentage" : "0.5", "fillColor" : "#6790bd", "label" : "CSS"}
+		]
+	},
+	{
+	"company" : "Canales Corporativos",	
+	"customer" : "Healty Girls and the pink planet",
+	"description" : "Primera applicación web del framework JUGO.",
+	"data" : [
+		{"percentage" : "0.5", "fillColor" : "#072950", "label" : "Ruby On Rails"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS3"},
+		{"percentage" : "0.1", "fillColor" : "#6790bd", "label" : "HTML5"},
+		{"percentage" : "0.2", "fillColor" : "#233e5c", "label" : "JQuery"}
+		]
+	},
+	{
+	"company" : "ZED Worldwide",	
+	"customer" :  "Desafio Claro",
+	"description" : "Web realizada para la operadora Claro de Brasil para promocionar un concurso basado en el envio de sms.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "Wordpress"},
+		{"percentage" : "0.1", "fillColor" : "#28517E", "label" : "HTML"},
+		{"percentage" : "0.1", "fillColor" : "#6790bd", "label" : "CSS"},
+		{"percentage" : "0.2", "fillColor" : "#233e5c", "label" : "MySql"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "Php"}
+		]
+	},
+	{
+	"company" : "ZED Worldwide",	
+	"customer" : "Win win",
+	"description" : "Web realizada para una operadora de telefonía movíl italiana para promocionar un concurso basado en el envio de sms.",
+	"data" : [
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "JQuery"},
+		{"percentage" : "0.3", "fillColor" : "#28517E", "label" : "HTML"},
+		{"percentage" : "0.3", "fillColor" : "#072950", "label" : "CSS"},
+		{"percentage" : "0.2", "fillColor" : "#233e5c", "label" : "MySql"}
+		]
+	},
+	{
+	"company" : "NEXUS A.T.",	
+	"customer" : "Inplace TV",
+	"description" : "Estudio televisivo para videos publicitarios.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "Adobe Flash"},
+		{"percentage" : "0.4", "fillColor" : "#6790bd", "label" : "FLV"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "HTML"}
+		]
+	}
+	],
+	"free" : [{
+	"company" : "",
+	"customer" : "Frutas Grande",
+	"description" : "Web corporativa para un mayorista de fruta y verdura.",
+	"data" : [
+		{"percentage" : "0.6", "fillColor" : "#072950", "label" : "Wordpress"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS"}
+		]
+	},
+	{
+	"company" : "",
+	"customer" : "Totsaunaveu",
+	"description" : "Web realizada para un grupo de jovenes directores de cine.<br/>En colaboración con la periodista Patricia Ruiz Machí.",
+	"data" : [
+		{"percentage" : "0.6", "fillColor" : "#072950", "label" : "Wordpress"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS"}
+		]
+	},
+	{
+	"company" : "Accidente.pro",
+	"customer" : "112plus",
+	"description" : "Aplicación para contactar con el 112 en caso de emergencia.",
+	"data" : [
+		{"percentage" : "0.5", "fillColor" : "#072950", "label" : "Java"},
+		{"percentage" : "0.5", "fillColor" : "#6790bd", "label" : "Android SDK"}
+		]
+	},
+	{
+	"company" : "Accidente.pro",
+	"customer" : "Accidente.pro",
+	"description" : "Una comunidad de profesionales que se dedica a la ayuda a las víctimas de accidente de tráfico.",
+	"data" : [
+		{"percentage" : "0.5", "fillColor" : "#072950", "label" : "Wordpress"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.1", "fillColor" : "#233e5c", "label" : "JQuery"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS"}
+		]
+	},
+	{
+	"company" : "",
+	"customer" : "Madeinnovation",
+	"description" : "Estudio de I+D y gestión de proyectos de diseño industrial.",
+	"data" : [
+		{"percentage" : "0.6", "fillColor" : "#072950", "label" : "Wordpress"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS"}
+		]
+	},
+	{
+	"company" : "",
+	"customer" : "Restaurante Spazio Rebelot",
+	"description" : "La web incluíe un gestor de contenidos y un modulo para la edicción y envio de newsletters a tema.",
+	"data" : [
+		{"percentage" : "0.45", "fillColor" : "#072950", "label" : "Adobe Flash"},
+		{"percentage" : "0.1", "fillColor" : "#6790bd", "label" : "XML"},
+		{"percentage" : "0.1", "fillColor" : "#233e5c", "label" : "HTML"},
+		{"percentage" : "0.1", "fillColor" : "#28517E", "label" : "Php"},
+		{"percentage" : "0.35", "fillColor" : "#6790bd", "label" : "Javascript"}
+		]
+	},
+	{
+	"company" : "Ajuntamento de Vanzago",
+	"customer" : "Fondazione Ferrario",
+	"description" : "Web realizada para el concurso convocado por la fundación.",
+	"data" : [
+		{"percentage" : "0.25", "fillColor" : "#072950", "label" : "Adobe Flash"},
+		{"percentage" : "0.25", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.25", "fillColor" : "#28517E", "label" : "CSS"},
+		{"percentage" : "0.25", "fillColor" : "#233e5c", "label" : "Javascript"}
+		]
+	},
+	{
+	"company" : "",
+	"customer" : "Omniamarmi",
+	"description" : "Web realizada para un artesano del marmól.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "HTML"},
+		{"percentage" : "0.3", "fillColor" : "#6790bd", "label" : "CSS"},
+		{"percentage" : "0.3", "fillColor" : "#28517E", "label" : "Javascript"}
+		]
+	},
+	{
+	"company" : "",
+	"customer" : "Gilgamesh Lounge Bar",
+	"description" : "Web realizada para un local de copas.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "HTML"},
+		{"percentage" : "0.3", "fillColor" : "#6790bd", "label" : "CSS"},
+		{"percentage" : "0.3", "fillColor" : "#28517E", "label" : "Javascript"}
+		]
+	},
+	{
+	"company" : "",
+	"customer" : "Excalibur",
+	"description" : "Tienda de maquetas fantasy y juegos de rol. <br/> Con foro y modulo de newsletters.",
+	"data" : [
+		{"percentage" : "0.3", "fillColor" : "#072950", "label" : "Adobe Flash"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS"},
+		{"percentage" : "0.2", "fillColor" : "#233e5c", "label" : "MySql"},
+		{"percentage" : "0.1", "fillColor" : "#6790bd", "label" : "Php"}
+		]
+	}],
+	"demo" : [{
+		"company" : "",
+	  "customer" : "GraphORama",
+	  "description" : "Demo de utilizo de las principales librería para dibujar graficos.",
+	"data" : [
+		{"percentage" : "0.3", "fillColor" : "#072950", "label" : "Adobe Flash"},
+		{"percentage" : "0.3", "fillColor" : "#6790bd", "label" : "Php"},
+		{"percentage" : "0.3", "fillColor" : "#233e5c", "label" : "JQuery"},
+		{"percentage" : "0.1", "fillColor" : "#28517E", "label" : "HTML"}
+		]
+	}],
+	"uni" : [{
+		"company" : "",
+	  "customer" : "Proyecto para la asiñatura de Comunicación visual",
+	  "description" : "Objetivo: explicar los contenidos del curso con ejemplos praticos.",
+	"data" : [
+		{"percentage" : "0.5", "fillColor" : "#6790bd", "label" : "Adobe Flash"},
+		{"percentage" : "0.5", "fillColor" : "#072950", "label" : "Actionscript 3"}
+		]
+	},
+	{
+		"company" : "",
+	  "customer" : "AI for the NEUROMANCER",
+	  "description" : "Proyecto para las asiñaturas conjuntas de 'Realidad virtual' y 'Sistemas multimediales'",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "HTML"},
+		{"percentage" : "0.3", "fillColor" : "#6790bd", "label" : "CSS"},
+		{"percentage" : "0.3", "fillColor" : "#28517E", "label" : "Javascript"}
+		]
+	},
+	{
+		"company" : "",
+	  "customer" : "Diseño web 1 y 2.",
+	  "description" : "Objetivo: proporcionar un manual con tutoriales para aprender la tecnologia SVG: Scalable vector graphics.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "SVG"},
+		{"percentage" : "0.3", "fillColor" : "#6790bd", "label" : "CSS"},
+		{"percentage" : "0.3", "fillColor" : "#28517E", "label" : "Javascript"}
+		]
+	},
+	{
+		"company" : "",
+	  "customer" : "MAYA to XVR",
+	  "description" : "Proyecto de fin de carrera. Objetivo: realizar un plugin para Maya para exportar los datos de los modelos 3D al formato XVR.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "C++"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS"},
+		{"percentage" : "0.2", "fillColor" : "#233e5c", "label" : "Javascript"}
+		]
+	}]
+}

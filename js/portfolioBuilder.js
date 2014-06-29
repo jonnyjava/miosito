@@ -44,7 +44,6 @@
     return content;
   }
 
-
   function buildPage(deck){
     $.each(deck, function(key, val) {
       $("div[data-tag='"+key+"']").append(deck[key]);
@@ -60,6 +59,11 @@
           texto = "<p><b>"+item.title+"</b><br/>"+item.description+"</p>";
           card = $("div[data-name='"+key+"-"+index+"']");
           card.html(texto);
+          image = $("img[data-img_attr='"+key+"-"+index+"']");
+          image.attr('title', item.title);
+          image.attr('alt', item.title);
+          sheet = $("a[data-sheet_title='"+key+"-"+index+"']");
+          sheet.attr('title', item.title.toUpperCase());
         });
       });
     });
@@ -81,10 +85,10 @@
   function createDeck(key, val){
     var deck = "";
     $.each( val, function( index, item ) {
-      var image = getImage(item);
+      var image = getImage(item, key, index);
       var allTexts = getTexts(key, index);
       var link = getLink(item);
-      var sheet = getSheet(item);
+      var sheet = getSheet(item, key, index);
       var icons = createIcons(item.icons.split(", "));
       var sheet_and_link = "<div class='row'>"+sheet+link+"</div>";
       var card = "<div class='containerficha'><div id='"+key+"container"+(index+1)+"' class='ficha'>"+image+"<div class='three columns'>"+icons+sheet_and_link+"</div>"+allTexts+"</div></div>";
@@ -93,21 +97,20 @@
     return deck;
  }
 
-  function getSheet(item){
+  function getSheet(item, key, index){
     linkToSheet = "<div class='link'><div class='bottonemini zoom'></div></div>"
-    return "<a href='"+item.link+"' target='_blank' class='js_linkToSheet'>"+linkToSheet+"</a>";
+    return "<a href='#' data-sheet_title='"+key+"-"+index+"' onclick='sheetWindow(this.title, \""+key+"\","+index+");'>"+linkToSheet+"</a>";
   }
-
   function getLink(item){
     linkToPage = "<div class='link'><div class='bottonemini go'></div></div>"
-    return "<a href='"+item.link+"' target='_blank' class='js_linkToPage'>"+linkToPage+"</a>";
+    return "<a href='"+item.link+"' target='_blank'>"+linkToPage+"</a>";
   }
 
-  function getImage(item){
-    return "<div class='four columns'><img src='img/"+item.image+".png' alt='"+item.title+"' title='"+item.title+"' class='ficha' border='0' /></div>";
+  function getImage(item, key, index){
+    return "<div class='four columns'><img src='img/"+item.image+".png' alt='"+key+"' title='' data-img_attr='"+key+"-"+index+"' class='ficha' border='0' /></div>";
   }
 
-  function getTexts(key,index){
+  function getTexts(key, index){
     return "<div class='seven columns' data-name="+key+"-"+index+"></div>";
   }
 
@@ -120,3 +123,43 @@
    icons += "</div>";
    return icons;
   }
+
+  function sheetWindow(mytitle, sheetkey, sheetindex){
+    var locale = $('.js_porfolio').attr('data-language');
+    jsonfile = "partials/projectSheets"+locale+".txt";
+    graph = "<canvas id='myCanvas' style='float:left;'></canvas>";
+    $.getJSON(jsonfile,{}).done(function(data){
+      $.each(data, function(key, val) {
+        if (key == sheetkey) {
+          $.each( val, function( index, item ) { 
+            if(index == sheetindex) {
+              company = getSheetCompany(item.company);
+              customer = "<p><b>Cliente:</b><br/>"+item.customer+"<p/>";
+              description = "<p><b>Descripción:</b><br/>"+item.description+"<p/>";
+              content =  "<div class='pop-up js_sheet'>"; 
+              sheet = graph+"<div class='sheet_text'>"+company+customer+description+"</div>";
+              content = content+sheet;
+              content = content + "</div>";
+              $.colorbox({html: content, width:'720px', height:'450px', maxWidth:'95%', maxHeight:'95%', title: mytitle});
+              resizeCanvas();
+              HoverPie.make($("#myCanvas"), item.data, {});
+            }
+          });
+        }
+      });
+    });
+  }
+
+  function getSheetCompany(text){
+    company = "";
+    if (text.length > 0) { company = "<p><b>Empresa:</b><br/>"+text+"<p/>"; }
+    return company;
+  }
+
+ function resizeCanvas(){
+  popup_size = $('#colorbox').width();
+  coeff = 2.25;
+  canvas_size = popup_size / coeff ;
+  $("#myCanvas").attr("width",canvas_size);
+  $("#myCanvas").attr("height",canvas_size);
+ }

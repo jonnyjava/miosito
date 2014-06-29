@@ -1,3 +1,11 @@
+/*
+colors:
+#6790bd = light blue
+#28517E = medium light blue
+#15457B = medium blue
+#233e5c = medium dark blue
+#072950 = dark blue
+*/
 body{
   padding: 0px;
   margin: 0px;
@@ -217,6 +225,9 @@ a, a:hover, a:visited{
 }
 .top{
    padding-top: 20px; 
+}
+#cboxContent{
+  background-color: #6790bd;
 }
 .pop-up{
   text-align: left;
@@ -491,6 +502,14 @@ h3, h4, h5, h6{
   width:100%;
   font-size:12px;
 }  
+.sheet_text{
+  max-width: 40%;
+  float:left;
+  margin-left: 20px;
+}
+.sheet_text p b{
+  font-size: 15px;
+}
 #captchacontainer{
   width:298px;
   margin:auto;
