@@ -12,7 +12,7 @@
 	},
 	{
 	"link" : "http://www.eurotri.com",
-	"icons": "yii, jquery, html, css, mysql, php",
+	"icons": "yii, html, css, mysql, php",
 	"image": "eurotri"
 	},
 	{
@@ -22,12 +22,12 @@
 	},
 	{
 	"link" : "#",
-	"icons" : "ror, jquey, html5, css3",
+	"icons" : "ror, jquery, html5, css3",
 	"image" : "healtygirls"
 	},
 	{
 	"link" : "http://www.desafioclaro.com.br",
-	"icons": "wordpress, jquery, html, css, mysql, php",
+	"icons": "wordpress, html, css, mysql, php",
 	"image": "desafioclaro"
 	},
 	{
@@ -43,12 +43,12 @@
 	],
 	"free" : [{
 	"link" : "http://www.frutasgrande.com",
-	"icons": "wordpress, jquery, html, css",
+	"icons": "wordpress, html, css",
 	"image": "frutasgrande"
 	},
 	{
 	"link" : "http://totsaunaveu.es",
-	"icons": "wordpress, jquery, html, css",
+	"icons": "wordpress, html, css",
 	"image": "totsaunaveu"
 	},
 	{
@@ -63,12 +63,12 @@
 	},
 	{
 	"link" : "http://madeinnovation.es",
-	"icons": "wordpress, jquery, html, css",
+	"icons": "wordpress, html, css",
 	"image": "madeinnovation"
 	},
 	{
 	"link" : "http://www.jonnyjava.net/FREE/spaziorebelot/index.html",
-	"icons": "flash, xml, php, mysql, js",
+	"icons": "flash, xml, php, js, html",
 	"image": "ristorantespaziorebelot"
 	},
 	{
@@ -93,7 +93,7 @@
 	}],
 	"demo" : [{
 	  "link" : "http://www.jonnyjava.net/DEMO/Graphorama/index.html",
-	  "icons": "php, jquery, flash",
+	  "icons": "php, jquery, flash, html",
 	  "image": "graphorama"
 	}],
 	"uni" : [{
