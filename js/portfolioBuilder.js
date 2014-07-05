@@ -85,29 +85,27 @@
   function createDeck(key, val){
     var deck = "";
     $.each( val, function( index, item ) {
-      var image = getImage(item, key, index);
+      var image = getImage(item.link, item.image, key, index);
       var allTexts = getTexts(key, index);
-      var link = getLink(item);
-      var sheet = getSheet(item, key, index);
       var icons = createIcons(item.icons.split(", "));
-      var sheet_and_link = "<div class='row'>"+sheet+link+"</div>";
-      var card = "<div class='containerficha'><div id='"+key+"container"+(index+1)+"' class='ficha'>"+image+"<div class='three columns'>"+icons+sheet_and_link+"</div>"+allTexts+"</div></div>";
+      var card = "<div class='containerficha'><div id='"+key+"container"+(index+1)+"' class='ficha'>"+image+"<div class='three columns'>"+icons+"</div>"+allTexts+"</div></div>";
       deck += card;
     });
     return deck;
  }
 
-  function getSheet(item, key, index){
+  function getSheet(key, index){
     linkToSheet = "<div class='link'><div class='bottonemini zoom'></div></div>"
     return "<a href='#' data-sheet_title='"+key+"-"+index+"' onclick='sheetWindow(this.title, \""+key+"\","+index+");'>"+linkToSheet+"</a>";
   }
-  function getLink(item){
+  function getLink(link){
     linkToPage = "<div class='link'><div class='bottonemini go'></div></div>"
-    return "<a href='"+item.link+"' target='_blank'>"+linkToPage+"</a>";
+    return "<a href='"+link+"' target='_blank'>"+linkToPage+"</a>";
   }
 
-  function getImage(item, key, index){
-    return "<div class='four columns'><img src='img/"+item.image+".png' alt='"+key+"' title='' data-img_attr='"+key+"-"+index+"' class='ficha' border='0' /></div>";
+  function getImage(link, image, key, index){
+
+    return "<div class='four columns overlay_container'><img onmouseover=\"overlay($(this),'"+link+"','"+key+"','"+index+"');\" src='img/"+image+".png' alt='"+key+"' title='' data-img_attr='"+key+"-"+index+"' class='ficha' border='0' /></div>";
   }
 
   function getTexts(key, index){
@@ -115,7 +113,7 @@
   }
 
   function createIcons(arrayIcons){
-   var icons = "<div class='row'>";
+   var icons = "<div class='row icon_box'>";
    for(var i = 0; i< arrayIcons.length; i++){
      if(i%2==0){ icons += "<div class='omega bigicon "+arrayIcons[i]+"'></div>"; }
      else{ icons += "<div class='bigicon "+arrayIcons[i]+"'></div>"; }
@@ -163,3 +161,16 @@
   $("#myCanvas").attr("width",canvas_size);
   $("#myCanvas").attr("height",canvas_size);
  }
+
+function overlay(obj, link, key, index){
+  overlay_width = obj.width();
+  overlay_height = obj.height();
+  link = getLink(link);
+  sheet = getSheet(key, index);
+  sheet_and_link = sheet+"<span>&nbsp;</span>"+link;
+  overlay_canvas = "<div style='width:"+overlay_width+"px;height:"+overlay_height+"px;' class='overlay' onmouseout='deleteOverlay();'>"+sheet_and_link+"</div>";
+  obj.before(overlay_canvas);
+}
+function deleteOverlay(){
+  $(".overlay").remove();
+}
