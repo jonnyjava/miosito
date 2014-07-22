@@ -342,7 +342,7 @@ b{
   z-index: 0;
 }
 .ficha div p{
-  margin:5px 0px 0px 0px;
+  margin:5px 0px 0px 10px;
   height: 70px;
   width:100%;
 }
@@ -517,11 +517,14 @@ h3, h4, h5, h6{
   margin: 0 20px;
 }  
 .sheet_text{
-  max-width: 40%;
-  float:left;
-  margin-left: 20px;
+  display: inline;
+  margin-top: 10px;
 }
-.sheet_text p b{
+.sheet_description{
+  clear: both;
+  display: block;
+}
+.sheet_text p b, .sheet_description p b{
   font-size: 15px;
 }
 .overlay_container{
@@ -538,6 +541,9 @@ h3, h4, h5, h6{
 }
 .overlay .link{
   margin: 25% 25px;
+}
+#myCanvas{
+  margin: 0 20px 20px 0;
 }
 #cboxContent{
   background-color: #6790bd;

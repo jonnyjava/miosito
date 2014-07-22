@@ -133,12 +133,13 @@
             if(index == sheetindex) {
               company = getSheetCompany(item.company);
               customer = "<p><b>Cliente:</b><br/>"+item.customer+"<p/>";
-              description = "<p><b>Descripción:</b><br/>"+item.description+"<p/>";
+              shortDescription = "<p><b>Proyecto:</b><br/>"+item.shortDescription+"<p/>";
+              description = "<div class='sheet_description'><p><b>Descripción:</b><br/>"+item.description+"<p/></div>";
               content =  "<div class='pop-up js_sheet'>"; 
-              sheet = graph+"<div class='sheet_text'>"+company+customer+description+"</div>";
+              sheet = graph+"<div class='sheet_text'>"+company+customer+shortDescription+"</div>"+description;
               content = content+sheet;
               content = content + "</div>";
-              $.colorbox({html: content, width:'720px', height:'450px', maxWidth:'95%', maxHeight:'95%', title: mytitle});
+              $.colorbox({html: content, width:'720px', height:'540px', maxWidth:'95%', maxHeight:'95%', title: mytitle});
               resizeCanvas();
               HoverPie.make($("#myCanvas"), item.data, {});
             }
