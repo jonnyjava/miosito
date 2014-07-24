@@ -55,11 +55,11 @@
 	},
 	{
 	"title" : "Restaurante Spazio Rebelot",
-	"description" : ""
+	"description" : "The website has a content management system and a newsletter module to write and send tematical emails."
 	},
 	{
 	"title" : "Fondazione Ferrario",
-	"description" : "The website has a content management system and a newsletter module to write and send tematical emails."
+	"description" : "Web winner of the contest for the new foundation corporate image."
 	},
 	{
 	"title" : "Omniamarmi",
@@ -79,7 +79,7 @@
 	}],
 	"uni" : [{
 	  "title" : "Project for the 'visual communication' exam",
-	  "description" : ">Goal: explain the course contents with practical examples."
+	  "description" : "Goal: explain the course contents with practical examples."
 	},
 	{
 	  "title" : "AI for the NEUROMANCER",
@@ -91,6 +91,6 @@
 	},
 	{
 	  "title" : "MAYA to XVR",
-	  "description" : "Bachelor thesis; goal: implement a plugin for Maya to export the 3D model's to XVR format."
+	  "description" : "Bachelor thesis.<br/>Goal: create a Maya plugin to export the 3D model's to XVR format."
 	}]
 }

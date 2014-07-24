@@ -3,27 +3,25 @@
   var textook ="Mail enviado!";
   var textocaptchako="CAPTCHA NON VALIDO!";
 </script>
-<div>
+<div class="row">
   <div class="four columns alpha">&nbsp;</div>
   <div class="eight columns">
     <h3>È possibile contattarmi:</h3>
     <a href="http://es.linkedin.com/in/andreacarrozzo" title="Andrea Carrozzo Linkedin"   target="_blank">
-      <div class="link">
-        <span>Consultando il mio profilo pubblico in Linkedin</span><div class="bottonemini go"></div>
+      <div class="link contacto">
+        <span>Via Linkedin</span><div class="bottonemini go"></div>
       </div>
     </a>
-    <br />
     <a href="http://www.infojobs.net/andrea-carrozzo.prf" title="Andrea Carrozzo InfoJobs" target="_blank">
-      <div class="link">
-        <span>Consultando il mio profilo pubblico in InfoJobs</span><div class="bottonemini go"></div>
+      <div class="link contacto">
+        <span>Via InfoJobs</span><div class="bottonemini go"></div>
       </div>
     </a>
-    <br />
     <a href="mailto:jonnyjava.net@gmail.com" title="Andrea Carrozzo mail">
-      <div class="link"><span>Scrivendomi una e-mail a jonnyjava.net@gmail.com</span><div class="bottonemini go"></div>
+      <div class="link contacto">
+        <span>Scrivendo a: jonnyjava.net@gmail.com</span><div class="bottonemini go"></div>
       </div>
     </a>
-
   </div>
   <div class="four columns alpha omega">&nbsp;</div>
 </div>
@@ -31,8 +29,9 @@
   <h5>Utilizzando questo form.</h5>
 </div>
 <div class="row form">
-  <div class="four columns omega  ">
-    <label class="labelcontact ">Email*</label>
+  <div class="two columns">&nbsp;</div>
+  <div class="two columns omega">
+    <label class="labelcontact">Email*</label>
   </div>
   <div class="eight columns omega form ">
     <input class="inputcontact" type="text" value="" id="mail" name="mail" onfocus="$('#avisocorreo').css('display','none');"/>
@@ -40,31 +39,31 @@
   <div class="four columns alpha  omega "><i id="avisocorreo" class="aviso">Mail non valida</i></div>
 </div>
 <div class="row form">
-  <div class="four columns omega  ">
+  <div class="two columns">&nbsp;</div>
+  <div class="two columns omega">
     <label class="labelcontact">Oggetto* </label>
   </div>
   <div class="eight columns omega form ">
     <input class="inputcontact" type="text" value="" id="objeto" name="objeto" onfocus="$('#avisoobjeto').css('display','none');"/>
   </div>
-  <div class="four columns alpha  omega ">
+  <div class="four columns alpha omega ">
     <i id="avisoobjeto" class="aviso">L'oggetto della mail non puó rimanere in bianco</i>
   </div>  
 </div>
 <div class="row form">
-  <div class="four columns omega  ">
+  <div class="two columns">&nbsp;</div>
+  <div class="two columns omega">
     <label class="labelcontact">Texto*</label>
   </div>
   <div class="eight columns omega form ">
     <textarea class="textareacontact" rows="4" cols="34" id="contenido" name="contenido" resizable="false" style="float:left;resize:none;" onfocus="$('#avisotexto').css('display','none');"></textarea>
   </div>
-  <div class="four columns alpha  omega ">
+  <div class="four columns alpha omega ">
     <i id="avisotexto" class="aviso" style="height:70px;v-align:middle;">Il contenuto della mail non puó essere nullo.</i>
   </div>
 </div>
 <div class="row form">
-  <div class="four columns omega  ">
-    <label class="labelcontact"><i style="font-size: 12px;">* campi obbligatori</i></label>
-  </div>
+  <div class="four columns omega">&nbsp;</div>
   <div class="eight columns omega form ">
     <form id="myForm">
       <div id="captchacontainer" style="margin:auto;">You must enable javascript to see captcha here!</div><br style="clear:both;"/>
@@ -72,9 +71,9 @@
   </div>
   <div class="four columns alpha  omega "></div>
 </div>
-<div class="row">
+<div class="row bottoniera">
   <div class="four columns omega">&nbsp;</div>
-  <div class="four columns bottoniera form">
+  <div class="four columns form">
     <input type="button" onclick="limpiaform();" id="cancelar" name="cancelar" value="Cancelar" />
   </div>
   <div class="four columns bottoniera form" >

@@ -3,35 +3,34 @@
   var textook ="Mail enviado!";
   var textocaptchako="CAPTCHA NOT VALID!";
 </script>
-<div>
+<div class="row">
   <div class="four columns alpha">&nbsp;</div>
   <div class="eight columns">
     <h3>You can contact me:</h3>
     <a href="http://es.linkedin.com/in/andreacarrozzo" title="Andrea Carrozzo Linkedin"   target="_blank">
-      <div class="link">
-        <span>Looking my Linkedin public profile</span><div class="bottonemini go"></div>
+      <div class="link contacto">
+        <span>Trought Linkedin</span><div class="bottonemini go"></div>
       </div>
     </a>
-    <br />
     <a href="http://www.infojobs.net/andrea-carrozzo.prf" title="Andrea Carrozzo InfoJobs" target="_blank">
-      <div class="link">
-        <span>Looking my InfoJobs public profile</span><div class="bottonemini go"></div>
+      <div class="link contacto">
+        <span>Trought InfoJobs</span><div class="bottonemini go"></div>
       </div>
     </a>
-    <br />
     <a href="mailto:jonnyjava.net@gmail.com" title="Andrea Carrozzo mail">
-      <div class="link"><span>Sending an e-mail to jonnyjava.net@gmail.com</span><div class="bottonemini go"></div>
+      <div class="link contacto">
+        <span>Writing to jonnyjava.net@gmail.com</span><div class="bottonemini go"></div>
       </div>
     </a>
-
   </div>
   <div class="four columns alpha omega">&nbsp;</div>
 </div>
 <div class="sixteen columns top">
-  <h5> Trought this form.</h5>
+  <h5>Trought this form.</h5>
 </div>
 <div class="row form">
-  <div class="four columns omega  ">
+  <div class="two columns">&nbsp;</div>
+  <div class="two columns omega">
     <label class="labelcontact ">Email*</label>
   </div>
   <div class="eight columns omega form ">
@@ -40,7 +39,8 @@
   <div class="four columns alpha  omega "><i id="avisocorreo" class="aviso">Email not vaild</i></div>
 </div>
 <div class="row form">
-  <div class="four columns omega  ">
+  <div class="two columns">&nbsp;</div>
+  <div class="two columns omega">
     <label class="labelcontact">Subject* </label>
   </div>
   <div class="eight columns omega form ">
@@ -51,7 +51,8 @@
   </div>  
 </div>
 <div class="row form">
-  <div class="four columns omega  ">
+  <div class="two columns">&nbsp;</div>
+  <div class="two columns omega">
     <label class="labelcontact">Message*</label>
   </div>
   <div class="eight columns omega form ">
@@ -62,9 +63,7 @@
   </div>
 </div>
 <div class="row form">
-  <div class="four columns omega  ">
-    <label class="labelcontact"><i style="font-size: 12px;"> * required fields </i></label>
-  </div>
+  <div class="four columns">&nbsp;</div>
   <div class="eight columns omega form ">
     <form id="myForm">
       <div id="captchacontainer" style="margin:auto;">You must enable javascript to see captcha here!</div><br style="clear:both;"/>
@@ -72,12 +71,12 @@
   </div>
   <div class="four columns alpha  omega "></div>
 </div>
-<div class="row">
+<div class="row bottoniera">
   <div class="four columns omega">&nbsp;</div>
   <div class="four columns bottoniera form">
     <input type="button" onclick="limpiaform();" id="cancelar" name="cancelar" value="Cancelar" />
   </div>
-  <div class="four columns bottoniera form" >
+  <div class="four columns form" >
     <input type="button" id="enviar" name="enviar" onclick="validaEInvia();" value="Enviar" />
   </div>
   <div class="four columns alpha omega">

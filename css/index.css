@@ -1,3 +1,11 @@
+/*
+colors:
+#6790bd = light blue
+#28517E = medium light blue
+#15457B = medium blue
+#233e5c = medium dark blue
+#072950 = dark blue
+*/
 body{
   padding: 0px;
   margin: 0px;
@@ -66,7 +74,7 @@ body{
   font-size:1.15em;
 	line-height: 40px;
 	font-weight: bolder;
-	margin-top: 0.5em;
+	margin: 0.5em 0;
 	width: 100%;
 	height: 2.5em;
 	border:none;
@@ -171,13 +179,13 @@ a, a:hover, a:visited{
   font-weight: bolder;
 }
 .bottonemini{
-  float:right;
+  display: inline-block;
   width: 28px;
   height: 28px;
 	margin: 4px 4px 0px 0px;
 	border:1px solid #072950;
-	-moz-border-radius: 16px;
-	border-radius: 16px;
+	-moz-border-radius: 50%;
+	border-radius: 20%;
 	vertical-align: middle;
 	cursor:pointer;
 }
@@ -310,6 +318,9 @@ b{
  height: 300px;
  min-height: 300px;
 }
+.icon_box{
+  min-height: 110px;
+}
 .containerficha{
   min-height: 80%;
   max-height: 80%;
@@ -324,9 +335,14 @@ b{
   width:220px;
   height:165px;
   display:block;
+  margin-left: 10px;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 .ficha div p{
-  margin:5px 0px 0px 0px;
+  margin:5px 0px 0px 10px;
   height: 70px;
   width:100%;
 }
@@ -354,6 +370,16 @@ b{
   -moz-border-radius: 6px;
   border-radius: 6px;
   cursor:pointer;
+  display: inline-block;
+  padding: 0 10px;
+}
+.contacto{
+  text-align: left;
+  width: 100%;
+  margin: 10px 0;
+}
+.contacto div{
+  float: right;
 }
 .popupbutton, .bluebutton{
   font-family: Ubuntu;
@@ -376,10 +402,16 @@ b{
 .popupbutton{
   top:220px;
 }
+.popupbutton .bottonemini{
+  float: right;
+}
 .link span, .popupbutton span, .bluebutton span{
   line-height: 36px;
   vertical-align: middle;
   color:#6790bd;
+}
+.link .bottonemini{
+  margin-right: 0px;
 }
 .bluebutton span{
   font-size: 20px
@@ -481,7 +513,41 @@ h3, h4, h5, h6{
   display:none;
   width:100%;
   font-size:12px;
+  font-family: Nunito;
+  margin: 0 20px;
 }  
+.sheet_text{
+  display: inline;
+  margin-top: 10px;
+}
+.sheet_description{
+  clear: both;
+  display: block;
+}
+.sheet_text p b, .sheet_description p b{
+  font-size: 15px;
+}
+.overlay_container{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.overlay{
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  z-index: 10;
+  background-color: rgba(103,144,189,0.75);
+}
+.overlay .link{
+  margin: 25% 25px;
+}
+#myCanvas{
+  margin: 0 20px 20px 0;
+}
+#cboxContent{
+  background-color: #6790bd;
+}
 #captchacontainer{
   width:298px;
   margin:auto;
@@ -517,7 +583,7 @@ h3, h4, h5, h6{
 .go{background: #072950 url('../img/spriteicons.png') 98px 2px;}
 .go:hover, .link:hover .go{background: #15457b url('../img/spriteicons.png') 98px -22px;}
 .zoom{background: #072950 url('../img/spriteicons.png') -94px 2px;}
-.zoom:hover, .popupbutton:hover .zoom{background: #15457b url('../img/spriteicons.png') -94px -22px;}
+.zoom:hover, .link:hover .zoom, .popupbutton:hover .zoom{background: #15457b url('../img/spriteicons.png') -94px -22px;}
 .plus{background: #072950 url('../img/spriteicons.png') 2px 2px;}
 .plus:hover{background: #15457b url('../img/spriteicons.png') 2px -22px;}
 
