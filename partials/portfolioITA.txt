@@ -10,7 +10,7 @@
 	},
 	{
 	"title" : "Eurotri",
-	"description" : "Portale di triatlon: Ridisegno, programmazione e implementazione del sistema di vendita online."
+	"description" : "Portale di triathlon: Ridisegno, programmazione e implementazione del sistema di vendita online."
 	},
 	{
 	"title" : "Platano de Canarias",

@@ -1,0 +1,272 @@
+{
+	"work" : [
+	{
+	"company" : "Rankia S.L.",
+	"customer" : "Rankia",
+	"shortDescription" : "Online community about economy and finance.<br/>It contains blogs, forums, financial, bank, financial, and insurance products comparinson tools and a webinars subscription platform.",
+	"description" : "As backend developer I worked on maintenace tasks over existing functionalities, and developing new sections and opensource engines.<br/>Working in Rankia has been one of the most rewarding experiences in all my career as programmer.<br/>There I learnt to develop following TDD methodologies, to organize work using Kanban, to follow good pratices of coding, and, most of all, I deepened my knowledge of Ruby on Rails and Git.",
+	"data" : [
+		{"percentage" : "0.45", "fillColor" : "#072950", "label" : "Ruby On Rails"},
+		{"percentage" : "0.15", "fillColor" : "#6790bd", "label" : "JQuery"},
+		{"percentage" : "0.1", "fillColor" : "#28517E", "label" : "HAML"},
+		{"percentage" : "0.15", "fillColor" : "#233e5c", "label" : "SASS"},
+		{"percentage" : "0.15", "fillColor" : "#6790bd", "label" : "MySql"}
+		]
+	},
+	{
+	"company" : "Rankia S.L.",
+	"customer" : "Verema",
+	"shortDescription" : "Online community about wine and food belonging to Rankia group.<br/>It contains blogs, forums, a rating system for products and restaurants, and a subscription platform to remote product tasting.",
+	"description" : "Although Verema has less traffic and is less improtant than Rankia website, maintenace and development of new sections was requiring to me a big part of my time; helping me significantly to improve my technical skills.<br/>One of the my mayor achivements has been to learn how to work on legacy code",
+  "data" : [
+		{"percentage" : "0.45", "fillColor" : "#072950", "label" : "Ruby On Rails"},
+		{"percentage" : "0.15", "fillColor" : "#6790bd", "label" : "JQuery"},
+		{"percentage" : "0.1", "fillColor" : "#28517E", "label" : "HAML"},
+		{"percentage" : "0.15", "fillColor" : "#233e5c", "label" : "SASS"},
+		{"percentage" : "0.15", "fillColor" : "#6790bd", "label" : "MySql"}
+		]
+	},
+	{
+	"company" : "Canales Corporativos",
+	"customer" : "Eurotri",
+	"shortDescription" : "Triathlon portal. Redraw, markup and POS development.",
+	"description" : "Project made with PHP with a framework called YII.<br/>I had to implement the POS over SERMESA system, working on a legacy web.<br/>The experience was totally negative, not only for the immature and bad documented technology, but mostly for the customer, who were totally unable to understand costs, problems, issues and timing related to web development.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "Yii"},
+		{"percentage" : "0.1", "fillColor" : "#28517E", "label" : "Html"},
+		{"percentage" : "0.1", "fillColor" : "#6790bd", "label" : "CSS"},
+		{"percentage" : "0.2", "fillColor" : "#233e5c", "label" : "MySql"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "Php"}
+		]
+	},
+	{
+	"company" : "Canales Corporativos",
+	"customer" : "Platano de Canarias",
+	"shortDescription" : "Re-markup of the existing web.",
+	"description" : "The other side of my work is frontend development. In this little project I learnt to use CSS grids to organize content inside a webpage to leave it ready to be responsive.",
+	"data" : [
+		{"percentage" : "0.5", "fillColor" : "#072950", "label" : "HTML"},
+		{"percentage" : "0.5", "fillColor" : "#28517E", "label" : "CSS"}
+		]
+	},
+	{
+	"company" : "Canales Corporativos",	
+	"customer" : "Healty Girls and the pink planet",
+	"shortDescription" : "First application of JUGO framework",
+	"description" : "Developing PlayJugo I discovered a new language which I'm still in love: Ruby On Rails.<br/>I learnt to work with MVC patter, to design an application with UML and to use with GIT and Jenkins.",
+	"data" : [
+		{"percentage" : "0.5", "fillColor" : "#072950", "label" : "Ruby On Rails"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS3"},
+		{"percentage" : "0.1", "fillColor" : "#6790bd", "label" : "HTML5"},
+		{"percentage" : "0.2", "fillColor" : "#233e5c", "label" : "JQuery"}
+		]
+	},
+	{
+	"company" : "ZED Worldwide",	
+	"customer" :  "Desafio Claro",
+	"shortDescription" : "Web developed for Claro, a brazilian mobile carrier, to promote a sms based contest.",
+	"description" : "Simple web made with Wordpress. The only remarcable point was a PHP script to send PIN via SMS to validate contest suscripitions.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "Wordpress"},
+		{"percentage" : "0.1", "fillColor" : "#28517E", "label" : "HTML"},
+		{"percentage" : "0.1", "fillColor" : "#6790bd", "label" : "CSS"},
+		{"percentage" : "0.2", "fillColor" : "#233e5c", "label" : "MySql"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "Php"}
+		]
+	},
+	{
+	"company" : "ZED Worldwide",	
+	"customer" : "Win win",
+	"shortDescription" : "Web developed for an italian mobile carrier to promote a sms based contest.",
+	"description" : "Corporate website dedicated to TimWin contest of Telecom Italia.<br/>For legal reasons I had to change the contest brand in this demo.",
+	"data" : [
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "JQuery"},
+		{"percentage" : "0.3", "fillColor" : "#28517E", "label" : "HTML"},
+		{"percentage" : "0.3", "fillColor" : "#072950", "label" : "CSS"},
+		{"percentage" : "0.2", "fillColor" : "#233e5c", "label" : "MySql"}
+		]
+	},
+	{
+	"company" : "NEXUS A.T.",	
+	"customer" : "Inplace TV",
+	"shortDescription" : "Tv studio for video advertising.",
+	"description" : "Corporate website made with flash and actionscript for a video advertisiting studio which business were broadcasting in big spaces like airports, train stations and bookstores.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "Adobe Flash"},
+		{"percentage" : "0.4", "fillColor" : "#6790bd", "label" : "FLV"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "HTML"}
+		]
+	}
+	],
+	"free" : [{
+	"company" : "",
+	"customer" : "Frutas Grande",
+	"shortDescription" : "Corporate website for a fresh fruit and vegetables wholesaler.<br/> It has a blog and a product season calendar.",
+	"description" : "Simple multilanguage website made with Wordpress.<br/>The challenge is the communication with my customer who wants to create a brand through internet but he doesn't have enough time neither resorces to achieve it.",
+	"data" : [
+		{"percentage" : "0.6", "fillColor" : "#072950", "label" : "Wordpress"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS"}
+		]
+	},
+	{
+	"company" : "",
+	"customer" : "Totsaunaveu",
+	"shortDescription" : "Web been realized for a group of joung directors.<br/>In collaboration with the journalist Patricia Ruiz Machí.<br/>It contains an event calendar, a video manager, and social network widgets.",
+	"description" : "Another simple project made with Wordpress.<br/>For the first time I have seen how is the social managing world from inside. I discovered the secrets of diffusion and content management, guided by the journalist and social manager Patricia Ruiz Machí.",
+	"data" : [
+		{"percentage" : "0.6", "fillColor" : "#072950", "label" : "Wordpress"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS"}
+		]
+	},
+	{
+	"company" : "Accidente.pro",
+	"customer" : "112plus",
+	"shortDescription" : "Mobile application to call 112 emergency number if needed.",
+	"description" : "My first step into Android development world.<br/>This app connect to the device geolocation system and let the user to see his position into the map, share it and call the emergency number.",
+	"data" : [
+		{"percentage" : "0.5", "fillColor" : "#072950", "label" : "Java"},
+		{"percentage" : "0.5", "fillColor" : "#6790bd", "label" : "Android SDK"}
+		]
+	},
+	{
+	"company" : "Accidente.pro",
+	"customer" : "Accidente.pro",
+	"shortDescription" : "A community of professionals which helps car accidents victims.",
+	"description" : "Responsive website made with Wordpress.<br/>It contains a compensation calculator to simulate the indemnification in case of car accident.<br/>It has a simple API to build the same calculator in a mobile environment.",
+	"data" : [
+		{"percentage" : "0.5", "fillColor" : "#072950", "label" : "Wordpress"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.1", "fillColor" : "#233e5c", "label" : "JQuery"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS"}
+		]
+	},
+	{
+	"company" : "",
+	"customer" : "Madeinnovation",
+	"shortDescription" : "Industrial design project management and R+D consultant.",
+	"description" : "My first responsive and multilanguage website made with Wordpress.<br/>It contains all thhe classics plugins for a corporate website: Seo By yoast, ContactForm y qTranslate, Facebook plugin, Heatmap and Newsletter builder.",
+	"data" : [
+		{"percentage" : "0.6", "fillColor" : "#072950", "label" : "Wordpress"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS"}
+		]
+	},
+	{
+	"company" : "",
+	"customer" : "Spazio Rebelot restaurant",
+	"shortDescription" : "The websit includes an homemade cms and a newsletter manager.",
+	"description" : "Web made with flash and actionscript<br/>It has an HTML and javascript CMS to edit some XML files to change the menu of the restaurant and all the texts inside the webpage.",
+	"data" : [
+		{"percentage" : "0.45", "fillColor" : "#072950", "label" : "Adobe Flash"},
+		{"percentage" : "0.1", "fillColor" : "#6790bd", "label" : "XML"},
+		{"percentage" : "0.1", "fillColor" : "#233e5c", "label" : "HTML"},
+		{"percentage" : "0.1", "fillColor" : "#28517E", "label" : "Php"},
+		{"percentage" : "0.35", "fillColor" : "#6790bd", "label" : "Javascript"}
+		]
+	},
+	{
+	"company" : "Vanzago city hall",
+	"customer" : "Fondazione Ferrario",
+	"shortDescription" : "Web winner of the contest for the new foundation corporate image.",
+	"description" : "Corporate website made with some flash pieces.<br/>The challenge was seeking information about the story and creation of the foundation.",
+	"data" : [
+		{"percentage" : "0.25", "fillColor" : "#072950", "label" : "Adobe Flash"},
+		{"percentage" : "0.25", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.25", "fillColor" : "#28517E", "label" : "CSS"},
+		{"percentage" : "0.25", "fillColor" : "#233e5c", "label" : "Javascript"}
+		]
+	},
+	{
+	"company" : "",
+	"customer" : "Omniamarmi",
+	"shortDescription" : "Marble craftsman corporate website.",
+	"description" : "Simple website made with HTML, CSS and javascript.<br/>It contains a stone catalogue.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "HTML"},
+		{"percentage" : "0.3", "fillColor" : "#6790bd", "label" : "CSS"},
+		{"percentage" : "0.3", "fillColor" : "#28517E", "label" : "Javascript"}
+		]
+	},
+	{
+	"company" : "",
+	"customer" : "Gilgamesh Lounge Bar",
+	"shortDescription" : "Static website for a chillout club.",
+	"description" : "Simple website made with HTML, CSS and javascript.<br/>Sadly the club closed the same day of the website publication.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "HTML"},
+		{"percentage" : "0.3", "fillColor" : "#6790bd", "label" : "CSS"},
+		{"percentage" : "0.3", "fillColor" : "#28517E", "label" : "Javascript"}
+		]
+	},
+	{
+	"company" : "",
+	"customer" : "Excalibur",
+	"shortDescription" : "Fantasy modeling and roleplay shop.<br/>With forum and newsletter module.",
+	"description" : "Web made with HTML and embedded Flash. The draws were made by the shop owner, the sword is a 3D model rendering made by me for an univeristy exam about Maya 6.<br/>It has a homemade PHP forum which never has been published.",
+	"data" : [
+		{"percentage" : "0.3", "fillColor" : "#072950", "label" : "Adobe Flash"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS"},
+		{"percentage" : "0.2", "fillColor" : "#233e5c", "label" : "MySql"},
+		{"percentage" : "0.1", "fillColor" : "#6790bd", "label" : "Php"}
+		]
+	}],
+	"demo" : [{
+		"company" : "",
+	  "customer" : "GraphORama",
+	  "shortDescription" : "Demo showing how to use the most common graph and plotting libraries.",
+		"description" : "In the two years spent working for ZED, I had to build and intranet to show to the mobile carriers some contests statistics, to let them download excels and see realtime graphs about players behaviour<br/>This demo shows some of the most popular libraries to draw graphs and how to use them.",
+	"data" : [
+		{"percentage" : "0.3", "fillColor" : "#072950", "label" : "Adobe Flash"},
+		{"percentage" : "0.3", "fillColor" : "#6790bd", "label" : "Php"},
+		{"percentage" : "0.3", "fillColor" : "#233e5c", "label" : "JQuery"},
+		{"percentage" : "0.1", "fillColor" : "#28517E", "label" : "HTML"}
+		]
+	}],
+	"uni" : [{
+		"company" : "",
+	  "customer" : "Visual comunication project",
+		"shortDescription" : "Goal: explain the class contents with practical examples.",
+	  "description" : "Web made with Flash for the visual comunication exam.<br/>Every excercise represents a concept explored in a different lesson.",
+	"data" : [
+		{"percentage" : "0.5", "fillColor" : "#6790bd", "label" : "Adobe Flash"},
+		{"percentage" : "0.5", "fillColor" : "#072950", "label" : "Actionscript 3"}
+		]
+	},
+	{
+		"company" : "",
+	  "customer" : "AI for the NEUROMANCER",
+		"shortDescription" : "Project for 'Virtual reality' and 'Multimedia systems' exams.",
+	  "description" : "This project has been indeed my favourite during all my student carrer.<br/>Made in collaboration with Davide Ardore and Matteo Vignati, this web is the description of the second part of the project: a 3D interactive world which working in any browser and telling the story inside 'The Neuromancer' novel of William Gibson.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "HTML"},
+		{"percentage" : "0.3", "fillColor" : "#6790bd", "label" : "CSS"},
+		{"percentage" : "0.3", "fillColor" : "#28517E", "label" : "Javascript"}
+		]
+	},
+	{
+		"company" : "",
+	  "customer" : "Web design 1 and 2.",
+		"shortDescription" : "learn and teach a web technology.",
+	  "description" : "Made in collaboration with Raluca Hategan; the goal of the website is learn SVG through practical examples.<br/>It has a downloadable PDF book written by us.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "SVG"},
+		{"percentage" : "0.3", "fillColor" : "#6790bd", "label" : "CSS"},
+		{"percentage" : "0.3", "fillColor" : "#28517E", "label" : "Javascript"}
+		]
+	},
+	{
+		"company" : "",
+	  "customer" : "MAYA to XVR",
+		"shortDescription" : "Bachelor thesis.",
+	  "description" : "Goal: create a Maya plugin to export the 3D model's to XVR format.<br/>The webpage is an example of the possibilites offered by the plugin. It works only in IE.<br/>I choosed this project because I would improve my programming skills. I used C++.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "C++"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS"},
+		{"percentage" : "0.2", "fillColor" : "#233e5c", "label" : "Javascript"}
+		]
+	}]
+}

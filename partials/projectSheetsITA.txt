@@ -1,0 +1,272 @@
+{
+	"work" : [
+	{
+	"company" : "Rankia S.L.",
+	"customer" : "Rankia",
+	"shortDescription" : "Comunit&aacute; online di finanza ed economia<br/>Contiene blogs, forums, compertori di prodotti finanziari, di risparmio e assicurativi, e una piattaforma di sottoscrizione a webinars.",
+	"description" : "In quanto programmatore backend il mio compito era il mantenimento delle funzionalit&aacute; esistenti, lo sviluppo di nuove sezioni e di engines opensource<br/>Lavorare in Rankia &eacute; stata una delle esperienza piú gratificanti della mia carriera di informatico.<br/>É stato lí che ho imperto a sviluppare seguendo la metodología TDD, a organizzare il lavoro utilizzando Kanban, a mantenere un buon stile di programmazione seguendo le <i>good practices</i> di lavoro, e soprattutto ho approfondito enormemente le mie conoscienze di Ruby on Rails e GIT.",
+	"data" : [
+		{"percentage" : "0.45", "fillColor" : "#072950", "label" : "Ruby On Rails"},
+		{"percentage" : "0.15", "fillColor" : "#6790bd", "label" : "JQuery"},
+		{"percentage" : "0.1", "fillColor" : "#28517E", "label" : "HAML"},
+		{"percentage" : "0.15", "fillColor" : "#233e5c", "label" : "SASS"},
+		{"percentage" : "0.15", "fillColor" : "#6790bd", "label" : "MySql"}
+		]
+	},
+	{
+	"company" : "Rankia S.L.",
+	"customer" : "Verema",
+	"shortDescription" : "Comunit&aacute; online dí vino e gastronomia del gruppo Rankia.<br/>Contiene blogs, forums, un sistema di valorazione dei prodotti e dei ristoranti, e una piattaforma di sottoscrizione a desgustazioni virtuali.",
+	"description" : "Nonostante avesse meno traffico e fosse seconda come importanza rispetto alla pagina web di Rankia, il mantenimento e lo sviluppo di nuove sezioni di questa web hanno occupato una grossa parte del mio tempo contribuendo cosí in modo significativo a migliorare il mio controllo sulle tecnologie che stavo utilizzando.<br/>Uno dei risultati piú importanti che ho ottenuto &eacute; stata l'esperienza che ho accumulato nel lavorare su <i>legacy code</i> ereditato da sviluppatori precendenti.",
+	"data" : [
+		{"percentage" : "0.45", "fillColor" : "#072950", "label" : "Ruby On Rails"},
+		{"percentage" : "0.15", "fillColor" : "#6790bd", "label" : "JQuery"},
+		{"percentage" : "0.1", "fillColor" : "#28517E", "label" : "HAML"},
+		{"percentage" : "0.15", "fillColor" : "#233e5c", "label" : "SASS"},
+		{"percentage" : "0.15", "fillColor" : "#6790bd", "label" : "MySql"}
+		]
+	},
+	{
+	"company" : "Canales Corporativos",
+	"customer" : "Eurotri",
+	"shortDescription" : "Portale di triathlon: Ridisegno, markup y  e sviluppo del sistema di vendita online.",
+	"description" : "progetto realizzado con PHP utilizzando un framework chiamato YII. <br/>Il mio compito fu di sviluppare un POS basato sul sistema SERMESA in una pagina web precedentemente creata da un'altra azienda.<br/>L'esperienza fu completamente negativa, non solo por la tecnologia utilizzada precendentemente, totalmente immatura e poco documentata, ma anche per le enormi difficolt&aacute; di comunicazione con il cliente che, essendo totalmente digiuno di tecnologia, non era capace di comprendere costi, difficolt&aacute; e tempistiche dello sviluppo.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "Yii"},
+		{"percentage" : "0.1", "fillColor" : "#28517E", "label" : "Html"},
+		{"percentage" : "0.1", "fillColor" : "#6790bd", "label" : "CSS"},
+		{"percentage" : "0.2", "fillColor" : "#233e5c", "label" : "MySql"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "Php"}
+		]
+	},
+	{
+	"company" : "Canales Corporativos",
+	"customer" : "Platano de Canarias",
+	"shortDescription" : "Nuovo markup della pagina web esistente.",
+	"description" : "l'altra faccia del mio lavoro &eacute; lo sviluppo frontend. in questo piccolo incarico imperi a utilizzarr una grid CSS per organizzare il contenuto di una pagina e preperrlo affich&eacute; sia responsive.",
+	"data" : [
+		{"percentage" : "0.5", "fillColor" : "#072950", "label" : "HTML"},
+		{"percentage" : "0.5", "fillColor" : "#28517E", "label" : "CSS"}
+		]
+	},
+	{
+	"company" : "Canales Corporativos",	
+	"customer" : "Healty Girls and the pink planet",
+	"shortDescription" : "Prima applicazione web del framework JUGO.",
+	"description" : "Durante lo sviluppo di PlayJugo scoprii un nuovo linguaggio di programmazione che ancora oggi mi appassiona: Ruby On Rails.<br/>Imperi a lavorare con il Model View Controller pattern, a disegnare una applicazione con UML, e iniziai a lavorare con GIT e Jenkins",
+	"data" : [
+		{"percentage" : "0.5", "fillColor" : "#072950", "label" : "Ruby On Rails"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS3"},
+		{"percentage" : "0.1", "fillColor" : "#6790bd", "label" : "HTML5"},
+		{"percentage" : "0.2", "fillColor" : "#233e5c", "label" : "JQuery"}
+		]
+	},
+	{
+	"company" : "ZED Worldwide",	
+	"customer" :  "Desafio Claro",
+	"shortDescription" : "Web realizzata per l'operatore Claro Brasil per promozionare un concorso basato sull'invio di SMS.",
+	"description" : "Semplice pagina web realizzata con wordpress. Unica particolarit&aacute;: uno script PHP che invia codici PIN via SMS per validare le iscrizioni al concorso.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "Wordpress"},
+		{"percentage" : "0.1", "fillColor" : "#28517E", "label" : "HTML"},
+		{"percentage" : "0.1", "fillColor" : "#6790bd", "label" : "CSS"},
+		{"percentage" : "0.2", "fillColor" : "#233e5c", "label" : "MySql"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "Php"}
+		]
+	},
+	{
+	"company" : "ZED Worldwide",	
+	"customer" : "Win win",
+	"shortDescription" : "Web realizzata per un operatore di telefonia mobile italiano per promozionare un concorso basato sull'invio di SMS.",
+	"description" : "Web presenziale dedicata al concorso TimWin di Telecom Italia.<br/>Per motivi legali ho dovuto modificare il brand della promozione nella demo qui presentata.",
+	"data" : [
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "JQuery"},
+		{"percentage" : "0.3", "fillColor" : "#28517E", "label" : "HTML"},
+		{"percentage" : "0.3", "fillColor" : "#072950", "label" : "CSS"},
+		{"percentage" : "0.2", "fillColor" : "#233e5c", "label" : "MySql"}
+		]
+	},
+	{
+	"company" : "NEXUS A.T.",	
+	"customer" : "Inplace TV",
+	"shortDescription" : "Studio televisivo per video pubblicitari.",
+	"description" : "Web presenziale realizzata in flash e actionscript per un'azienda che girava e distribuiva video pubblicitari nei grandi spazi come stazioni, aereoporti e catene di librerie.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "Adobe Flash"},
+		{"percentage" : "0.4", "fillColor" : "#6790bd", "label" : "FLV"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "HTML"}
+		]
+	}
+	],
+	"free" : [{
+	"company" : "",
+	"customer" : "Frutas Grande",
+	"shortDescription" : "Web corporativa per un grossista di frutta e verdura.<br/>Contiene un blog e un calendario stagionale di frutta e verdura.",
+	"description" : "Semplice pagina web multilingua realizzata con wordpress.<br/>La vera difficolt&aacute; di questo progetto risiede nella comunicazione con il cliente che vorrebbe investire tempo e denaro nella creazione di un brand attraverso internet ma purtroppo non ha il tempo né le competenze necessarie per farlo.",
+	"data" : [
+		{"percentage" : "0.6", "fillColor" : "#072950", "label" : "Wordpress"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS"}
+		]
+	},
+	{
+	"company" : "",
+	"customer" : "Totsaunaveu",
+	"shortDescription" : "Web realizzata per un gruppo di giovani registi.<br/>In collaborazione con la giornalista Patricia Ruiz Machí.<br/> Contiene un calendario di eventi, visore per i video e widgets delle varie reti sociali.",
+	"description" : "un altro semplice progetto realizzato con wordpress.<br/>Per la prima volta sono stato in contatto con l'altro lato della mia professione: la diffusione e a gestione dei contenuti da parte della giornalista e social manager Patricia Ruiz Machí.",
+	"data" : [
+		{"percentage" : "0.6", "fillColor" : "#072950", "label" : "Wordpress"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS"}
+		]
+	},
+	{
+	"company" : "Accidente.pro",
+	"customer" : "112plus",
+	"shortDescription" : "Applicazione per contattare il 112 in caso di emergenza.",
+	"description" : "la mia prima incursisione nel mondo della programmazione mobile con Android<br/>La applicazione si connete al sistema di geolocalizazione del telefono e permette agli utenti di visualizzare la propria posizione nella mappa, compartirla, e contattare il 112.",
+	"data" : [
+		{"percentage" : "0.5", "fillColor" : "#072950", "label" : "Java"},
+		{"percentage" : "0.5", "fillColor" : "#6790bd", "label" : "Android SDK"}
+		]
+	},
+	{
+	"company" : "Accidente.pro",
+	"customer" : "Accidente.pro",
+	"shortDescription" : "Una comunit&aacute; di professionisti che si dedicano ad aiutare le vittime di incidente stradale.",
+	"description" : "Web responsive realizzata con wordpress.<br/>Contiene una calcolatrice per simulare la indennizzazione dovuta in caso di incidente stradale.<br/>Espone una semplicissima API per realizzare la stessa calcolatrice in ambiente mobile.",
+	"data" : [
+		{"percentage" : "0.5", "fillColor" : "#072950", "label" : "Wordpress"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.1", "fillColor" : "#233e5c", "label" : "JQuery"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS"}
+		]
+	},
+	{
+	"company" : "",
+	"customer" : "Madeinnovation",
+	"shortDescription" : "Studio di R+S e gestione di progetti di disegno industriale.",
+	"description" : "La mia prima web responsive e multilingua realizzata con wordpress.<br/>Contiene tutti i classici plugins per una web presenziale: Seo By yoast, ContactForm, qTranslate, Facebook plugin, Heatmap e Newsletter",
+	"data" : [
+		{"percentage" : "0.6", "fillColor" : "#072950", "label" : "Wordpress"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS"}
+		]
+	},
+	{
+	"company" : "",
+	"customer" : "Restaurante Spazio Rebelot",
+	"shortDescription" : "La pagina web include un gestore di contenuti e un modulo per la edizione e invio di newsletters a tema.",
+	"description" : "Web realizzata in flash e actionscript.<br/>Il CMS scritto in Html e javascript permette editare una serie di files XML per cambiare i piatti dei menu e i testi di tutte le pagine.",
+	"data" : [
+		{"percentage" : "0.45", "fillColor" : "#072950", "label" : "Adobe Flash"},
+		{"percentage" : "0.1", "fillColor" : "#6790bd", "label" : "XML"},
+		{"percentage" : "0.1", "fillColor" : "#233e5c", "label" : "HTML"},
+		{"percentage" : "0.1", "fillColor" : "#28517E", "label" : "Php"},
+		{"percentage" : "0.35", "fillColor" : "#6790bd", "label" : "Javascript"}
+		]
+	},
+	{
+	"company" : "Comune di Vanzago",
+	"customer" : "Fondazione Ferrario",
+	"shortDescription" : "Web realizzata per il concorso convocato per la fondazione.",
+	"description" : "Pagina presenziale realizzata parzialmente en flash. <br/>La difficoltá principale di questa pagina fu la ricerca di informazioni storiche riguardanti la storia e le origini della Fondazione Ferrario.",
+	"data" : [
+		{"percentage" : "0.25", "fillColor" : "#072950", "label" : "Adobe Flash"},
+		{"percentage" : "0.25", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.25", "fillColor" : "#28517E", "label" : "CSS"},
+		{"percentage" : "0.25", "fillColor" : "#233e5c", "label" : "Javascript"}
+		]
+	},
+	{
+	"company" : "",
+	"customer" : "Omniamarmi",
+	"shortDescription" : "Web realizzata per un artigiano del marmo.",
+	"description" : "Web presenziale in puro HTML, CSS e javascript.<br/>Contiene una biblioteca di materiali per la pavimentazione.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "HTML"},
+		{"percentage" : "0.3", "fillColor" : "#6790bd", "label" : "CSS"},
+		{"percentage" : "0.3", "fillColor" : "#28517E", "label" : "Javascript"}
+		]
+	},
+	{
+	"company" : "",
+	"customer" : "Gilgamesh Lounge Bar",
+	"shortDescription" : "Web realizzata per un locale lounge.",
+	"description" : "Web presenziale in puro HTML, CSS e javascript.<br/>Sfoortunatamente il locale chiuse, per motivi indipendenti alla volontá dei proprietari, il giorno stesso della pubblicazione della pagina web.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "HTML"},
+		{"percentage" : "0.3", "fillColor" : "#6790bd", "label" : "CSS"},
+		{"percentage" : "0.3", "fillColor" : "#28517E", "label" : "Javascript"}
+		]
+	},
+	{
+	"company" : "",
+	"customer" : "Excalibur",
+	"shortDescription" : "Negozio di modellismo fantasy e di giochi di ruolo.<br/>Con forum e modulo per newsletters.",
+	"description" : "Web presenziale realizzata in HTML con parti in Flash. I disegni erano opera del proprietario del negozio, la spada &eacute; un rendering di un modello 3D da me realizzato durante un corso universitario di Maya 6<br/>Conteneva un piccolo forum realizzato artigianalmente in PHP che non venne mai pubblicato.",
+	"data" : [
+		{"percentage" : "0.3", "fillColor" : "#072950", "label" : "Adobe Flash"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS"},
+		{"percentage" : "0.2", "fillColor" : "#233e5c", "label" : "MySql"},
+		{"percentage" : "0.1", "fillColor" : "#6790bd", "label" : "Php"}
+		]
+	}],
+	"demo" : [{
+		"company" : "",
+	  "customer" : "GraphORama",
+	  "shortDescription" : "Demo di esempio dell'uso delle principali librerie per tracciare grafiche.",
+		"description" : "Durante i due annitrascorsi in ZED, ebbi modo di implementare una intranet dove i vari operadoratori di telefonia potessero vedere statistiche dei concorso, scaricare excels con dati e vedere grafiche in tempo reale riguardo l'andamento delle participazioni.<br/>Questa piccola demo mostra le principali librerie che usai per tracciare grafiche e come utilizzarle.",
+	"data" : [
+		{"percentage" : "0.3", "fillColor" : "#072950", "label" : "Adobe Flash"},
+		{"percentage" : "0.3", "fillColor" : "#6790bd", "label" : "Php"},
+		{"percentage" : "0.3", "fillColor" : "#233e5c", "label" : "JQuery"},
+		{"percentage" : "0.1", "fillColor" : "#28517E", "label" : "HTML"}
+		]
+	}],
+	"uni" : [{
+		"company" : "",
+	  "customer" : "Progetto per l'esame di Comunicazione visiva",
+		"shortDescription" : "Obiettivo: spiegare i contenuti del corso con esempi pratici.",
+	  "description" : "Web realizzata in Flash per il corso di Comunicazione visiva.<br/>Ogni esercizio rappresenta un concetto visto durante le lezioni.",
+	"data" : [
+		{"percentage" : "0.5", "fillColor" : "#6790bd", "label" : "Adobe Flash"},
+		{"percentage" : "0.5", "fillColor" : "#072950", "label" : "Actionscript 3"}
+		]
+	},
+	{
+		"company" : "",
+	  "customer" : "AI for the NEUROMANCER",
+		"shortDescription" : "Progetto per gli esami congiunti di 'Realtá virtuali' e 'Sistemi multimediali'",
+	  "description" : "Questo fu senza ombra di dubbio il mio progetto preferito di tutta la mia carriera universitaria.<br/>Realizzato con Davide Ardore e Matteo Vignati la web era la descrizione della seconda parte del progetto: una serie di scene tridimensionali interattive visualizzabili in qualunque browser e che raccontavano la storia di un romanzo Cyberpunk: 'The neuromancer' di William Gibson.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "HTML"},
+		{"percentage" : "0.3", "fillColor" : "#6790bd", "label" : "CSS"},
+		{"percentage" : "0.3", "fillColor" : "#28517E", "label" : "Javascript"}
+		]
+	},
+	{
+		"company" : "",
+	  "customer" : "Diseño web 1 y 2.",
+		"shortDescription" : "Impara e insegna una tecnologia web",
+	  "description" : "Realizzato insieme alla mia compagna di corso Raluca Hategan. L'obiettivo di tutta la web &eacute; offrire un manuale con tutorials per imparare la tecnologia SVG: Scalable vector graphics.<br/>La pagina contiene un manuale scaricabile in PDF.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "SVG"},
+		{"percentage" : "0.3", "fillColor" : "#6790bd", "label" : "CSS"},
+		{"percentage" : "0.3", "fillColor" : "#28517E", "label" : "Javascript"}
+		]
+	},
+	{
+		"company" : "",
+	  "customer" : "MAYA to XVR",
+		"shortDescription" : "Tesi di laurea.",
+	  "description" : "Obiettivo del progetto: realizzare un plugin per Maya per esportare i dati dei modelli 3D disegnati con Maya al formato XVR.<br/>La pagina web &eacute; un esempio delle possibilit&aacute; offerte dal plugin.<br/>Scelsi questo progetto perch&eacute; volevo approfondire le mie conoscienze nel campo della programmazione. Il progetto è stato scritto in C++.",
+	"data" : [
+		{"percentage" : "0.4", "fillColor" : "#072950", "label" : "C++"},
+		{"percentage" : "0.2", "fillColor" : "#6790bd", "label" : "HTML"},
+		{"percentage" : "0.2", "fillColor" : "#28517E", "label" : "CSS"},
+		{"percentage" : "0.2", "fillColor" : "#233e5c", "label" : "Javascript"}
+		]
+	}]
+}
