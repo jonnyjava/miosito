@@ -1,3 +1,19 @@
+function load_subsections(lang){
+  var sheet_titles = ["","","",""];  
+  switch(lang){
+    case 'ESP':
+      sheet_titles = ["Cliente","Proyecto","Empresa","Descripción"];  
+      break;
+    case 'ENG':
+      sheet_titles = ["Customer","Project","Company","Description"];  
+      break;
+    case 'ITA':
+      sheet_titles = ["Cliente","Progetto","Azienda","Descrizione"];  
+      break;
+  }
+  return sheet_titles;
+}
+
   function buildPortfolio(lang){
     var sections = ["work","free","demo","uni"];
     switch(lang){
@@ -104,7 +120,6 @@
   }
 
   function getImage(link, image, key, index){
-
     return "<div class='four columns overlay_container'><img onmouseover=\"overlay($(this),'"+link+"','"+key+"','"+index+"');\" src='img/"+image+".png' alt='"+key+"' title='' data-img_attr='"+key+"-"+index+"' class='ficha' border='0' /></div>";
   }
 
@@ -124,6 +139,7 @@
 
   function sheetWindow(mytitle, sheetkey, sheetindex){
     var locale = $('.js_porfolio').attr('data-language');
+    sheet_titles = load_subsections(locale);
     jsonfile = "partials/projectSheets"+locale+".txt";
     graph = "<canvas id='myCanvas' style='float:left;'></canvas>";
     $.getJSON(jsonfile,{}).done(function(data){
@@ -132,9 +148,9 @@
           $.each( val, function( index, item ) { 
             if(index == sheetindex) {
               company = getSheetCompany(item.company);
-              customer = "<p><b>Cliente:</b><br/>"+item.customer+"<p/>";
-              shortDescription = "<p><b>Proyecto:</b><br/>"+item.shortDescription+"<p/>";
-              description = "<div class='sheet_description'><p><b>Descripción:</b><br/>"+item.description+"<p/></div>";
+              customer = "<p><b>"+sheet_titles[0]+":</b><br/>"+item.customer+"<p/>";
+              shortDescription = "<p><b>"+sheet_titles[1]+":</b><br/>"+item.shortDescription+"<p/>";
+              description = "<div class='sheet_description'><p><b>"+sheet_titles[3]+":</b><br/>"+item.description+"<p/></div>";
               content =  "<div class='pop-up js_sheet'>"; 
               sheet = graph+"<div class='sheet_text'>"+company+customer+shortDescription+"</div>"+description;
               content = content+sheet;
@@ -151,7 +167,7 @@
 
   function getSheetCompany(text){
     company = "";
-    if (text.length > 0) { company = "<p><b>Empresa:</b><br/>"+text+"<p/>"; }
+    if (text.length > 0) { company = "<p><b>"+sheet_titles[2]+":</b><br/>"+text+"<p/>"; }
     return company;
   }
 
